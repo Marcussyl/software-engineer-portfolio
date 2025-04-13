@@ -3,7 +3,7 @@
 @import "tailwindcss/preflight.css" layer(base);
 @import "tailwindcss/utilities.css" layer(utilities);
 
-:global(:root) {
+@theme {
   --primary-purple: #5f3aa6;
   --secondary-purple: #382167;
 }
@@ -64,9 +64,26 @@ button:focus-visible {
   }
 
   .primary-button {
-    @apply bg-gradient-to-b from-[#3d2769] via-[#7d64b1] to-[#854ef2] px-0.5;
+    @apply bg-gradient-to-b from-[#3d2769] via-[#7d64b1] to-[#854ef2] px-0.5 drop-shadow-2xl relative;
   }
   .primary-button .inner {
-    @apply bg-[#382167] p-2 text-white border-b-[#854ef2] border-b-2 text-sm;
+    @apply bg-[#382167] p-2 text-white border-b-[#854ef2] border-b-2 text-sm flex gap-2 items-center drop-shadow-xl drop-shadow-indigo-500;
+  }
+
+  .floating-tag {
+    @apply absolute flex gap-2 items-center border-0.5 border-purple-200 p-3;
+  }
+
+  .floating-tag p:first-child {
+    @apply text-3xl font-bold;
+  }
+  .floating-tag p:nth-child(2) {
+    @apply text-white text-sm;
+  }
+}
+
+@layer components {
+  #hero {
+    background-image: url(./assets/hero-bg.png);
   }
 }
