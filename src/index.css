@@ -1,11 +1,25 @@
-@layer theme, base, components, utilities;
+@import "tailwindcss";
 @import "tailwindcss/theme.css" layer(theme);
 @import "tailwindcss/preflight.css" layer(base);
 @import "tailwindcss/utilities.css" layer(utilities);
+@layer theme, base, components, utilities;
 
 @theme {
-  --primary-purple: #5f3aa6;
-  --secondary-purple: #382167;
+  --color-main-purple: #5f3aa6;
+  --color-light-purple: #9772e2;
+  --color-grayish-white: #a29daa;
+}
+
+@layer base {
+  
+}
+
+.section-content {
+  @apply w-4/5 mx-auto;
+}
+
+.gradient-text {
+  @apply bg-gradient-to-r from-[#864ff3] via-[#9772e2] to-white bg-clip-text text-transparent;
 }
 
 
@@ -18,6 +32,9 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /*--primary-purple: #5f3aa6;*/
+  /*--secondary-purple: #382167;*/
 }
 
 body {
@@ -27,10 +44,10 @@ body {
   color: #9166e9;
 }
 
-h1 {
-  font-size: 3.2em;
+/* h1 {
+  font-size: 3em;
   line-height: 1.1;
-}
+} */
 
 /* button:hover {
   border-color: #646cff;
@@ -40,7 +57,7 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 } */
 
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
@@ -51,12 +68,17 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-}
+} */
 
-@layer components {
+/* .section-content {
+  margin: 0 auto;
+  max-width: 100%;
+} */
+
+/* @layer components {
   .content-wrapper {
-    width: 80%;  /* or any specific width */
-    margin-inline: auto;  /* centers the container */
+    width: 80%;
+    margin-inline: auto;
   }
 
   .tag {
@@ -71,7 +93,7 @@ button:focus-visible {
   }
 
   .floating-tag {
-    @apply absolute flex gap-2 items-center border-0.5 border-purple-200 p-3;
+    @apply absolute flex gap-2 items-center border-[0.5] border-purple-200 p-3;
   }
 
   .floating-tag p:first-child {
@@ -80,10 +102,10 @@ button:focus-visible {
   .floating-tag p:nth-child(2) {
     @apply text-white text-sm;
   }
-}
+} */
 
-@layer components {
+/* @layer components {
   #hero {
     background-image: url(./assets/hero-bg.png);
   }
-}
+} */
