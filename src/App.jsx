@@ -1,7 +1,6 @@
-
+import $ from 'jquery';
 import './App.css'
 import { NavBar } from './components/NavBar'
-import { HeroTag } from './components/HeroTag';
 import { HeroSection } from './sections/Hero';
 import { TechStackSection } from './sections/TechStack';
 
@@ -34,5 +33,7 @@ function App() {
     </div>
   );
 }
+
+$('#tech-stack .tech-stack-item').css("background-color", "yellow");
 
 export default App

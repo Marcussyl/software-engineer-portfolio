@@ -1,7 +1,9 @@
 import { TechStackItem } from "../components/TechStackItem"
 
-export const TechStackSection = ({text}) => {
+export const TechStackSection = () => {
   return (
-    <div>{text}</div>
+    <div className="flex gap-3">
+      <TechStackItem text={"JavaScript"} value={"90"}/>
+    </div>
   )
 }
