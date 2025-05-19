@@ -5,49 +5,57 @@
 @layer theme, base, components, utilities;
 
 @theme {
-  --color-main-purple: #5f3aa6;
-  --color-light-purple: #9772e2;
-  --color-grayish-white: #a29daa;
+    --color-main-purple: #5f3aa6;
+    --color-light-purple: #9772e2;
+    --color-grayish-white: #a29daa;
 }
 
-@layer base {
-  
+@layer components {
+    .section-content {
+        @apply w-4/5 mx-auto;
+    }
+    .gradient-text {
+        @apply bg-gradient-to-r from-[#864ff3] via-[#9772e2] to-white bg-clip-text text-transparent;
+    }
+    
+    .logo-container {
+      @apply grid grid-cols-4 grid-rows-4 gap-3;
+
+      .grid-item {
+        @apply bg-[#1a0a3a];
+      }
+
+      img {
+        @apply w-[100px] p-[26px];
+        /* @apply w-[50px] p-[26px] border-1 border-purple-400 bg-linear-to-b from-[#5930AC] via-[#2E067E] to-[#ebe4fb]; */
+      }
+    }
 }
 
-.section-content {
-  @apply w-4/5 mx-auto;
-}
-
-.gradient-text {
-  @apply bg-gradient-to-r from-[#864ff3] via-[#9772e2] to-white bg-clip-text text-transparent;
-}
-
-
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-
-  /* color-scheme: light dark; */
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  /*--primary-purple: #5f3aa6;*/
-  /*--secondary-purple: #382167;*/
-}
+/* :root {
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    color-scheme: light dark;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    --primary-purple: #5f3aa6;
+    --secondary-purple: #382167;
+} */
 
 body {
-  min-width: 320px;
-  min-height: 100vh;
-  background-color: #0d061a;
-  color: #9166e9;
+    min-width: 320px;
+    min-height: 100vh;
+    background-color: #0d061a;
+    color: #9166e9;
 }
+
 
 /* h1 {
   font-size: 3em;
   line-height: 1.1;
 } */
+
 
 /* button:hover {
   border-color: #646cff;
@@ -56,6 +64,7 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 } */
+
 
 /* @media (prefers-color-scheme: light) {
   :root {
@@ -67,45 +76,5 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
-  }
-} */
-
-/* .section-content {
-  margin: 0 auto;
-  max-width: 100%;
-} */
-
-/* @layer components {
-  .content-wrapper {
-    width: 80%;
-    margin-inline: auto;
-  }
-
-  .tag {
-    @apply border-2 rounded-3xl border-purple-600 p-1.5 flex place-items-center gap-1 text-xs text-purple-600;
-  }
-
-  .primary-button {
-    @apply bg-gradient-to-b from-[#3d2769] via-[#7d64b1] to-[#854ef2] px-0.5 drop-shadow-2xl relative;
-  }
-  .primary-button .inner {
-    @apply bg-[#382167] p-2 text-white border-b-[#854ef2] border-b-2 text-sm flex gap-2 items-center drop-shadow-xl drop-shadow-indigo-500;
-  }
-
-  .floating-tag {
-    @apply absolute flex gap-2 items-center border-[0.5] border-purple-200 p-3;
-  }
-
-  .floating-tag p:first-child {
-    @apply text-3xl font-bold;
-  }
-  .floating-tag p:nth-child(2) {
-    @apply text-white text-sm;
-  }
-} */
-
-/* @layer components {
-  #hero {
-    background-image: url(./assets/hero-bg.png);
   }
 } */

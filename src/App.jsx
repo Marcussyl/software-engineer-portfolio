@@ -5,13 +5,12 @@ import { HeroSection } from './sections/Hero';
 import { TechStackSection } from './sections/TechStack';
 
 function App() {
-  
 
   return (
     <div className={"font-mono"}>
       <NavBar />
       {/* HERO Section */}
-      <section id="hero" className="bg-[url('./assets/hero-bg.png')]">
+      <section id="hero" className="bg-[url('./assets/hero-bg.png')] bg-center">
         <div className="section-content">
           <HeroSection />
         </div>
@@ -34,6 +33,14 @@ function App() {
   );
 }
 
-$('#tech-stack .tech-stack-item').css("background-color", "yellow");
+$(window).on('load',() => {
+  const baseFontSize = 15;
+  const val = $('#tech-stack .tech-stack-item').each((idx, el) => {
+    const adjustedFontSize = (($(el).data('value') / 100 + 1) * baseFontSize).toFixed(1);
+    console.log(adjustedFontSize);
+    $(el).css("font-size", `${adjustedFontSize}px`);
+  });
+  console.log("value: "+val);
+})
 
 export default App

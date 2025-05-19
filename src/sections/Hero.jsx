@@ -7,7 +7,6 @@ export const HeroSection = () => {
     >
       <div className="tag flex">
         Hi there
-        {/*<img src="./shake-hand.svg" alt="hand shaking"/>*/}
       </div>
       <div className="gradient-text">
         <h2 className="text-xl">I'm Marcus,</h2>
