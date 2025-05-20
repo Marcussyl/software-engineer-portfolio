@@ -1,7 +1,9 @@
-export const TechStackItem = ({text, value, moreClass}) => {
+export const TechStackItem = ({imgPath, imgAlt}) => {
   return (
-    <div class={`tech-stack-item text-light-white hover:scale-3d cursor-pointer w-fit ${moreClass}`} data-value={value}>
-      {text}
+    <div className="tech-stack-item rounded-sm bg-linear-to-br from-[#5930AC] from-[47%] via-[#2E067E] via-[66%] to-[#EBE4FB] to-[100%] blur">
+      <div className="img-wrapper bg-linear-to-br from-[#FFFFFF] from-[100%] via-transparent via-[50%] to-[#FFFFFF] to-[100%]">
+      </div>
+        <img src={imgPath} alt={imgAlt} />
     </div>
   );
 }

@@ -4,99 +4,10 @@ export const TechStackSection = () => {
   return (
     <div className="flex gap-3 px-5 py-7">
       <div className="logo-container">
-        <div className="grid-item">
-          <div className="">
-            <img
-              src="/assets/tech-icos/ico-js.png"
-              alt="js icon"
-              className=""
-            />
-          </div>
-        </div>
-        <div className="grid-item">
-          <img
-            src="/assets/tech-icos/ico-react.png"
-            alt="js icon"
-            className=""
-          />
-        </div>
-        <div className="grid-item">
-          <img
-            src="/assets/tech-icos/ico-redux.png"
-            alt="js icon"
-            className=""
-          />
-        </div>
-        <div className="grid-item">
-          <img
-            src="/assets/tech-icos/ico-vue.png"
-            alt="js icon"
-            className=""
-          />
-        </div>
-        <div className="grid-item">
-          <img
-            src="/assets/tech-icos/ico-docker.png"
-            alt="js icon"
-            className=""
-          />
-        </div>
-        <div className="grid-item">
-          <img
-            src="/assets/tech-icos/ico-js.png"
-            alt="js icon"
-            className=""
-          />
-        </div>
-        <div className="grid-item">
-          <img
-            src="/assets/tech-icos/ico-js.png"
-            alt="js icon"
-            className=""
-          />
-        </div>
-        <div className="grid-item">
-          <img
-            src="/assets/tech-icos/ico-js.png"
-            alt="js icon"
-            className=""
-          />
-        </div>
-        <div className="grid-item">
-          <img
-            src="/assets/tech-icos/ico-js.png"
-            alt="js icon"
-            className=""
-          />
-        </div>
-        <div className="grid-item">
-          <img
-            src="/assets/tech-icos/ico-js.png"
-            alt="js icon"
-            className=""
-          />
-        </div>
-        <div className="grid-item">
-          <img
-            src="/assets/tech-icos/ico-js.png"
-            alt="js icon"
-            className=""
-          />
-        </div>
-        <div className="grid-item">
-          <img
-            src="/assets/tech-icos/ico-js.png"
-            alt="js icon"
-            className=""
-          />
-        </div>
-        <div className="grid-item">
-          <img
-            src="/assets/tech-icos/ico-js.png"
-            alt="js icon"
-            className=""
-          />
-        </div>
+        <TechStackItem
+          imgPath={"/assets/tech-icos/ico-react.png"}
+          imgAlt={"react icon"}
+        />
         {/* <img src="/assets/tech-icos/ico-react.png" alt="react icon" />
         <img src="/assets/tech-icos/ico-docker.png" alt="docker icon" />
         <img src="/assets/tech-icos/ico-redux.png" alt="redux icon" />
