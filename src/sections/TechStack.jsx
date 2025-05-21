@@ -2,26 +2,52 @@ import { TechStackItem } from "../components/TechStackItem"
 
 export const TechStackSection = () => {
   return (
-    <div className="flex gap-3 px-5 py-7">
-      <div className="logo-container">
-        <TechStackItem
-          imgPath={"/assets/tech-icos/ico-react.png"}
-          imgAlt={"react icon"}
-        />
-        {/* <img src="/assets/tech-icos/ico-react.png" alt="react icon" />
-        <img src="/assets/tech-icos/ico-docker.png" alt="docker icon" />
-        <img src="/assets/tech-icos/ico-redux.png" alt="redux icon" />
-        <img src="/assets/tech-icos/ico-vue.png" alt="vue icon" />
-        <img src="/assets/tech-icos/ico-azure.png" alt="azure icon" />
-        <img src="/assets/tech-icos/ico-jest.png" alt="azure icon" />
-        <img src="/assets/tech-icos/ico-google-cloud.png" alt="azure icon" />
-        <img src="/assets/tech-icos/ico-mocha.png" alt="azure icon" />
-        <img src="/assets/tech-icos/ico-aws.png" alt="azure icon" />
-        <img src="/assets/tech-icos/ico-nodejs.png" alt="azure icon" />
-        <img src="/assets/tech-icos/ico-passportjs.png" alt="azure icon" />
-        <img src="/assets/tech-icos/Frame-9.png" alt="azure icon" /> */}
+    <div className="flex gap-10 px-5 py-7 justify-around">
+      <div className="tect-stack-container flex flex-col gap-5 items-center flex-1">
+        <div className="flex gap-2 py-2 px-6 border-[1px] border-main-purple rounded-[20px]">
+          <p className="whitespace-nowrap">Tech Stack</p>
+          <img src="" alt="icon" className="" />
+        </div>
+        <h2 className="gradient-text text-2xl font-bold">Technologies I Used</h2>
+        <p className="text-[rgb(181,178,186)] text-center text-balance">
+          I've worked with a variety of technologies and frameworks over the years, and I'm always eager to learn new ones. Here are some of the technologies I've used:
+        </p>
+        <div className="flex gap-5 text-[#B5B2BA] w-full justify-evenly">
+          <div>
+            <p className="font-bold">Frontend</p>
+            <ul className="text-sm list-disc marker:text-main-purple ml-[13px]">
+              <li className="mb-2">React</li>
+              <li className="mb-2">Redux</li>
+              <li className="mb-2">Vue</li>
+              <li className="mb-2">Typescript</li>
+              <li className="mb-2">Tailwind</li>
+              <li className="mb-2">Sass</li>
+              <li className="mb-2">HTML</li>
+              <li className="mb-2">CSS</li>
+            </ul>
+          </div>
+          <div>
+            <p className="font-bold">Backend</p>
+            <ul className="text-sm list-disc marker:text-main-purple ml-[13px]">
+              <li className="mb-2">Nodejs</li>
+              <li className="mb-2">Express</li>
+              <li className="mb-2">MongoDB</li>
+              <li className="mb-2">PostgreSQL</li>
+              <li className="mb-2">MySQL</li>
+              <li className="mb-2">SQL</li>
+            </ul>
+          </div>
+          <div>
+            <p className="font-bold">Infrastructure</p>
+            <ul className="text-sm list-disc marker:text-main-purple ml-[13px]">
+              <li className="mb-2">Docker</li>
+              <li className="mb-2">Kubernetes</li>
+              <li className="mb-2">AWS</li>
+              <li className="mb-2">Azure</li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <div className="tect-stack-container"></div>
     </div>
   );
 }

@@ -13,24 +13,29 @@
 
 @layer components {
     .section-content {
-        @apply w-4/5 mx-auto;
+        @apply w-4/5 p-4 mx-auto;
     }
+
     .gradient-text {
         @apply bg-gradient-to-r from-[#864ff3] via-[#9772e2] to-white bg-clip-text text-transparent;
     }
     
     .logo-container {
-      @apply grid grid-cols-4 grid-rows-4 gap-3;
+      @apply grid grid-cols-4 grid-rows-4 gap-3 flex-1;
 
       .grid-item {
-        @apply bg-[#1a0a3a];
+        @apply bg-[#66666624] backdrop-blur-[40px] backdrop-saturate-[1.4];
       }
 
       img {
-        @apply w-[100px] p-[26px];
+        @apply min-w-[50px] p-[15px];
         /* @apply w-[50px] p-[26px] border-1 border-purple-400 bg-linear-to-b from-[#5930AC] via-[#2E067E] to-[#ebe4fb]; */
       }
     }
+
+    /* .tach-stack-container {
+      @apply 
+    } */
 }
 
 /* :root {
