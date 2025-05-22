@@ -13,7 +13,7 @@ export const Projects = () => {
           <div className="mt-3">
             <div className="flex justify-between border-1 border-white p-2">
               <h3 className="font-bold">App Development</h3>
-              <img src="" alt="link icon" className="cursor-pointer"/>
+              <img src="/assets/up-right-arrow.png" alt="link icon" className="cursor-pointer object-contain"/>
             </div>
             <div className="flex flex-wrap gap-3 p-2">
               <div className="card-tag">#school project</div>
@@ -27,7 +27,7 @@ export const Projects = () => {
           <div className="mt-3">
             <div className="flex justify-between border-1 border-white p-2">
               <h3 className="font-bold">App Development</h3>
-              <img src="" alt="link icon" className="cursor-pointer"/>
+              <img src="/assets/up-right-arrow.png" alt="link icon" className="cursor-pointer object-contain"/>
             </div>
             <div className="flex flex-wrap gap-3 p-2">
               <div className="card-tag">#school project</div>
@@ -41,7 +41,7 @@ export const Projects = () => {
           <div className="mt-3">
             <div className="flex justify-between border-1 border-white p-2">
               <h3 className="font-bold">App Development</h3>
-              <img src="" alt="link icon" className="cursor-pointer"/>
+              <img src="/assets/up-right-arrow.png" alt="link icon" className="cursor-pointer object-contain"/>
             </div>
             <div className="flex flex-wrap gap-3 p-2">
               <div className="card-tag">#school project</div>

@@ -51,6 +51,19 @@
     }
 
     /* global classes end */
+
+
+    /* Nav Bar start */
+
+    .section-linker {
+      @apply text-white hover:text-light-purple transition-colors text-base
+    }
+
+    .section-linker.active {
+      @apply underline text-light-purple underline-offset-3
+    }
+
+    /* Nav Bar end */
     
     
     /* Tech Stack Section start */

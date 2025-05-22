@@ -11,25 +11,25 @@ export const NavBar = () => {
         <div className="flex items-center space-x-8">
           <a
             href="#"
-            className="text-white hover:text-purple-400 transition-colors"
+            className="section-linker active"
           >
             Home
           </a>
           <a
             href="#about"
-            className="text-white hover:text-purple-400 transition-colors"
+            className="section-linker"
           >
             About me
           </a>
           <a
             href="#projects"
-            className="text-white hover:text-purple-400 transition-colors"
+            className="section-linker"
           >
             Projects
           </a>
           <a
             href="#contact"
-            className="text-white hover:text-purple-400 transition-colors"
+            className="section-linker"
           >
             Contact
           </a>
