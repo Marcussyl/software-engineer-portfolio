@@ -3,6 +3,7 @@ import './App.css'
 import { NavBar } from './components/NavBar'
 import { HeroSection } from './sections/Hero';
 import { TechStackSection } from './sections/TechStack';
+import { Projects } from './sections/Projects';
 
 function App() {
 
@@ -23,7 +24,9 @@ function App() {
       </section>
       {/* PROJECTS Section */}
       <section id="projects">
-        <div className='section-content'></div>
+        <div className='section-content'>
+          <Projects/>
+        </div>
       </section>
       {/* CONTACT Section */}
       <section id="contact">
