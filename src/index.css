@@ -16,8 +16,20 @@
         @apply w-4/5 p-4 mx-auto;
     }
 
+    .tag {
+      @apply flex gap-2 py-1 px-4 border-[1px] border-main-purple rounded-[20px]
+    }
+
+    .tag p {
+      @apply text-sm
+    }
+
+    .tag img {
+      @apply object-contain w-[16px]
+    }
+
     .gradient-text {
-        @apply bg-gradient-to-r from-[#864ff3] via-[#9772e2] to-white bg-clip-text text-transparent;
+        @apply bg-gradient-to-r from-[#864ff3] via-[#9772e2] to-[#ab97d1] bg-clip-text text-transparent;
     }
     
     .logo-container {
@@ -32,6 +44,44 @@
         /* @apply w-[50px] p-[26px] border-1 border-purple-400 bg-linear-to-b from-[#5930AC] via-[#2E067E] to-[#ebe4fb]; */
       }
     }
+
+    /* .tech-stack-col {
+      position: relative;
+    }
+
+    .tech-stack-col:not(:first-child)::before {
+      content: '';
+      width: 1px;
+      height: 60%;
+      background-color: purple;
+      border-left: 2px dashed purple;
+      position: absolute;
+      left: -60px;
+      top: 30px;
+    } */
+
+    /* Tech Stack Section start */
+    #tech-stack .tech-stack-col {
+      @apply self-start
+    }
+
+    #tech-stack .divider {
+      @apply w-[1px] h-[50%] border-l-2 border-[#3a226c] border-dashed relative top-[-10px]
+    }
+
+    #tech-stack .tech-stack-col .tech-stack-col-title {
+      @apply font-bold
+    }
+
+    #tech-stack .tech-stack-col ul {
+      @apply text-sm list-disc marker:text-main-purple ml-[13px]
+    }
+
+    #tech-stack .tech-stack-col li {
+      @apply mb-1
+    }
+
+    /* Tech Stack Section end */
 
     /* .tach-stack-container {
       @apply 

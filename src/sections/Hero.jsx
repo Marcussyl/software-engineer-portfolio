@@ -5,8 +5,9 @@ export const HeroSection = () => {
     <div
       className="mt-4 flex flex-col justify-center items-center gap-7 w-[80%] mx-auto relative text-center px-7 py-10"
     >
-      <div className="tag flex">
-        Hi there
+      <div className="tag">
+        <p>Hi there</p>
+        <img src="/assets/tag-icons/shake-hand.png"/>
       </div>
       <div className="gradient-text">
         <h2 className="text-xl">I'm Marcus,</h2>
