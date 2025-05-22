@@ -12,12 +12,22 @@
 }
 
 @layer components {
+    /* global classes start */
+
     .section-content {
-        @apply w-4/5 p-4 mx-auto;
+        @apply w-4/5 p-4 mx-auto flex justify-center;
+    }
+
+    .section-title {
+      @apply text-2xl text-center
+    }
+
+    .section-desc {
+      @apply text-[rgb(181,178,186)] text-balance text-center
     }
 
     .tag {
-      @apply flex gap-2 py-1 px-4 border-[1px] border-main-purple rounded-[20px]
+      @apply flex gap-2 py-1 px-4 border-[1px] border-main-purple rounded-[20px] w-fit
     }
 
     .tag p {
@@ -39,36 +49,12 @@
     .gradient-text {
         @apply bg-gradient-to-r from-[#864ff3] via-[#9772e2] to-[#ab97d1] bg-clip-text text-transparent;
     }
+
+    /* global classes end */
     
-    .logo-container {
-      @apply grid grid-cols-4 grid-rows-4 gap-3 flex-1;
-
-      .grid-item {
-        @apply bg-[#66666624] backdrop-blur-[40px] backdrop-saturate-[1.4];
-      }
-
-      img {
-        @apply min-w-[50px] p-[15px];
-        /* @apply w-[50px] p-[26px] border-1 border-purple-400 bg-linear-to-b from-[#5930AC] via-[#2E067E] to-[#ebe4fb]; */
-      }
-    }
-
-    /* .tech-stack-col {
-      position: relative;
-    }
-
-    .tech-stack-col:not(:first-child)::before {
-      content: '';
-      width: 1px;
-      height: 60%;
-      background-color: purple;
-      border-left: 2px dashed purple;
-      position: absolute;
-      left: -60px;
-      top: 30px;
-    } */
-
+    
     /* Tech Stack Section start */
+
     #tech-stack .tech-stack-col {
       @apply self-start
     }
@@ -91,21 +77,21 @@
 
     /* Tech Stack Section end */
 
-    /* .tach-stack-container {
-      @apply 
-    } */
-}
 
-/* :root {
-    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-    color-scheme: light dark;
-    font-synthesis: none;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    --primary-purple: #5f3aa6;
-    --secondary-purple: #382167;
-} */
+    /* Projects Showcase Section start */
+
+    #projects .expandable-card {
+      @apply flex-1 p-4 border-2 border-dashed border-purple-300 rounded-md bg-purple-950 text-white
+    }
+
+    #projects .card-tag {
+      @apply text-sm border-2 border-white py-1 px-[13px] rounded-[18px] whitespace-nowrap
+    }
+
+    /* Projects Showcase Section start */
+
+
+}
 
 body {
     min-width: 320px;

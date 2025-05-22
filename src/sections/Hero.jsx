@@ -11,11 +11,11 @@ export const HeroSection = () => {
       </div>
       <div className="gradient-text">
         <h2 className="text-xl">I'm Marcus,</h2>
-        <h1 className="text-4xl leading-relaxed">
+        <h1 className="section-title text-4xl leading-relaxed">
           Full-Stack Software Engineer
         </h1>
       </div>
-      <p className="description text-[#a29daa] text-balance">
+      <p className="section-desc">
         I'm a full-stack software engineer pashionate about creating responsive,
         user-friendly web experiences with 2 years of experiences in modern
         technologies.

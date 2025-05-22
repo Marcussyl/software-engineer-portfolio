@@ -8,7 +8,7 @@ export const TechStackSection = () => {
           <p className="whitespace-nowrap">Tech Stack</p>
           <img src="/assets/tag-icons/tech-stack.png" alt="icon" className="" />
         </div>
-        <h2 className="gradient-text text-2xl font-bold">
+        <h2 className="gradient-text section-title">
           Technologies I Used
         </h2>
         <p className="text-[rgb(181,178,186)] text-center text-balance">
