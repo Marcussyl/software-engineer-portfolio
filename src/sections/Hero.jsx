@@ -22,9 +22,9 @@ export const HeroSection = () => {
       </p>
       <a
         href=""
-        className="bg-gradient-to-b from-[#3d2769] via-[#7d64b1] to-[#854ef2] px-0.5 drop-shadow-2xl relative"
+        className="glowing-btn "
       >
-        <div className="bg-[#382167] p-2 text-white border-b-[#854ef2] border-b-2 text-sm flex gap-2 items-center drop-shadow-xl drop-shadow-indigo-500">
+        <div className="inner">
           Download CV
           <svg
             width="18"
