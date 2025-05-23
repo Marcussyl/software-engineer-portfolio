@@ -4,6 +4,7 @@ import { NavBar } from './components/NavBar'
 import { HeroSection } from './sections/Hero';
 import { TechStackSection } from './sections/TechStack';
 import { Projects } from './sections/Projects';
+import { Milestone } from './sections/Milestone';
 
 function App() {
 
@@ -23,9 +24,15 @@ function App() {
         </div>
       </section>
       {/* PROJECTS Section */}
-      <section id="projects" style={{background: "url('/assets/grid-bg.png'), url('/assets/light-bg.png')"}}>
+      <section id="projects" style={{background: "url('/assets/grid-bg.png'), url('/assets/light-bg.png')", backgroundSize: "cover", backgroundPosition: "center"}}>
         <div className='section-content'>
           <Projects/>
+        </div>
+      </section>
+      {/* Milestone Section */}
+      <section id="milestone" style={{background: "url('/assets/fancy-bg.svg')"}}>
+        <div className='section-content'>
+          <Milestone/>
         </div>
       </section>
       {/* CONTACT Section */}
