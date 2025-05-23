@@ -51,9 +51,6 @@ importers:
       postcss:
         specifier: ^8.5.3
         version: 8.5.3
-      sass:
-        specifier: ^1.86.3
-        version: 1.86.3
       stylelint:
         specifier: ^16.19.1
         version: 16.19.1
@@ -2185,6 +2182,7 @@ snapshots:
   chokidar@4.0.3:
     dependencies:
       readdirp: 4.1.2
+    optional: true
 
   color-convert@2.0.1:
     dependencies:
@@ -2469,7 +2467,8 @@ snapshots:
 
   ignore@7.0.4: {}
 
-  immutable@5.1.1: {}
+  immutable@5.1.1:
+    optional: true
 
   import-fresh@3.3.1:
     dependencies:
@@ -2700,7 +2699,8 @@ snapshots:
 
   react@19.1.0: {}
 
-  readdirp@4.1.2: {}
+  readdirp@4.1.2:
+    optional: true
 
   require-from-string@2.0.2: {}
 
@@ -2747,6 +2747,7 @@ snapshots:
       source-map-js: 1.2.1
     optionalDependencies:
       '@parcel/watcher': 2.5.1
+    optional: true
 
   scheduler@0.26.0: {}
 
