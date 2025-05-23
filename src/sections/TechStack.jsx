@@ -11,12 +11,12 @@ export const TechStackSection = () => {
         <h2 className="gradient-text section-title">
           Technologies I Used
         </h2>
-        <p className="text-[rgb(181,178,186)] text-center text-balance">
+        <p className="section-desc">
           I've worked with a variety of technologies and frameworks over the
           years, and I'm always eager to learn new ones. Here are some of the
           technologies I've used:
         </p>
-        <div className="flex gap-5 text-[#B5B2BA] w-full justify-evenly items-center">
+        <div className="flex gap-10 text-[#B5B2BA] w-full justify-center items-center">
           <div className="tech-stack-col">
             <p className="tech-stack-col-title">Frontend</p>
             <ul>

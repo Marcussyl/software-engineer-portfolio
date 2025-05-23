@@ -23,7 +23,7 @@ function App() {
         </div>
       </section>
       {/* PROJECTS Section */}
-      <section id="projects">
+      <section id="projects" style={{background: "url('/assets/grid-bg.png'), url('/assets/light-bg.png')"}}>
         <div className='section-content'>
           <Projects/>
         </div>

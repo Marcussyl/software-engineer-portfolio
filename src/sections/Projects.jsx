@@ -3,59 +3,135 @@ export const Projects = () => {
     <div className="flex flex-col justify-center items-center gap-5">
       <div className="tag">
         <p>Projects</p>
-        <img src="/assets/tag-icons/tech-stack.png" alt="icon"/>
+        <img src="/assets/tag-icons/tech-stack.png" alt="icon" />
       </div>
-      <h1 className="gradient-text section-title">Take a Look at the Latest Projects I Have Done</h1>
-      <p className="section-desc">Explore my latest projects, showcasing creativity and precision in design. Each project reflects innovation and user-focused solutions.</p>
-      <div className="flex p-4 gap-2 font-mono">
+      <h1 className="gradient-text section-title">
+        Take a Look at the Latest Projects I Have Done
+      </h1>
+      <p className="section-desc">
+        Explore my latest projects, showcasing creativity and precision in
+        design. Each project reflects innovation and user-focused solutions.
+      </p>
+      <div className="flex py-4 px-10 gap-5">
         <div className="expandable-card">
-          <img src="" alt="project thumbnail" className="h-[150px] border-1 border-white object-contain"/>
+          <img
+            src="/assets/proj-thumbs/image.png"
+            alt="project thumbnail"
+            className="proj-thumb"
+          />
           <div className="mt-3">
-            <div className="flex justify-between border-1 border-white p-2">
-              <h3 className="font-bold">App Development</h3>
-              <img src="/assets/up-right-arrow.png" alt="link icon" className="cursor-pointer object-contain"/>
+            <div className="flex justify-between items-center p-2 ">
+              <h3 className="proj-title">Jammming</h3>
+              <img
+                src="/assets/up-right-arrow.png"
+                alt="link icon"
+                className="round-btn"
+              />
             </div>
             <div className="flex flex-wrap gap-3 p-2">
-              <div className="card-tag">#school project</div>
-              <div className="card-tag">#react</div>
-              <div className="card-tag">#jquery</div>
+              <div className="proj-tag">school project</div>
+              <div className="proj-tag">react</div>
+              <div className="proj-tag">jquery</div>
             </div>
           </div>
         </div>
         <div className="expandable-card">
-          <img src="" alt="project thumbnail" className="h-[150px] border-1 border-white object-contain"/>
+          <img
+            src="/assets/proj-thumbs/image-1.png"
+            alt="project thumbnail"
+            className="proj-thumb"
+          />
           <div className="mt-3">
-            <div className="flex justify-between border-1 border-white p-2">
-              <h3 className="font-bold">App Development</h3>
-              <img src="/assets/up-right-arrow.png" alt="link icon" className="cursor-pointer object-contain"/>
+            <div className="flex justify-between items-center p-2 ">
+              <h3 className="proj-title">AI Racer</h3>
+              <img
+                src="/assets/up-right-arrow.png"
+                alt="link icon"
+                className="round-btn"
+              />
             </div>
             <div className="flex flex-wrap gap-3 p-2">
-              <div className="card-tag">#school project</div>
-              <div className="card-tag">#react</div>
-              <div className="card-tag">#jquery</div>
+              <div className="proj-tag">school project</div>
+              <div className="proj-tag">react</div>
+              <div className="proj-tag">jquery</div>
             </div>
           </div>
         </div>
         <div className="expandable-card">
-          <img src="" alt="project thumbnail" className="h-[150px] border-1 border-white object-contain"/>
+          <img
+            src="/assets/proj-thumbs/image-2.png"
+            alt="project thumbnail"
+            className="proj-thumb"
+          />
           <div className="mt-3">
-            <div className="flex justify-between border-1 border-white p-2">
-              <h3 className="font-bold">App Development</h3>
-              <img src="/assets/up-right-arrow.png" alt="link icon" className="cursor-pointer object-contain"/>
+            <div className="flex justify-between items-center p-2 ">
+              <h3 className="proj-title">Mark Sixer</h3>
+              <img
+                src="/assets/up-right-arrow.png"
+                alt="link icon"
+                className="round-btn"
+              />
             </div>
             <div className="flex flex-wrap gap-3 p-2">
-              <div className="card-tag">#school project</div>
-              <div className="card-tag">#react</div>
-              <div className="card-tag">#jquery</div>
+              <div className="proj-tag">school project</div>
+              <div className="proj-tag">react</div>
+              <div className="proj-tag">jquery</div>
             </div>
           </div>
         </div>
       </div>
-      <div className="glowing-btn">
-        <div className="inner">
-          Show More
+      <div className="round-btn animate-bounce">
+        <img src="/assets/down-arrow.png" alt="arrow icon" />
+      </div>
+
+      {/* Project Detail Card */}
+      <div class="proj-detail-card hidden">
+        <button class="close-btn absolute top-0 right-2">x</button>
+        <div class="basic-info flex-1 flex flex-col gap-5">
+          <img src="/assets/proj-thumbs/image.png" alt="swiper img" class="proj-thumb" />
+          <div class="tags flex gap-2 flex-wrap">
+            <div class="proj-tag">API Integration</div>
+            <div class="proj-tag">Frontend</div>
+            <div class="proj-tag">Responsive</div>
+            <div class="proj-tag">Responsive</div>
+            <div class="proj-tag">Responsive</div>
+          </div>
+        </div>
+        <div class="details flex-1 flex flex-col gap-5">
+          <h2 class="proj-title">Jimming</h2>
+          <div class="overview">
+            <h3 class="proj-subtitle">Overview</h3>
+            <p class="proj-desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores ab vel nam quis aut eligendi quaerat facilis mollitia tempora corporis odio quam ipsam, ad fugit eos est qui eum possimus.</p>
+          </div>
+          <div class="features">
+            <h3 class="proj-subtitle">Key Features</h3>
+            <div class="feature-item flex gap-2">
+              <img src="/assets/tick.png" alt="icon" />
+              <p className="proj-desc">Frontend</p>
+            </div>
+            <div class="feature-item flex gap-2">
+              <img src="/assets/tick.png" alt="icon" />
+              <p className="proj-desc">Responsive Design</p>
+            </div>
+            <div class="feature-item flex gap-2">
+              <img src="/assets/tick.png" alt="icon" />
+              <p className="proj-desc">API Integration</p>
+            </div>
+          </div>
+          <div class="buttons flex gap-5">
+            <a href="" class="glowing-btn">
+              <div className="inner">
+                View Source Code
+                <img src="/assets/github.png" alt="icon" className="object-contain w-[12px]"/>
+              </div>
+            </a>
+            <div class="flex items-center px-2 gap-2 border-2 border-grayish-white">
+              <p>Live Preview</p>
+              <img src="/assets/play.png" alt="icon" className="object-contain w-[12px]"/>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  )
+  );
 }

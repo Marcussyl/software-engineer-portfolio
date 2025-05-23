@@ -7,23 +7,24 @@
 @theme {
     --color-main-purple: #5f3aa6;
     --color-light-purple: #9772e2;
+    --color-dark-purple: #0d061a;
     --color-ambient-purple: #1e103a;
-    --color-grayish-white: #a29daa;
+    --color-grayish-white: rgb(181,178,186);
 }
 
 @layer components {
     /* global classes start */
 
     .section-content {
-        @apply w-4/5 p-4 mx-auto flex justify-center;
+        @apply w-4/5 px-4 py-10 mx-auto flex justify-center;
     }
 
     .section-title {
-      @apply text-2xl text-center
+      @apply text-4xl text-center
     }
 
     .section-desc {
-      @apply text-[rgb(181,178,186)] text-balance text-center
+      @apply text-grayish-white text-balance text-center text-lg
     }
 
     .tag {
@@ -81,7 +82,7 @@
     }
 
     #tech-stack .tech-stack-col ul {
-      @apply text-sm list-disc marker:text-main-purple ml-[13px]
+      @apply text-base list-disc marker:text-main-purple ml-[13px]
     }
 
     #tech-stack .tech-stack-col li {
@@ -94,11 +95,47 @@
     /* Projects Showcase Section start */
 
     #projects .expandable-card {
-      @apply flex-1 p-4 border-2 border-dashed border-purple-300 rounded-md bg-purple-950 text-white
+      @apply flex-1 p-4 border-2 border-dashed border-main-purple rounded-md bg-[rgba(133,78,243,10%)] text-white
     }
 
-    #projects .card-tag {
-      @apply text-sm border-2 border-white py-1 px-[13px] rounded-[18px] whitespace-nowrap
+    #projects .proj-thumb {
+      @apply w-full object-contain rounded
+    }
+
+    #projects .proj-tag {
+      @apply text-sm border-1 border-grayish-white py-1 px-[13px] rounded-[18px] whitespace-nowrap text-grayish-white
+    }
+
+    #projects .proj-title {
+      @apply text-lg text-grayish-white
+    }
+
+    #projects .round-btn {
+      @apply cursor-pointer object-contain p-3 border-1 border-main-purple rounded-full bg-[rgba(56,33,102,25%)] w-[40px]
+    }
+
+    #projects .proj-detail-card {
+      @apply mx-auto text-grayish-white flex flex-col gap-7 p-6 border-2 border-dashed border-main-purple rounded-xl w-[90%] md:flex-row bg-dark-purple
+    }
+
+    #projects .proj-detail-card .proj-title {
+      @apply text-2xl font-bold text-main-purple
+    }
+
+    #projects .proj-detail-card .proj-subtitle {
+      @apply text-lg font-bold text-grayish-white
+    }
+
+    #projects .proj-detail-card .proj-desc {
+      @apply text-base text-grayish-white
+    }
+
+    #projects .feature-item {
+      @apply flex gap-2
+    }
+
+    #projects .feature-item img {
+      @apply object-contain w-[16px]
     }
 
     /* Projects Showcase Section start */
