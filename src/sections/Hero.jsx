@@ -1,13 +1,12 @@
 import { HeroTag } from "../components/HeroTag";
+import * as motion from "motion/react-client";
 
 export const HeroSection = () => {
   return (
-    <div
-      className="mt-4 flex flex-col justify-center items-center gap-7 w-[80%] mx-auto relative text-center px-7 py-10"
-    >
+    <div className="mt-4 flex flex-col justify-center items-center gap-7 w-[80%] mx-auto relative text-center px-7 py-10">
       <div className="tag">
         <p>Hi there</p>
-        <img src="/assets/tag-icons/shake-hand.png"/>
+        <img src="/assets/tag-icons/shake-hand.png" />
       </div>
       <div className="gradient-text">
         <h2 className="text-xl">I'm Marcus,</h2>
@@ -20,10 +19,11 @@ export const HeroSection = () => {
         user-friendly web experiences with 2 years of experiences in modern
         technologies.
       </p>
-      <a
-        href=""
-        className="glowing-btn "
-      >
+      <motion.button
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        className="glowing-btn block"
+      >  
         <div className="inner">
           Download CV
           <svg
@@ -42,7 +42,7 @@ export const HeroSection = () => {
             />
           </svg>
         </div>
-      </a>
+      </motion.button>
       <HeroTag
         number={"05+"}
         desc={"Technologies<br>mastered"}
