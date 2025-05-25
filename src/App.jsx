@@ -20,10 +20,9 @@ function App() {
       const selAccordion = $(this).data('achievement');
       console.log(selAccordion);
       const accordion = $(this).closest('.accordion');
-      accordionItem.find(".accordion-content").slideToggle(400, "linear");
+      $(".accordion-content").not(this).slideUp(200, "linear");
+      accordionItem.find(".accordion-content").slideDown(200, "linear");
       accordion.attr("data-active-accordion", selAccordion);
-      // $(".accordion .thumbnails img").fadeOut();
-      // $(`.accordion .thumbnails img[data-achievement="${selAccordion}"]`).fadeIn();
     };
 
     $(".accordion .accordion-title").on("click", handleClick);
