@@ -17,12 +17,20 @@ function App() {
   useEffect(() => {
     const handleClick = function () {
       const accordionItem = $(this).closest(".accordion-item");
-      const selAccordion = $(this).data('achievement');
-      console.log(selAccordion);
+      const selAccordionId = $(this).data('achievement');
+      const selContent = accordionItem.find(".accordion-content");
+
       const accordion = $(this).closest('.accordion');
-      $(".accordion-content").not(this).slideUp(200, "linear");
-      accordionItem.find(".accordion-content").slideDown(200, "linear");
-      accordion.attr("data-active-accordion", selAccordion);
+      accordion.attr("data-active-accordion", selAccordionId);
+
+      if (selContent.is(":visible")) {
+        return; // Do nothing if already opened
+      }
+
+      $("#milestone .accordion-content").not(selContent).slideUp(400, "linear");
+      accordionItem
+        .find(".accordion-content")
+        .slideDown(200, "linear");
     };
 
     $(".accordion .accordion-title").on("click", handleClick);
