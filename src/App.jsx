@@ -30,7 +30,7 @@ function App() {
         </div>
       </section>
       {/* Milestone Section */}
-      <section id="milestone" style={{background: "url('/assets/fancy-bg.svg')"}}>
+      <section id="milestone" style={{background: "url('/assets/fancy-bg.svg') no-repeat"}}>
         <div className='section-content'>
           <Milestone/>
         </div>

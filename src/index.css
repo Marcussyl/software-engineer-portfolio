@@ -51,17 +51,25 @@
         @apply bg-gradient-to-r from-[#864ff3] via-[#9772e2] to-[#ab97d1] bg-clip-text text-transparent;
     }
 
+    .round-btn {
+      @apply relative cursor-pointer object-contain p-3 border-1 border-main-purple rounded-full bg-[rgba(56,33,102,25%)] w-[40px]
+    }
+
+    /* .round-btn:hover {
+      @apply border-red-500
+    } */
+
     /* global classes end */
 
 
     /* Nav Bar start */
 
     .section-linker {
-      @apply text-white hover:text-light-purple transition-colors text-base
+      @apply text-grayish-white hover:text-light-purple transition-colors text-base
     }
 
     .section-linker.active {
-      @apply underline text-light-purple underline-offset-3
+      @apply underline font-bold text-light-purple underline-offset-3
     }
 
     /* Nav Bar end */
@@ -108,10 +116,6 @@
 
     #projects .proj-title {
       @apply text-lg text-grayish-white
-    }
-
-    #projects .round-btn {
-      @apply cursor-pointer object-contain p-3 border-1 border-main-purple rounded-full bg-[rgba(56,33,102,25%)] w-[40px]
     }
 
     #projects .proj-detail-card {
