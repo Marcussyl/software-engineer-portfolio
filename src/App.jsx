@@ -5,8 +5,33 @@ import { HeroSection } from './sections/Hero';
 import { TechStackSection } from './sections/TechStack';
 import { Projects } from './sections/Projects';
 import { Milestone } from './sections/Milestone';
+import { useEffect } from 'react';
 
 function App() {
+  // useEffect(() => {
+  //   $('.accordion .accordion-title').on('click', function () {
+  //     const accordionItem = $(this).closest('.accordion-item');
+  //     accordionItem.find('.accordion-content').slideToggle();
+  //   })
+  // }, [])
+  useEffect(() => {
+    const handleClick = function () {
+      const accordionItem = $(this).closest(".accordion-item");
+      const selAccordion = $(this).data('achievement');
+      console.log(selAccordion);
+      const accordion = $(this).closest('.accordion');
+      accordionItem.find(".accordion-content").slideToggle(400, "linear");
+      accordion.attr("data-active-accordion", selAccordion);
+      // $(".accordion .thumbnails img").fadeOut();
+      // $(`.accordion .thumbnails img[data-achievement="${selAccordion}"]`).fadeIn();
+    };
+
+    $(".accordion .accordion-title").on("click", handleClick);
+
+    return () => {
+      $(".accordion .accordion-title").off("click", handleClick);
+    };
+  }, []);
 
   return (
     <div className={"font-mono"}>

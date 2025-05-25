@@ -10,132 +10,79 @@ export const Milestone = () => {
         A showcase of certifications, awards, and achievements highlighting
         expertise, innovation, and dedication to front-end development.
       </p>
-      <div class="">
-        <div class="achievement-item grid grid-cols-2 text-white gap-3 mb-3">
+      <div className="accordion" data-active-accordion="aws-practitioner">
+        <div className="thumbnails">
           <img
-            src=""
-            alt="swiper img"
-            class="w-full h-[200px] bg-gray-900 border-2 sticky top-[90px]"
+            src="/assets/proj-thumbs/image.png"
+            alt="aws practitioner"
+            data-achievement="aws-practitioner"
           />
-          <p class="border-2">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis
-            deleniti quidem voluptas, iure at incidunt vel totam. In cupiditate
-            possimus officiis molestiae eaque quisquam expedita animi nostrum
-            asperiores fuga vel amet consectetur, corrupti consequatur itaque
-            magnam. Repellendus ut doloremque aliquam voluptas! Nemo aperiam
-            rerum et culpa iure eos quo laborum labore distinctio! Accusamus
-            porro voluptatum mollitia voluptate dolor quam doloremque. Lorem,
-            ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
-            tempore ex architecto dicta reiciendis doloribus ducimus deleniti
-            molestiae quae, possimus harum cum dolores, quam sed non cupiditate
-            eius. Eveniet, ex? Lorem, ipsum dolor sit amet consectetur
-            adipisicing elit.
-          </p>
+          <img
+            src="/assets/proj-thumbs/image-1.png"
+            alt="hackathon"
+            data-achievement="hackathon"
+          />
+          <img
+            src="/assets/proj-thumbs/image-2.png"
+            alt="java competition"
+            data-achievement="java-competition"
+          />
         </div>
-        <div class="achievement-item grid grid-cols-2 text-white gap-3 mb-3">
-          <img
-            src=""
-            alt="swiper img"
-            class="w-full h-[200px] bg-gray-900 border-2 sticky top-[90px]"
-          />
-          <p class="border-2">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis
-            deleniti quidem voluptas, iure at incidunt vel totam. In cupiditate
-            possimus officiis molestiae eaque quisquam expedita animi nostrum
-            asperiores fuga vel amet consectetur, corrupti consequatur itaque
-            magnam. Repellendus ut doloremque aliquam voluptas! Nemo aperiam
-            rerum et culpa iure eos quo laborum labore distinctio! Accusamus
-            porro voluptatum mollitia voluptate dolor quam doloremque. Lorem,
-            ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
-            tempore ex architecto dicta reiciendis doloribus ducimus deleniti
-            molestiae quae, possimus harum cum dolores, quam sed non cupiditate
-            eius. Eveniet, ex? Lorem, ipsum dolor sit amet consectetur
-            adipisicing elit.
-          </p>
-        </div>
-        <div class="achievement-item grid grid-cols-2 text-white gap-3 mb-3">
-          <img
-            src=""
-            alt="swiper img"
-            class="w-full h-[200px] bg-gray-900 border-2 sticky top-[90px]"
-          />
-          <p class="border-2">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis
-            deleniti quidem voluptas, iure at incidunt vel totam. In cupiditate
-            possimus officiis molestiae eaque quisquam expedita animi nostrum
-            asperiores fuga vel amet consectetur, corrupti consequatur itaque
-            magnam. Repellendus ut doloremque aliquam voluptas! Nemo aperiam
-            rerum et culpa iure eos quo laborum labore distinctio! Accusamus
-            porro voluptatum mollitia voluptate dolor quam doloremque. Lorem,
-            ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
-            tempore ex architecto dicta reiciendis doloribus ducimus deleniti
-            molestiae quae, possimus harum cum dolores, quam sed non cupiditate
-            eius. Eveniet, ex? Lorem, ipsum dolor sit amet consectetur
-            adipisicing elit.
-          </p>
-        </div>
-        <div class="achievement-item grid grid-cols-2 text-white gap-3 mb-3">
-          <img
-            src=""
-            alt="swiper img"
-            class="w-full h-[200px] bg-gray-900 border-2 sticky top-[90px]"
-          />
-          <p class="border-2">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis
-            deleniti quidem voluptas, iure at incidunt vel totam. In cupiditate
-            possimus officiis molestiae eaque quisquam expedita animi nostrum
-            asperiores fuga vel amet consectetur, corrupti consequatur itaque
-            magnam. Repellendus ut doloremque aliquam voluptas! Nemo aperiam
-            rerum et culpa iure eos quo laborum labore distinctio! Accusamus
-            porro voluptatum mollitia voluptate dolor quam doloremque. Lorem,
-            ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
-            tempore ex architecto dicta reiciendis doloribus ducimus deleniti
-            molestiae quae, possimus harum cum dolores, quam sed non cupiditate
-            eius. Eveniet, ex? Lorem, ipsum dolor sit amet consectetur
-            adipisicing elit.
-          </p>
-        </div>
-        <div class="achievement-item grid grid-cols-2 text-white gap-3 mb-3">
-          <img
-            src=""
-            alt="swiper img"
-            class="w-full h-[200px] bg-gray-900 border-2 sticky top-[90px]"
-          />
-          <p class="border-2">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis
-            deleniti quidem voluptas, iure at incidunt vel totam. In cupiditate
-            possimus officiis molestiae eaque quisquam expedita animi nostrum
-            asperiores fuga vel amet consectetur, corrupti consequatur itaque
-            magnam. Repellendus ut doloremque aliquam voluptas! Nemo aperiam
-            rerum et culpa iure eos quo laborum labore distinctio! Accusamus
-            porro voluptatum mollitia voluptate dolor quam doloremque. Lorem,
-            ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
-            tempore ex architecto dicta reiciendis doloribus ducimus deleniti
-            molestiae quae, possimus harum cum dolores, quam sed non cupiditate
-            eius. Eveniet, ex? Lorem, ipsum dolor sit amet consectetur
-            adipisicing elit.
-          </p>
-        </div>
-        <div class="achievement-item grid grid-cols-2 text-white gap-3 mb-3">
-          <img
-            src=""
-            alt="swiper img"
-            class="w-full h-[200px] bg-gray-900 border-2 sticky top-[90px]"
-          />
-          <p class="border-2">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis
-            deleniti quidem voluptas, iure at incidunt vel totam. In cupiditate
-            possimus officiis molestiae eaque quisquam expedita animi nostrum
-            asperiores fuga vel amet consectetur, corrupti consequatur itaque
-            magnam. Repellendus ut doloremque aliquam voluptas! Nemo aperiam
-            rerum et culpa iure eos quo laborum labore distinctio! Accusamus
-            porro voluptatum mollitia voluptate dolor quam doloremque. Lorem,
-            ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
-            tempore ex architecto dicta reiciendis doloribus ducimus deleniti
-            molestiae quae, possimus harum cum dolores, quam sed non cupiditate
-            eius. Eveniet, ex? Lorem, ipsum dolor sit amet consectetur
-            adipisicing elit.
-          </p>
+        <div className="details">
+          <div className="accordion-item">
+            <div
+              className="accordion-title gradient-text"
+              data-achievement="aws-practitioner"
+            >
+              <h2>Lorem ipsum dolor sit amet.</h2>
+              <img
+                src="/assets/up-right-arrow.png"
+                alt="up-right-arrow"
+                className="round-btn"
+              />
+            </div>
+            <div className="accordion-content">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
+              similique ipsam quis quae accusamus rerum, necessitatibus placeat
+              molestias debitis quisquam?
+            </div>
+          </div>
+          <div className="accordion-item">
+            <div
+              className="accordion-title gradient-text"
+              data-achievement="hackathon"
+            >
+              <h2>Lorem ipsum dolor sit amet.</h2>
+              <img
+                src="/assets/up-right-arrow.png"
+                alt="up-right-arrow"
+                className="round-btn"
+              />
+            </div>
+            <div className="accordion-content">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
+              similique ipsam quis quae accusamus rerum, necessitatibus placeat
+              molestias debitis quisquam?
+            </div>
+          </div>
+          <div className="accordion-item">
+            <div
+              className="accordion-title gradient-text"
+              data-achievement="java-competition"
+            >
+              <h2>Lorem ipsum dolor sit amet.</h2>
+              <img
+                src="/assets/up-right-arrow.png"
+                alt="up-right-arrow"
+                className="round-btn"
+              />
+            </div>
+            <div className="accordion-content">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
+              similique ipsam quis quae accusamus rerum, necessitatibus placeat
+              molestias debitis quisquam?
+            </div>
+          </div>
         </div>
       </div>
     </div>

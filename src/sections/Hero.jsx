@@ -1,7 +1,5 @@
 import { HeroTag } from "../components/HeroTag";
 import { motion } from "motion/react";
-// import Float from "../fancy/components/blocks/float";
-import Float from "@/fancy/components/blocks/float.jsx";
 
 export const HeroSection = () => {
   return (
