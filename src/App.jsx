@@ -27,10 +27,10 @@ function App() {
         return; // Do nothing if already opened
       }
 
-      $("#milestone .accordion-content").not(selContent).slideUp(400, "linear");
       accordionItem
         .find(".accordion-content")
         .slideDown(200, "linear");
+      $("#milestone .accordion-content").not(selContent).slideUp(200, "linear");
     };
 
     $(".accordion .accordion-title").on("click", handleClick);
