@@ -1,5 +1,7 @@
 import { HeroTag } from "../components/HeroTag";
-import * as motion from "motion/react-client";
+import { motion } from "motion/react";
+// import Float from "../fancy/components/blocks/float";
+import Float from "@/fancy/components/blocks/float.jsx";
 
 export const HeroSection = () => {
   return (
@@ -23,7 +25,7 @@ export const HeroSection = () => {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         className="glowing-btn block"
-      >  
+      >
         <div className="inner">
           Download CV
           <svg
