@@ -188,7 +188,7 @@
     #milestone .accordion[data-active-accordion="hackathon"] .details .accordion-title[data-achievement="hackathon"] img,
     #milestone .accordion[data-active-accordion="java-competition"] .details .accordion-title[data-achievement="java-competition"] img
     {
-      @apply transform rotate-180 transition-transform duration-300 ease-linear
+      @apply transform rotate-180 transition-transform duration-200 ease-linear
     }
 
     /* Mileston Section end */
