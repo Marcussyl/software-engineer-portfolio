@@ -7,6 +7,12 @@ import { Projects } from './sections/Projects';
 import { Milestone } from './sections/Milestone';
 import { useEffect } from 'react';
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
 function App() {
   useEffect(() => {
     const handleClick = function () {
@@ -14,7 +20,7 @@ function App() {
       const selAccordionId = $(this).data("achievement");
       const accordion = $(this).closest(".accordion");
       const selContent = accordionItem.find(".accordion-content");
-      
+
       accordion.attr("data-active-accordion", selAccordionId);
 
       if (selContent.is(":visible")) {
@@ -74,24 +80,67 @@ function App() {
       {/* TECH STACK Section */}
       <section id="tech-stack">
         <div className="section-content">
-          <TechStackSection/>
+          <TechStackSection />
         </div>
       </section>
       {/* PROJECTS Section */}
-      <section id="projects" style={{background: "url('/assets/grid-bg.png'), url('/assets/light-bg.png')", backgroundSize: "cover", backgroundPosition: "center"}}>
-        <div className='section-content'>
-          <Projects/>
+      <section
+        id="projects"
+        style={{
+          background: "url('/assets/grid-bg.png'), url('/assets/light-bg.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="section-content">
+          <Projects />
         </div>
       </section>
       {/* Milestone Section */}
-      <section id="milestone" style={{background: "url('/assets/fancy-bg.svg') no-repeat"}}>
-        <div className='section-content'>
-          <Milestone/>
+      <section
+        id="milestone"
+        style={{ background: "url('/assets/fancy-bg.svg') no-repeat" }}
+      >
+        <div className="section-content">
+          <Milestone />
         </div>
       </section>
       {/* CONTACT Section */}
       <section id="contact">
-        <div className='section-content'></div>
+        <div className="section-content"></div>
+      </section>
+      <section>
+        <Swiper
+          // cssMode={true}
+          navigation={true}
+          pagination={true}
+          mousewheel={true}
+          keyboard={true}
+          modules={[Navigation, Pagination, Mousewheel, Keyboard]}
+          className="mySwiper w-full border-2 border-red-200 rounded-lg"
+        >
+          <SwiperSlide>
+            <img
+              src="/assets/proj-thumbs/image.png"
+              alt="aws practitioner"
+              data-achievement="aws-practitioner"
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              src="/assets/proj-thumbs/image-1.png"
+              alt="hackathon"
+              data-achievement="hackathon"
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              src="/assets/proj-thumbs/image-2.png"
+              alt="java competition"
+              data-achievement="java-competition"
+            />
+          </SwiperSlide>
+        </Swiper>
       </section>
     </div>
   );

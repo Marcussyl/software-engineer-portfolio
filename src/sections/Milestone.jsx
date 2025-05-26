@@ -1,3 +1,9 @@
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
 export const Milestone = () => {
   return (
     <div className="flex flex-col justify-center items-center gap-5">
