@@ -161,20 +161,34 @@
     #milestone .accordion .details .accordion-item .accordion-title {
       @apply border-b-[1px] border-main-purple cursor-pointer
     }
-    #milestone .accordion .details .accordion-content {
-      @apply hidden text-grayish-white py-3 text-base
-    }
+    /* control accordion thumbnail */
     #milestone .accordion .thumbnails img {
       @apply hidden object-contain w-full rounded
     }
-    #milestone .accordion[data-active-accordion="aws-practitioner"] .thumbnails img[data-achievement="aws-practitioner"] {
+    #milestone .accordion[data-active-accordion="aws-practitioner"] .thumbnails img[data-achievement="aws-practitioner"],
+    #milestone .accordion[data-active-accordion="hackathon"] .thumbnails img[data-achievement="hackathon"],
+    #milestone .accordion[data-active-accordion="java-competition"] .thumbnails img[data-achievement="java-competition"]
+    {
       @apply block
     }
-    #milestone .accordion[data-active-accordion="hackathon"] .thumbnails img[data-achievement="hackathon"] {
-      @apply block
+
+    /* control accordion content */
+    #milestone .accordion .details .accordion-content {
+      @apply max-h-0 text-grayish-white text-base overflow-hidden transition-all duration-500 ease-out
     }
-    #milestone .accordion[data-active-accordion="java-competition"] .thumbnails img[data-achievement="java-competition"] {
-      @apply block
+    #milestone .accordion[data-active-accordion="aws-practitioner"] .details .accordion-content[data-achievement="aws-practitioner"],
+    #milestone .accordion[data-active-accordion="hackathon"] .details .accordion-content[data-achievement="hackathon"],
+    #milestone .accordion[data-active-accordion="java-competition"] .details .accordion-content[data-achievement="java-competition"]
+    {
+      @apply max-h-fit py-3
+    }
+
+    /* control accordion title icon */
+    #milestone .accordion[data-active-accordion="aws-practitioner"] .details .accordion-title[data-achievement="aws-practitioner"] img,
+    #milestone .accordion[data-active-accordion="hackathon"] .details .accordion-title[data-achievement="hackathon"] img,
+    #milestone .accordion[data-active-accordion="java-competition"] .details .accordion-title[data-achievement="java-competition"] img
+    {
+      @apply transform rotate-180 transition-transform duration-500 ease-linear
     }
 
     /* Mileston Section end */

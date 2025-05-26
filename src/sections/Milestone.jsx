@@ -41,7 +41,10 @@ export const Milestone = () => {
                 className=""
               />
             </div>
-            <div className="accordion-content">
+            <div
+              className="accordion-content"
+              data-achievement="aws-practitioner"
+            >
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
               similique ipsam quis quae accusamus rerum, necessitatibus placeat
               molestias debitis quisquam?
@@ -59,7 +62,7 @@ export const Milestone = () => {
                 className=""
               />
             </div>
-            <div className="accordion-content">
+            <div className="accordion-content" data-achievement="hackathon">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
               similique ipsam quis quae accusamus rerum, necessitatibus placeat
               molestias debitis quisquam?
@@ -77,7 +80,10 @@ export const Milestone = () => {
                 className=""
               />
             </div>
-            <div className="accordion-content">
+            <div
+              className="accordion-content"
+              data-achievement="java-competition"
+            >
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
               similique ipsam quis quae accusamus rerum, necessitatibus placeat
               molestias debitis quisquam?
