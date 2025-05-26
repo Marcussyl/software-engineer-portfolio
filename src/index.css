@@ -161,12 +161,6 @@
     #milestone .accordion .details .accordion-item .accordion-title {
       @apply border-b-[1px] border-main-purple cursor-pointer
     }
-    /* #milestone .accordion .details .accordion-item:not(:last-child) .accordion-title {
-      @apply border-b-[1px] border-main-purple cursor-pointer
-    } */
-    /* #milestone .accordion .details .accordion-item:not(:last-child) .accordion-title {
-      @apply after:content-['hello'] after:absolute after:bottom-0 after:left-[2%] after:border-b-1 after:border-main-purple after:w-[96%]
-    } */
     #milestone .accordion .details .accordion-content {
       @apply hidden text-grayish-white py-3 text-base
     }

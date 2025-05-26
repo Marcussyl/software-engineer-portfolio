@@ -8,17 +8,13 @@ import { Milestone } from './sections/Milestone';
 import { useEffect } from 'react';
 
 function App() {
-  // useEffect(() => {
-  //   $('.accordion .accordion-title').on('click', function () {
-  //     const accordionItem = $(this).closest('.accordion-item');
-  //     accordionItem.find('.accordion-content').slideToggle();
-  //   })
-  // }, [])
   useEffect(() => {
     const handleClick = function () {
       const accordionItem = $(this).closest(".accordion-item");
       const selAccordionId = $(this).data('achievement');
       const selContent = accordionItem.find(".accordion-content");
+      // const selImg = $('.accordion .thumbnails').find(`img[data-achievement="${selAccordionId}"]`);
+      // console.log(JSON.stringify(selImg));
 
       const accordion = $(this).closest('.accordion');
       accordion.attr("data-active-accordion", selAccordionId);
@@ -26,6 +22,9 @@ function App() {
       if (selContent.is(":visible")) {
         return; // Do nothing if already opened
       }
+
+      // selImg.fadeIn(200, "linear");
+      // $(".accordion img").not(selImg).fadeOut(100, "linear");
 
       accordionItem
         .find(".accordion-content")
