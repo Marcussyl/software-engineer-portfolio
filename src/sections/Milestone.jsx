@@ -3,7 +3,6 @@ import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { tr } from "motion/react-client";
 
 export const Milestone = () => {
   return (
