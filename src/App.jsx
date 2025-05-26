@@ -10,9 +10,19 @@ import { useEffect } from 'react';
 function App() {
   useEffect(() => {
     const handleClick = function () {
-      const selAccordionId = $(this).data('achievement');
-      const accordion = $(this).closest('.accordion');
+      const accordionItem = $(this).closest(".accordion-item");
+      const selAccordionId = $(this).data("achievement");
+      const accordion = $(this).closest(".accordion");
+      const selContent = accordionItem.find(".accordion-content");
+      
       accordion.attr("data-active-accordion", selAccordionId);
+
+      if (selContent.is(":visible")) {
+        return; // Do nothing if already opened
+      }
+
+      accordionItem.find(".accordion-content").slideDown(200, "linear");
+      $("#milestone .accordion-content").not(selContent).slideUp(200, "linear");
     };
 
     $(".accordion .accordion-title").on("click", handleClick);
