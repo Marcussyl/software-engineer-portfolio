@@ -163,7 +163,7 @@
     }
     /* control accordion thumbnail */
     #milestone .accordion .thumbnails img {
-      @apply hidden object-contain w-full rounded
+      @apply hidden object-contain w-full rounded py-3
     }
     #milestone .accordion[data-active-accordion="aws-practitioner"] .thumbnails img[data-achievement="aws-practitioner"],
     #milestone .accordion[data-active-accordion="hackathon"] .thumbnails img[data-achievement="hackathon"],
@@ -174,7 +174,7 @@
 
     /* control accordion content */
     #milestone .accordion .details .accordion-content {
-      @apply hidden text-grayish-white text-base
+      @apply hidden py-3 text-grayish-white text-base
     }
     /* #milestone .accordion[data-active-accordion="aws-practitioner"] .details .accordion-content[data-achievement="aws-practitioner"],
     #milestone .accordion[data-active-accordion="hackathon"] .details .accordion-content[data-achievement="hackathon"],
