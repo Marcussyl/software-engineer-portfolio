@@ -176,6 +176,9 @@
     #milestone .accordion .details .accordion-content {
       @apply hidden py-3 text-grayish-white text-base
     }
+    #milestone .accordion .details .accordion-content[data-achievement="aws-practitioner"] {
+      @apply block
+    }
     /* #milestone .accordion[data-active-accordion="aws-practitioner"] .details .accordion-content[data-achievement="aws-practitioner"],
     #milestone .accordion[data-active-accordion="hackathon"] .details .accordion-content[data-achievement="hackathon"],
     #milestone .accordion[data-active-accordion="java-competition"] .details .accordion-content[data-achievement="java-competition"]
