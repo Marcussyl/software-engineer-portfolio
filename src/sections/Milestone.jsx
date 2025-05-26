@@ -17,8 +17,8 @@ export const Milestone = () => {
         expertise, innovation, and dedication to front-end development.
       </p>
       <div className="accordion" data-active-accordion="aws-practitioner">
-        <div className="thumbnails">
-          <img
+        <div className="thumbnails overflow-hidden">
+          {/* <img
             src="/assets/proj-thumbs/image.png"
             alt="aws practitioner"
             data-achievement="aws-practitioner"
@@ -32,7 +32,46 @@ export const Milestone = () => {
             src="/assets/proj-thumbs/image-2.png"
             alt="java competition"
             data-achievement="java-competition"
-          />
+          /> */}
+          <Swiper
+            // navigation={true}
+            slidesPerView={1}
+            pagination={{
+              el: ".swiper-pagination", // Use a valid DOM element here
+              type: "bullets",
+              clickable: true,
+            }}
+            modules={[Navigation, Pagination]}
+            className="mySwiper w-[70%] border-3 border-red-300 rounded-lg"
+          >
+            <SwiperSlide className="!w-[300px] border-2 border-orange-300 flex justify-center">
+              <img
+                src="/assets/proj-thumbs/image.png"
+                alt="aws practitioner"
+                className="mx-auto block pb-8 object-contain"
+                data-achievement="aws-practitioner"
+              />
+            </SwiperSlide>
+            <SwiperSlide className="!w-[300px] border-2 border-orange-300">
+              <img
+                src="/assets/proj-thumbs/image.png"
+                alt="aws practitioner"
+                className="mx-auto block pb-8 object-contain"
+                data-achievement="aws-practitioner"
+              />
+            </SwiperSlide>
+            <SwiperSlide className="!w-[300px] border-2 border-orange-300 flex justify-center">
+              <img
+                src="/assets/proj-thumbs/image.png"
+                alt="aws practitioner"
+                className="mx-auto block pb-8 object-contain"
+                data-achievement="aws-practitioner"
+              />
+            </SwiperSlide>
+            <div className="swiper-pagination"></div>
+            {/* <div className="absolute bottom-0 left-0 w-full">
+          </div> */}
+          </Swiper>
         </div>
         <div className="details">
           <div className="accordion-item">

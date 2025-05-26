@@ -8,7 +8,7 @@ import { Milestone } from './sections/Milestone';
 import { useEffect } from 'react';
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
+import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -109,39 +109,49 @@ function App() {
       <section id="contact">
         <div className="section-content"></div>
       </section>
-      <section>
+      {/* <section>
         <Swiper
-          // cssMode={true}
-          navigation={true}
-          pagination={true}
-          mousewheel={true}
-          keyboard={true}
-          modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-          className="mySwiper w-full border-2 border-red-200 rounded-lg"
+          navigation={{
+            nextEl: ".swiper-button-next", // Use a valid DOM element here
+            prevEl: ".swiper-button-prev", // Use a valid DOM element here
+          }}
+          pagination={{
+            el: ".swiper-pagination", // Use a valid DOM element here
+            type: "bullets",
+            clickable: true,
+          }}
+          modules={[Navigation, Pagination]}
+          className="mySwiper w-[50%] border-3 border-red-300 rounded-lg relative"
         >
-          <SwiperSlide>
+          <SwiperSlide className="w-fit border-2 border-orange-300 flex justify-center bg-white">
             <img
               src="/assets/proj-thumbs/image.png"
               alt="aws practitioner"
+              className="mx-auto block pb-8"
               data-achievement="aws-practitioner"
             />
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className="w-fit border-2 border-orange-300 flex justify-center bg-white">
             <img
-              src="/assets/proj-thumbs/image-1.png"
-              alt="hackathon"
-              data-achievement="hackathon"
+              src="/assets/proj-thumbs/image.png"
+              alt="aws practitioner"
+              className="mx-auto block pb-8"
+              data-achievement="aws-practitioner"
             />
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className="w-fit border-2 border-orange-300 flex justify-center bg-white">
             <img
-              src="/assets/proj-thumbs/image-2.png"
-              alt="java competition"
-              data-achievement="java-competition"
+              src="/assets/proj-thumbs/image.png"
+              alt="aws practitioner"
+              className="mx-auto block pb-8"
+              data-achievement="aws-practitioner"
             />
           </SwiperSlide>
+          <div className="swiper-button-next absolute bottom-0 left-[50%]"></div>
+          <div className="swiper-button-prev absolute bottom-0 right-[50%]"></div>
+          <div className="swiper-pagination"></div>
         </Swiper>
-      </section>
+      </section> */}
     </div>
   );
 }

@@ -147,13 +147,16 @@
 
     /* Mileston Section start */
     #milestone .accordion {
-      @apply flex gap-7 justify-center w-[70%]
+      @apply flex gap-2 justify-center w-[90%]
     }
     #milestone .accordion .thumbnails {
       @apply flex-1
     }
+    /* #milestone .accordion .thumbnails .swiper {
+      @apply w-[50%]
+    } */
     #milestone .accordion .details {
-      @apply flex-[1.5]
+      @apply flex-1
     }
     #milestone .accordion .details .accordion-title {
       @apply flex gap-2 items-center justify-between text-lg py-3 relative font-bold
@@ -192,6 +195,10 @@
     #milestone .accordion[data-active-accordion="java-competition"] .details .accordion-title[data-achievement="java-competition"] img
     {
       @apply transform rotate-180 transition-transform duration-200 ease-linear
+    }
+
+    .active-bullet {
+      @apply bg-sky-400
     }
 
     /* Mileston Section end */
@@ -302,6 +309,28 @@ button:focus-visible {
     --sidebar-accent-foreground: oklch(0.205 0 0);
     --sidebar-border: oklch(0.922 0 0);
     --sidebar-ring: oklch(0.708 0 0);
+
+    /* swiper start */
+
+    --swiper-theme-color: #5f3aa6 !important;
+    --swiper-navigation-color: #5f3aa6;
+    --swiper-pagination-color: #5f3aa6;
+    --swiper-pagination-bullet-inactive-color: #5f3aa6;
+    --swiper-pagination-bullet-inactive-opacity: 0.5;
+    --swiper-pagination-bullet-size: 8px;
+    --swiper-pagination-bullet-horizontal-gap: 4px;
+    --swiper-navigation-top-offset: 93%;
+    --swiper-navigation-size: 20px !important;
+    --swiper-navigation-sides-offset: 35%;
+    /* --swiper-pagination-bullet-active-size: 10px; */
+    /* --swiper-pagination-bullet-active-color: #5f3aa6; */
+    /* --swiper-navigation-width: 44px;
+    --swiper-navigation-height: 44px;
+    --swiper-navigation-border-radius: 50%;
+    --swiper-navigation-button-size: 20px; */
+    /* --swiper-navigation-button-color: #5f3aa6; */
+
+    /* swiper end */
 }
 
 .dark {
