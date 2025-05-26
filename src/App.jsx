@@ -5,6 +5,9 @@ import { HeroSection } from './sections/Hero';
 import { TechStackSection } from './sections/TechStack';
 import { Projects } from './sections/Projects';
 import { Milestone } from './sections/Milestone';
+import { Contacts } from './sections/Contacts';
+import { LampContainer } from './components/Lamp';
+import { LampDemo } from './components/Lamp';
 import { useEffect } from 'react';
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -106,52 +109,31 @@ function App() {
         </div>
       </section>
       {/* CONTACT Section */}
-      <section id="contact">
-        <div className="section-content"></div>
+      <section
+        id="contact"
+        // className="relative after:content-[''] after:absolute after:top-0 after:left-[25%] after:w-[50%] after:h-2 after:bg-main-purple after:drop-shadow-xl after:shadow-[0_20px_45px_#5f3aa6]"
+      >
+        <div className="section-content">
+          <Contacts />
+        </div>
       </section>
-      {/* <section>
-        <Swiper
-          navigation={{
-            nextEl: ".swiper-button-next", // Use a valid DOM element here
-            prevEl: ".swiper-button-prev", // Use a valid DOM element here
-          }}
-          pagination={{
-            el: ".swiper-pagination", // Use a valid DOM element here
-            type: "bullets",
-            clickable: true,
-          }}
-          modules={[Navigation, Pagination]}
-          className="mySwiper w-[50%] border-3 border-red-300 rounded-lg relative"
-        >
-          <SwiperSlide className="w-fit border-2 border-orange-300 flex justify-center bg-white">
-            <img
-              src="/assets/proj-thumbs/image.png"
-              alt="aws practitioner"
-              className="mx-auto block pb-8"
-              data-achievement="aws-practitioner"
-            />
-          </SwiperSlide>
-          <SwiperSlide className="w-fit border-2 border-orange-300 flex justify-center bg-white">
-            <img
-              src="/assets/proj-thumbs/image.png"
-              alt="aws practitioner"
-              className="mx-auto block pb-8"
-              data-achievement="aws-practitioner"
-            />
-          </SwiperSlide>
-          <SwiperSlide className="w-fit border-2 border-orange-300 flex justify-center bg-white">
-            <img
-              src="/assets/proj-thumbs/image.png"
-              alt="aws practitioner"
-              className="mx-auto block pb-8"
-              data-achievement="aws-practitioner"
-            />
-          </SwiperSlide>
-          <div className="swiper-button-next absolute bottom-0 left-[50%]"></div>
-          <div className="swiper-button-prev absolute bottom-0 right-[50%]"></div>
-          <div className="swiper-pagination"></div>
-        </Swiper>
-      </section> */}
+      <section>
+        {/* <LampContainer>
+          <motion.h1
+            initial={{ opacity: 0.5, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              delay: 0.3,
+              duration: 0.8,
+              ease: "easeInOut",
+            }}
+            className="mt-8 bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl"
+          >
+            Build lamps <br /> the right way
+          </motion.h1>
+        </LampContainer> */}
+        <LampDemo/>
+      </section>
     </div>
   );
 }

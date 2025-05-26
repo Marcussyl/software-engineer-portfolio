@@ -203,6 +203,20 @@
 
     /* Mileston Section end */
 
+    /* Contacts Section start */
+    .input-wrapper {
+      @apply bg-linear-to-r from-purple-400 to-sky-300 p-0.5 rounded
+    }
+
+    label {
+      @apply text-grayish-white mb-1 block
+    }
+
+    input, textarea {
+      @apply block w-full rounded-sm bg-white p-2
+    }
+    /* Contacts Section end */
+
 }
 
 body {
