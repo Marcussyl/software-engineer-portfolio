@@ -3,6 +3,7 @@ import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { tr } from "motion/react-client";
 
 export const Milestone = () => {
   return (
@@ -35,36 +36,41 @@ export const Milestone = () => {
           /> */}
           <Swiper
             // navigation={true}
+            autoplay={true}
+            loop={true}
             slidesPerView={1}
+            cssMode={true}
+            mousewheel={true}
+            keyboard={true}
             pagination={{
               el: ".swiper-pagination", // Use a valid DOM element here
               type: "bullets",
               clickable: true,
             }}
-            modules={[Navigation, Pagination]}
-            className="mySwiper w-[70%] border-3 border-red-300 rounded-lg"
+            modules={[Navigation, Pagination, Mousewheel, Keyboard]}
+            className="mySwiper w-[90%] rounded-lg"
           >
-            <SwiperSlide className="!w-[300px] border-2 border-orange-300 flex justify-center">
+            <SwiperSlide className="!w-full flex justify-center">
               <img
                 src="/assets/proj-thumbs/image.png"
                 alt="aws practitioner"
-                className="mx-auto block pb-8 object-contain"
+                className="mx-auto pb-8 object-contain"
                 data-achievement="aws-practitioner"
               />
             </SwiperSlide>
-            <SwiperSlide className="!w-[300px] border-2 border-orange-300">
+            <SwiperSlide className="!w-full">
               <img
                 src="/assets/proj-thumbs/image.png"
                 alt="aws practitioner"
-                className="mx-auto block pb-8 object-contain"
+                className="mx-auto pb-8 object-contain"
                 data-achievement="aws-practitioner"
               />
             </SwiperSlide>
-            <SwiperSlide className="!w-[300px] border-2 border-orange-300 flex justify-center">
+            <SwiperSlide className="!w-full flex justify-center">
               <img
                 src="/assets/proj-thumbs/image.png"
                 alt="aws practitioner"
-                className="mx-auto block pb-8 object-contain"
+                className="mx-auto pb-8 object-contain"
                 data-achievement="aws-practitioner"
               />
             </SwiperSlide>
