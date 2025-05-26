@@ -36,9 +36,9 @@ export const Milestone = () => {
             >
               <h2>Lorem ipsum dolor sit amet.</h2>
               <img
-                src="/assets/up-right-arrow.png"
+                src="/assets/google-down-arrow.svg"
                 alt="up-right-arrow"
-                className="round-btn"
+                className=""
               />
             </div>
             <div className="accordion-content">
@@ -54,9 +54,9 @@ export const Milestone = () => {
             >
               <h2>Lorem ipsum dolor sit amet.</h2>
               <img
-                src="/assets/up-right-arrow.png"
+                src="/assets/google-down-arrow.svg"
                 alt="up-right-arrow"
-                className="round-btn"
+                className=""
               />
             </div>
             <div className="accordion-content">
@@ -72,9 +72,9 @@ export const Milestone = () => {
             >
               <h2>Lorem ipsum dolor sit amet.</h2>
               <img
-                src="/assets/up-right-arrow.png"
+                src="/assets/google-down-arrow.svg"
                 alt="up-right-arrow"
-                className="round-btn"
+                className=""
               />
             </div>
             <div className="accordion-content">
