@@ -2,32 +2,45 @@
 
 export const Contacts = () => {
   return (
-    <div className="flex flex-col items-center">
-      <h1 className="section-title gradient-text">Get in touch with me</h1>
+    <div className="flex flex-col items-center pt-10">
+      {/* <h1 className="section-title gradient-text">Get in touch with me</h1> */}
       {/* <p className="section-desc"></p> */}
-      <div class="flex flex-col items-center bg-linear-to-br from-purple-500 to-grayish-white p-5 m-5 mx-auto rounded-lg">
-        <h2 class="text-grayish-white font-bold text-2xl">Get in touch</h2>
+      <div
+        class="flex flex-col items-center px-10 pt-5 pb-10 m-5 mx-auto rounded-lg border-2 border-dashed border-main-purple max-w-[500px]"
+        style={{
+          background:
+            "linear-gradient(to bottom right, #261a42 0%, #1e0e3b 20%, #140534 50%, #1e0e3d 80%, #281c44 90%, #281c44 100%)",
+        }}
+      >
+        <h2 class="gradient-text font-bold text-2xl">Get in touch</h2>
+        <br />
         <form action="https://example.com/submit" class="">
           <label for="name">Name</label>
           <div class="input-wrapper">
-            <input id="name" type="text" placeholder="Chan Tai Man"/>
+            <input id="name" type="text" placeholder="Chan Tai Man" />
           </div>
-          <br/>
+          <br />
           <label for="email">Email</label>
           <div class="input-wrapper">
-            <input id="email" type="email" placeholder="1234@example.com"/>
+            <input id="email" type="email" placeholder="1234@example.com" />
           </div>
-          <br/>
+          <br />
           <label for="msg">Message</label>
           <div class="input-wrapper">
-            <textarea id="msg" name="msg" rows="4" cols="50" placeholder="Write your message here"></textarea>
+            <textarea
+              id="msg"
+              name="msg"
+              rows="4"
+              cols="50"
+              placeholder="Write your message here"
+            ></textarea>
           </div>
-          <br/>
-          <button type="submit" class="glowing-btn block mx-auto">
-            <div class="inner">Submit message</div>
+          <br />
+          <button type="submit" class="glowing-btn block mx-auto w-full">
+            <div class="inner justify-center">Submit message</div>
           </button>
         </form>
       </div>
     </div>
-  )
+  );
 }

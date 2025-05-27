@@ -205,7 +205,7 @@
 
     /* Contacts Section start */
     .input-wrapper {
-      @apply bg-linear-to-r from-purple-400 to-sky-300 p-0.5 rounded
+      @apply bg-linear-to-r from-[#854EF3] to-[#AC9AD0] p-[1.5px] rounded-[10px]
     }
 
     label {
@@ -213,7 +213,9 @@
     }
 
     input, textarea {
-      @apply block w-full rounded-sm bg-white p-2
+      background: linear-gradient(to bottom right, #1f0c44, #271746);
+      @apply block w-full rounded-sm p-2 text-grayish-white text-sm
+      /* @apply block w-full rounded-sm bg-linear-to-br from-[#6F3ED0] to-[#4B3578] p-2 */
     }
     /* Contacts Section end */
 
