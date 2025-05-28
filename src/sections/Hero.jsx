@@ -1,7 +1,13 @@
 import { HeroTag } from "../components/HeroTag";
 import { motion } from "motion/react";
+import { useTypewriter } from "../components/useTypewriter";
 
 export const HeroSection = () => {
+  const displayText = useTypewriter(
+    "I'm a full-stack software engineer passionate about creating responsive, user-friendly web experiences with 2 years of experience in modern technologies.",
+    70
+  );
+
   return (
     <div className="mt-4 flex flex-col justify-center items-center gap-7 w-[80%] mx-auto relative text-center px-7 py-10">
       <div className="tag">
@@ -15,9 +21,7 @@ export const HeroSection = () => {
         </h1>
       </div>
       <p className="section-desc inline-block typewriter-effect">
-        I'm a full-stack software engineer pashionate about creating responsive,
-        user-friendly web experiences with 2 years of experiences in modern
-        technologies.
+        {displayText}
         <span className="w-3 h-3 inline-block border-b-2 animate-blinking-caret"></span>
       </p>
       <motion.button
