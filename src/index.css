@@ -228,6 +228,14 @@
       @apply block w-full rounded-[10px] p-2 text-grayish-white text-sm
       /* @apply block w-full rounded-sm bg-linear-to-br from-[#6F3ED0] to-[#4B3578] p-2 */
     }
+
+    .social-medias-container {
+      @apply flex gap-4 items-center justify-center mt-6
+    }
+
+    .social-medias-container img {
+      @apply object-contain w-[40px] h-[40px] p-2 border-1 rounded-full border-main-purple cursor-pointer transition-transform duration-200 ease-in-out hover:scale-110
+    }
     /* Contacts Section end */
 
 }

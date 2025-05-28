@@ -50,6 +50,11 @@ export const Contacts = () => {
             </div>
           </motion.button>
         </form>
+        <div className="social-medias-container">
+          <a href=""><img src="/assets/social-media/facebook.png" alt="" /></a>
+          <a href=""><img src="/assets/social-media/github.png" alt="" /></a>
+          <a href=""><img src="/assets/social-media/linkedin.png" alt="" /></a>
+        </div>
       </div>
     </div>
   );
