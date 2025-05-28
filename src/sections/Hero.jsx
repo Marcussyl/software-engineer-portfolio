@@ -14,10 +14,11 @@ export const HeroSection = () => {
           Full-Stack Software Engineer
         </h1>
       </div>
-      <p className="section-desc">
+      <p className="section-desc inline-block typewriter-effect">
         I'm a full-stack software engineer pashionate about creating responsive,
         user-friendly web experiences with 2 years of experiences in modern
         technologies.
+        <span className="w-3 h-3 inline-block border-b-2 animate-blinking-caret"></span>
       </p>
       <motion.button
         whileHover={{ scale: 1.1 }}

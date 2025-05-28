@@ -13,6 +13,13 @@
     --color-dark-purple: #0d061a;
     --color-ambient-purple: #1e103a;
     --color-grayish-white: rgb(181,178,186);
+
+    --animate-blinking-caret: blinking-caret .5s infinite;
+
+    @keyframes blinking-caret {
+      from, to { border-color: transparent }
+      50% { border-color: #5f3aa6 }
+    }
 }
 
 @layer components {
@@ -75,6 +82,10 @@
     }
 
     /* Nav Bar end */
+
+    /* Hero Section start */
+  
+    /* Hero Section end */
 
     /* Tech Stack Section start */
 
@@ -214,7 +225,7 @@
 
     input, textarea {
       background: linear-gradient(to bottom right, #1f0c44, #271746);
-      @apply block w-full rounded-sm p-2 text-grayish-white text-sm
+      @apply block w-full rounded-[10px] p-2 text-grayish-white text-sm
       /* @apply block w-full rounded-sm bg-linear-to-br from-[#6F3ED0] to-[#4B3578] p-2 */
     }
     /* Contacts Section end */
