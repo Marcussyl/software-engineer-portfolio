@@ -215,26 +215,30 @@
     /* Mileston Section end */
 
     /* Contacts Section start */
-    .input-wrapper {
+    #contact .input-wrapper {
       @apply bg-linear-to-r from-[#854EF3] to-[#AC9AD0] p-[1.5px] rounded-[10px]
     }
 
-    label {
+    #contact label {
       @apply text-grayish-white mb-1 block
     }
 
-    input, textarea {
+    #contact input, textarea {
       background: linear-gradient(to bottom right, #1f0c44, #271746);
       @apply block w-full rounded-[10px] p-2 text-grayish-white text-sm
       /* @apply block w-full rounded-sm bg-linear-to-br from-[#6F3ED0] to-[#4B3578] p-2 */
     }
 
-    .social-medias-container {
+    #contact .social-medias-container {
       @apply flex gap-4 items-center justify-center mt-6
     }
 
-    .social-medias-container img {
-      @apply object-contain w-[40px] h-[40px] p-2 border-1 rounded-full border-main-purple cursor-pointer transition-transform duration-200 ease-in-out hover:scale-110
+    #contact .social-medias-container a {
+      @apply flex justify-center items-center w-[40px] h-[40px] p-2 border-1 rounded-full border-main-purple
+    }
+
+    #contact .social-medias-container a img {
+      @apply object-contain 
     }
     /* Contacts Section end */
 
