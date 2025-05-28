@@ -6,8 +6,6 @@ import { TechStackSection } from './sections/TechStack';
 import { Projects } from './sections/Projects';
 import { Milestone } from './sections/Milestone';
 import { Contacts } from './sections/Contacts';
-import { LampContainer } from './components/Lamp';
-import { LampDemo } from './components/Lamp';
 import { useEffect } from 'react';
 
 import { Swiper, SwiperSlide } from "swiper/react";

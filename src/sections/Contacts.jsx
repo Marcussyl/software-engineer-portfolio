@@ -1,4 +1,4 @@
-
+import { motion } from "motion/react";
 
 export const Contacts = () => {
   return (
@@ -36,11 +36,21 @@ export const Contacts = () => {
             ></textarea>
           </div>
           <br />
-          <button type="submit" class="glowing-btn block mx-auto w-full">
-            <div class="inner justify-center">Submit message</div>
-          </button>
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.9 }}
+            className="glowing-btn block"
+            type="submit"
+            class="glowing-btn block mx-auto w-full rounded-[10px]"
+          >
+            <div class="inner justify-center rounded-[10px]">
+              Submit message
+              <img src="/assets/mail.svg" alt="mail icon" />
+              <img src="/assets/plane.svg" alt="plane icon" />
+            </div>
+          </motion.button>
         </form>
       </div>
     </div>
   );
-}
+};
