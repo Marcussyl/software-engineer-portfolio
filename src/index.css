@@ -18,7 +18,7 @@
 
     @keyframes blinking-caret {
       from, to { border-color: transparent }
-      50% { border-color: #5f3aa6 }
+      50% { border-color: var(--color-main-purple) }
     }
 }
 
