@@ -33,7 +33,7 @@ export const Contacts = () => {
   }
 
   return (
-    <div className="flex flex-col items-center pt-10 m-5">
+    <div className="flex flex-col items-center pt-10 m-5 relative">
       <motion.div
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}

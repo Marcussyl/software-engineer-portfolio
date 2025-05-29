@@ -240,6 +240,21 @@
     #contact .social-medias-container a img {
       @apply object-contain 
     }
+
+    #contact .namecard-container span img {
+      width: 0px;
+      height: 60px;
+      /* object-fit: contain; */
+      /* transform-origin: center; */
+      /* transform: scale(0); */
+      transition: width .3s ease-out;
+      display: inline-block;
+    }
+
+    #contact .namecard-container span:hover img {
+      /* transform: scale(1); */
+      width: 100px;
+    }
     /* Contacts Section end */
 
 }
