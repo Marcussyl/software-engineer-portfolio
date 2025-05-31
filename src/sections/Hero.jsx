@@ -15,7 +15,7 @@ export const HeroSection = () => {
         <p>Hi there</p>
         <img src="/assets/tag-icons/shake-hand.png" />
       </div>
-      <TextRotate/>
+      {/* <TextRotate/> */}
       <div className="gradient-text">
         <h2 className="text-xl">I'm Marcus,</h2>
         <h1 className="section-title text-4xl leading-relaxed">
