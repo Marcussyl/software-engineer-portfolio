@@ -37,7 +37,7 @@ export const Contacts = () => {
       <motion.div
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
-        class="transform-3d flex flex-col items-center px-10 pt-5 pb-10 mx-auto rounded-lg border-2 border-dashed border-main-purple max-w-[500px]"
+        className="transform-3d flex flex-col items-center px-10 pt-5 pb-10 mx-auto rounded-lg border-2 border-dashed border-main-purple max-w-[500px]"
         style={{
           rotateX,
           rotateY,
@@ -46,23 +46,23 @@ export const Contacts = () => {
         }}
       >
         <div className="inner transform-3d translate-z-[75px]">
-          <h2 class="gradient-text font-bold text-2xl text-center">
+          <h2 className="gradient-text font-bold text-2xl text-center">
             Get in touch
           </h2>
           <br />
-          <form action="https://example.com/submit" class="">
-            <label for="name">Name</label>
-            <div class="input-wrapper">
+          <form action="https://example.com/submit" className="">
+            <label htmlFor="name">Name</label>
+            <div className="input-wrapper">
               <input id="name" type="text" placeholder="Chan Tai Man" />
             </div>
             <br />
-            <label for="email">Email</label>
-            <div class="input-wrapper">
+            <label htmlFor="email">Email</label>
+            <div className="input-wrapper">
               <input id="email" type="email" placeholder="1234@example.com" />
             </div>
             <br />
-            <label for="msg">Message</label>
-            <div class="input-wrapper">
+            <label htmlFor="msg">Message</label>
+            <div className="input-wrapper">
               <textarea
                 id="msg"
                 name="msg"
@@ -77,9 +77,9 @@ export const Contacts = () => {
               // whileTap={{ scale: 0.9 }}
               className="glowing-btn block mx-auto w-full rounded-[10px] cursor-pointer"
               type="submit"
-              // class="glowing-btn block mx-auto w-full rounded-[10px] !cursor-pointer"
+              // className="glowing-btn block mx-auto w-full rounded-[10px] !cursor-pointer"
             >
-              <div class="inner justify-center rounded-[10px] !cursor-pointer">
+              <div className="inner justify-center rounded-[10px] !cursor-pointer">
                 Submit message
                 <img src="/assets/mail.svg" alt="mail icon" />
                 <img src="/assets/plane.svg" alt="plane icon" />
@@ -90,9 +90,9 @@ export const Contacts = () => {
               whileTap={{ scale: 0.9 }}
               className="glowing-btn block w-full cursor-pointer"
               type="submit"
-              // class="glowing-btn block mx-auto w-full rounded-[10px] !cursor-pointer"
+              // className="glowing-btn block mx-auto w-full rounded-[10px] !cursor-pointer"
             >
-              <div class="inner justify-center rounded-[10px] !cursor-pointer">
+              <div className="inner justify-center rounded-[10px] !cursor-pointer">
                 Submit message
                 <img src="/assets/mail.svg" alt="mail icon" />
                 <img src="/assets/plane.svg" alt="plane icon" />
