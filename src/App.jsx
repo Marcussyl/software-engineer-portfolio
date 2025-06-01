@@ -39,6 +39,97 @@ function App() {
     };
   }, []);
 
+  useEffect(() => {
+    const expandableCards = $(".expandable-card");
+    const prevState = {};
+    const maxT = 50;
+    
+    expandableCards.each(function() {
+      const $card = $(this);
+
+      $card.on('mouseenter', function() {
+        const rect = this.getBoundingClientRect();
+        if(prevState.time && (Date.now() - prevState.time) <= maxT) {
+          console.log('transition start...');
+          $card.find("span").css({
+            opacity: "50",
+            translate: `100px 100px 0`,
+            "transition": "opacity 300ms ease-out 50ms, translate 300ms ease-out",
+            // transform: `translate3d(${rect.left-prevState.left}, ${rect.top-prevState.top}, 0)`,
+          });
+        } else {
+          $card.find("span").css({
+            opacity: "50",
+            // "transition-delay": "50ms",
+          });
+        }
+      })
+
+      $card.on("mouseleave", function () {
+        const rect = this.getBoundingClientRect();
+        Object.assign(prevState, {
+          time: Date.now(),
+          el: $(this),
+          left: rect.left,
+          top: rect.top
+        })
+        // console.log(prevState);
+        
+        // console.log(rect);
+        $card.find("span").css({
+          opacity: "0",
+          translate: `0 0 0`,
+          transition: "opacity 300ms ease-out 50ms, translate 300ms ease-out",
+          // "transform": `translate3d(${prevState.left}, ${prevState.top}, 0)`
+        });
+      });
+    })
+  }, [])
+
+  useEffect(() => {
+    const $cardBg = $('.card-bg');
+    let prevState = null;
+
+    // mouse enter handler
+    $('.card').on('mouseenter', function() {
+      // get position of curr card
+      const rect = this.getBoundingClientRect();
+
+      // cal the x y change if prevState is not empty
+      if(prevState) {
+        console.log("prevState is not empty");
+        // console.log(Object.keys(prevState));
+        const xChange = rect.left - prevState.left;
+        const yChange = rect.top - prevState.top;
+        console.log(`xChange: ${xChange}, yChange: ${yChange}`);
+        console.log(`translate(${xChange}px, ${yChange}px)`);
+
+        $cardBg.css({
+          transform: `translate(${xChange}px, ${yChange}px)`
+        })
+      }
+
+
+      $cardBg.css({
+        'opacity': '1'
+      })
+    })
+
+
+    // mouse leave handler
+    $('.card').on('mouseleave', function() {
+      // store curr card info in prevState
+      const rect = this.getBoundingClientRect();
+      prevState = {};
+      Object.assign(prevState, {
+        left: rect.left,
+        top: rect.top,
+        el: $(this),
+        time: Date.now()
+      })
+    })
+  }, [])
+
   // useEffect(() => {
   //   const heroSectionDesc = "I'm a full-stack software engineer pashionate about creating responsive, user-friendly web experiences with 2 years of experiences in modern technologies."
   //   // let i = 0;
@@ -118,18 +209,31 @@ function App() {
 
         </div>
       </section>
+      <section>
+        <div className='cards-container'>
+          <div className="card">
+            <span className='card-bg'></span>
+          </div>
+          <div className="card"></div>
+          <div className="card"></div>
+          <div className="card"></div>
+          <div className="card"></div>
+          <div className="card"></div>
+          <div className="card"></div>
+          <div className="card"></div>
+          <div className="card"></div>
+        </div>
+      </section>
     </div>
   );
 }
 
 // $(window).on('load',() => {
-//   const baseFontSize = 15;
-//   const val = $('#tech-stack .tech-stack-item').each((idx, el) => {
-//     const adjustedFontSize = (($(el).data('value') / 100 + 1) * baseFontSize).toFixed(1);
-//     console.log(adjustedFontSize);
-//     $(el).css("font-size", `${adjustedFontSize}px`);
-//   });
-//   console.log("value: "+val);
+//   const expandableCards = $('.expandable-cards');
+//   console.log(expandableCards.length);
 // })
+
+// const expandableCards = $(".expandable-cards");
+// console.log(expandableCards.length);
 
 export default App

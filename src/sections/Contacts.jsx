@@ -21,7 +21,6 @@ export const Contacts = () => {
 
     const xPct = mouseX / width - 0.5;
     const yPct = mouseY / height - 0.5;
-    console.log({xPct, yPct});
 
     x.set(xPct);
     y.set(yPct);

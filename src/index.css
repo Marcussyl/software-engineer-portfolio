@@ -114,7 +114,12 @@
     /* Projects Showcase Section start */
 
     #projects .expandable-card {
-      @apply flex-1 p-4 border-2 border-dashed border-main-purple rounded-md bg-[rgba(133,78,243,10%)] text-white
+      @apply flex-1 p-4 border-2 border-dashed border-main-purple rounded-md bg-[rgba(133,78,243,10%)] text-white relative
+      /* @apply flex-1 p-4 border-2 border-dashed border-main-purple rounded-md bg-[rgba(133,78,243,10%)] text-white relative hover:shadow-xl hover:shadow-indigo-500 ease-out transition-all duration-200 */
+    }
+
+    #projects .expandable-card .moving-bg {
+      @apply absolute inset-0 w-full h-full bg-purple-400 opacity-0 -z-5 transition-all duration-300 translate-0
     }
 
     #projects .proj-thumb {
@@ -428,4 +433,30 @@ button:focus-visible {
   body {
     @apply bg-background text-foreground;
     }
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.card {
+  width: 200px;
+  height: 200px;
+  background-color: indigo;
+  opacity: 0.5;
+  position: relative;
+}
+
+.card-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-color: orangered;
+  z-index: -1;
+  transform: translate(0, 0);
+  opacity: 0;
+  transition: transform 300ms ease-out, opacity 20ms ease-out;
 }
