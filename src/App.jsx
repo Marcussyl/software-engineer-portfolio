@@ -55,7 +55,7 @@ function App() {
             opacity: "50",
             translate: `100px 100px 0`,
             "transition": "opacity 300ms ease-out 50ms, translate 300ms ease-out",
-            // transform: `translate3d(${rect.left-prevState.left}, ${rect.top-prevState.top}, 0)`,
+            transform: `translate3d(${rect.left-prevState.left}, ${rect.top-prevState.top}, 0)`,
           });
         } else {
           $card.find("span").css({
@@ -97,11 +97,12 @@ function App() {
 
       // cal the x y change if prevState is not empty
       if(prevState) {
-        console.log("prevState is not empty");
+        // console.log("prevState is not empty");
         // console.log(Object.keys(prevState));
         const xChange = rect.left - prevState.left;
         const yChange = rect.top - prevState.top;
-        console.log(`xChange: ${xChange}, yChange: ${yChange}`);
+        // console.log(`xChange: ${xChange}, yChange: ${yChange}`);
+        console.log("mouse enter:");
         console.log(`translate(${xChange}px, ${yChange}px)`);
 
         $cardBg.css({
@@ -120,13 +121,15 @@ function App() {
     $('.card').on('mouseleave', function() {
       // store curr card info in prevState
       const rect = this.getBoundingClientRect();
-      prevState = {};
-      Object.assign(prevState, {
+      prevState = {
         left: rect.left,
         top: rect.top,
         el: $(this),
-        time: Date.now()
-      })
+        time: Date.now(),
+      };
+      console.log("mouse leave:");
+      console.log(prevState);
+      console.log("=================");
     })
   }, [])
 
