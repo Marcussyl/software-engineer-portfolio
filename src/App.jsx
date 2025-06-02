@@ -87,50 +87,51 @@ function App() {
   }, [])
 
   useEffect(() => {
-    const $cardBg = $('.card-bg');
     let prevState = null;
 
-    // mouse enter handler
-    $('.card').on('mouseenter', function() {
-      // get position of curr card
-      const rect = this.getBoundingClientRect();
+    $(".card").each(function () {
+      const $card = $(this);
+      const $cardBg = $card.find(".card-bg"); // assuming this is the background element
 
-      // cal the x y change if prevState is not empty
-      if(prevState) {
-        // console.log("prevState is not empty");
-        // console.log(Object.keys(prevState));
-        const xChange = rect.left - prevState.left;
-        const yChange = rect.top - prevState.top;
-        // console.log(`xChange: ${xChange}, yChange: ${yChange}`);
-        console.log("mouse enter:");
-        console.log(`translate(${xChange}px, ${yChange}px)`);
+      $card.on("mouseenter", function () {
+        // console.log("mouseenter -----------------");
+        const rect = this.getBoundingClientRect();
+
+        if (prevState) {
+          const xChange = rect.left - prevState.left;
+          const yChange = rect.top - prevState.top;
+          // console.log(`translate(${xChange}px, ${yChange}px)`);
+          // console.log(prevState.el.data("count"));
+
+          prevState.el.css({
+            transform: `translate(${xChange}px, ${yChange}px)`,
+            transition: "transform 300ms ease-out",
+          });
+        }
 
         $cardBg.css({
-          transform: `translate(${xChange}px, ${yChange}px)`
-        })
-      }
+          opacity: "1",
+          transition: "opacity 300ms ease-out 500ms",
+        });
+      });
 
+      $card.on("mouseleave", function () {
+        console.log("mouseleave"+$cardBg.data("count"));
+        // Store current state before leaving
+        prevState = {
+          left: this.getBoundingClientRect().left,
+          top: this.getBoundingClientRect().top,
+          el: $cardBg,
+        };
 
-      $cardBg.css({
-        'opacity': '1'
-      })
-    })
+        // console.log($cardBg.data("count"));
 
-
-    // mouse leave handler
-    $('.card').on('mouseleave', function() {
-      // store curr card info in prevState
-      const rect = this.getBoundingClientRect();
-      prevState = {
-        left: rect.left,
-        top: rect.top,
-        el: $(this),
-        time: Date.now(),
-      };
-      console.log("mouse leave:");
-      console.log(prevState);
-      console.log("=================");
-    })
+        // $cardBg.css({
+        //   opacity: "0",
+        //   transition: "opacity 300ms ease-out 500ms",
+        // });
+      });
+    });
   }, [])
 
   // useEffect(() => {
@@ -215,16 +216,37 @@ function App() {
       <section>
         <div className='cards-container'>
           <div className="card">
-            <span className='card-bg'></span>
+          1
+            <span className='card-bg' data-count="1"></span>
           </div>
-          <div className="card"></div>
-          <div className="card"></div>
-          <div className="card"></div>
-          <div className="card"></div>
-          <div className="card"></div>
-          <div className="card"></div>
-          <div className="card"></div>
-          <div className="card"></div>
+          <div className="card">
+          2
+            <span className='card-bg' data-count="2"></span>
+          </div>
+          <div className="card">
+          3
+            <span className='card-bg' data-count="3"></span>
+          </div>
+          <div className="card">
+          4
+            <span className='card-bg' data-count="4"></span>
+          </div>
+          <div className="card">
+          5
+            <span className='card-bg' data-count="5"></span>
+          </div>
+          <div className="card">
+          6
+            <span className='card-bg' data-count="6"></span>
+          </div>
+          <div className="card">
+          7
+            <span className='card-bg' data-count="7"></span>
+          </div>
+          <div className="card">
+          8
+            <span className='card-bg' data-count="8"></span>
+          </div>
         </div>
       </section>
     </div>
