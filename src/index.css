@@ -459,4 +459,5 @@ button:focus-visible {
   transform: translate(0, 0);
   opacity: 0;
   transition: transform 300ms ease-out, opacity 20ms ease-out;
+  transform-origin: 50% 50%;
 }

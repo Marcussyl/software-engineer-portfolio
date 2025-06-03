@@ -87,6 +87,7 @@ function App() {
   }, [])
 
   useEffect(() => {
+    const cardBg = "<span class='card-bg'></span>"
     let prevState = null;
 
     $(".card").each(function () {
@@ -94,7 +95,7 @@ function App() {
       const $cardBg = $card.find(".card-bg"); // assuming this is the background element
 
       $card.on("mouseenter", function () {
-        // console.log("mouseenter -----------------");
+        console.log("mouseenter: "+$cardBg.data('count'));
         const rect = this.getBoundingClientRect();
 
         if (prevState) {
@@ -111,12 +112,12 @@ function App() {
 
         $cardBg.css({
           opacity: "1",
-          transition: "opacity 300ms ease-out 500ms",
+          transition: "opacity 300ms ease-out 300ms",
         });
       });
 
       $card.on("mouseleave", function () {
-        console.log("mouseleave"+$cardBg.data("count"));
+        console.log("mouseleave: "+$cardBg.data("count"));
         // Store current state before leaving
         prevState = {
           left: this.getBoundingClientRect().left,
@@ -124,12 +125,14 @@ function App() {
           el: $cardBg,
         };
 
+        console.log(prevState.el.data('count'));
+
         // console.log($cardBg.data("count"));
 
-        // $cardBg.css({
-        //   opacity: "0",
-        //   transition: "opacity 300ms ease-out 500ms",
-        // });
+        $cardBg.css({
+          opacity: "0",
+          transition: "opacity 300ms ease-out 300ms",
+        });
       });
     });
   }, [])
@@ -207,7 +210,7 @@ function App() {
           <Contacts />
         </div>
         <div className="namecard-container absolute bottom-5 right-5">
-          <p>Get my namecard <span>(<img src="/assets/namecard.png" alt="namecard"/>)</span> here</p>
+          <p className='gradient-text text-xl'>Get my namecard <span>(<img src="/assets/namecard.png" alt="namecard"/>)</span> here</p>
         </div>
         <div className="name-card">
 
@@ -217,35 +220,27 @@ function App() {
         <div className='cards-container'>
           <div className="card">
           1
-            <span className='card-bg' data-count="1"></span>
           </div>
           <div className="card">
           2
-            <span className='card-bg' data-count="2"></span>
           </div>
           <div className="card">
           3
-            <span className='card-bg' data-count="3"></span>
           </div>
           <div className="card">
           4
-            <span className='card-bg' data-count="4"></span>
           </div>
           <div className="card">
           5
-            <span className='card-bg' data-count="5"></span>
           </div>
           <div className="card">
           6
-            <span className='card-bg' data-count="6"></span>
           </div>
           <div className="card">
           7
-            <span className='card-bg' data-count="7"></span>
           </div>
           <div className="card">
           8
-            <span className='card-bg' data-count="8"></span>
           </div>
         </div>
       </section>
