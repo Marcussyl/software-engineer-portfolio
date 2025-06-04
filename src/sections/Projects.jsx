@@ -14,7 +14,6 @@ export const Projects = () => {
       </p>
       <div className="flex py-4 px-10 gap-5">
         <div className="expandable-card">
-          <span className="moving-bg"></span>
           <img
             src="/assets/proj-thumbs/image.png"
             alt="project thumbnail"
@@ -37,7 +36,6 @@ export const Projects = () => {
           </div>
         </div>
         <div className="expandable-card">
-          <span className="moving-bg"></span>
           <img
             src="/assets/proj-thumbs/image-1.png"
             alt="project thumbnail"
@@ -60,7 +58,6 @@ export const Projects = () => {
           </div>
         </div>
         <div className="expandable-card">
-          <span className="moving-bg"></span>
           <img
             src="/assets/proj-thumbs/image-2.png"
             alt="project thumbnail"
