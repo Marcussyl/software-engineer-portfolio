@@ -81,7 +81,7 @@ export const Projects = () => {
         </div>
       </div>
       <div className="round-btn animate-bounce">
-        <img src="/assets/down-arrow.png" alt="arrow icon" />
+        <img src="/assets/up-right-arrow.png" alt="arrow icon" className="rotate-135"/>
       </div>
 
       {/* Project Detail Card */}

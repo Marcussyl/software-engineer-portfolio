@@ -62,7 +62,7 @@
     }
 
     .round-btn {
-      @apply relative cursor-pointer object-contain p-3 border-1 border-main-purple rounded-full bg-[rgba(56,33,102,25%)] w-[40px]
+      @apply relative cursor-pointer object-contain p-[12px] border-1 border-main-purple rounded-full bg-[rgba(56,33,102,25%)] w-[40px]
     }
 
     /* .round-btn:hover {
@@ -114,12 +114,16 @@
     /* Projects Showcase Section start */
 
     #projects .expandable-card {
-      @apply flex-1 p-4 border-2 border-dashed border-main-purple rounded-md bg-[rgba(133,78,243,10%)] text-white relative
+      @apply flex-1 p-4 border-2 border-dashed border-main-purple rounded-md bg-[rgba(133,78,243,10%)] text-white relative transition-all duration-200 ease-out
       /* @apply flex-1 p-4 border-2 border-dashed border-main-purple rounded-md bg-[rgba(133,78,243,10%)] text-white relative hover:shadow-xl hover:shadow-indigo-500 ease-out transition-all duration-200 */
     }
 
-    #projects .expandable-card .moving-bg {
-      @apply absolute inset-0 w-full h-full bg-purple-400 opacity-0 -z-5 transition-all duration-300 translate-0
+    #projects .expandable-card:hover {
+      box-shadow: 0 0 20px rgba(133, 78, 243, 0.3),
+                0 0 40px rgba(133, 78, 243, 0.2),
+                0 0 60px rgba(133, 78, 243, 0.1);
+      transform: translateY(-2px);
+      /* border-color: #9772e2; */
     }
 
     #projects .proj-thumb {
