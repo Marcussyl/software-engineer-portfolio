@@ -72,31 +72,15 @@ export const Contacts = () => {
             </div>
             <br />
             <button
-              // whileHover={{ scale: 1.05 }}
-              // whileTap={{ scale: 0.9 }}
-              className="glowing-btn block mx-auto w-full rounded-[10px] cursor-pointer"
+              className="block mx-auto w-full"
               type="submit"
-              // className="glowing-btn block mx-auto w-full rounded-[10px] !cursor-pointer"
             >
-              <div className="inner justify-center rounded-[10px] !cursor-pointer">
+              <div className="inner justify-center rounded-[10px] !cursor-pointer flex gap-2 items-center border-2 border-dashed border-main-purple p-2">
                 Submit message
                 <img src="/assets/mail.svg" alt="mail icon" />
                 <img src="/assets/plane.svg" alt="plane icon" />
               </div>
             </button>
-            {/* <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.9 }}
-              className="glowing-btn block w-full cursor-pointer"
-              type="submit"
-              // className="glowing-btn block mx-auto w-full rounded-[10px] !cursor-pointer"
-            >
-              <div className="inner justify-center rounded-[10px] !cursor-pointer">
-                Submit message
-                <img src="/assets/mail.svg" alt="mail icon" />
-                <img src="/assets/plane.svg" alt="plane icon" />
-              </div>
-            </motion.button> */}
           </form>
           <div className="social-medias-container">
             <a href="">
