@@ -58,7 +58,7 @@ function App() {
       <section
         id="projects"
         style={{
-          background: "url('/software-engineer-portfolio/assets/grid-bg.png'), url('/software-engineer-portfolio/assets/light-bg.png')",
+          background: "url('/software-engineer-portfolio/assets/grid-bg.png') no-repeat, url('/software-engineer-portfolio/assets/light-bg.png') no-repeat",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
