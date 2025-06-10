@@ -76,7 +76,7 @@ export const Contacts = () => {
               type="submit"
             >
               <div className="inner justify-center rounded-[10px] !cursor-pointer flex gap-2 items-center border-2 border-dashed border-main-purple p-2">
-                Submit message
+                Submit
                 <img src="/software-engineer-portfolio/assets/mail.svg" alt="mail icon" />
                 <img src="/software-engineer-portfolio/assets/plane.svg" alt="plane icon" />
               </div>

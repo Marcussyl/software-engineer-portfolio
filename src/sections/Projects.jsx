@@ -12,7 +12,7 @@ export const Projects = () => {
         Explore my latest projects, showcasing creativity and precision in
         design. Each project reflects innovation and user-focused solutions.
       </p>
-      <div className="flex flex-col md:flex-row py-4 px-10 gap-5">
+      <div className="flex flex-col md:flex-row py-4 px-6 md:px-10 gap-5">
         <div className="expandable-card">
           <img
             src="/software-engineer-portfolio/assets/proj-thumbs/image.png"
