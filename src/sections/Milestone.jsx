@@ -17,7 +17,7 @@ export const Milestone = () => {
         expertise, innovation, and dedication to front-end development.
       </p>
       <div className="accordion" data-active-accordion="aws-practitioner">
-        <div className="thumbnails overflow-hidden">
+        <div className="thumbnails">
           {/* <img
             src="/software-engineer-portfolio/assets/proj-thumbs/image.png"
             alt="aws practitioner"
