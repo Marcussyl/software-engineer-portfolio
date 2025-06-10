@@ -43,7 +43,7 @@ function App() {
     <div className={"font-mono"}>
       <NavBar />
       {/* HERO Section */}
-      <section id="hero" className="bg-[url('./assets/hero-bg.png')] bg-center">
+      <section id="hero" className="bg-[url('/software-engineer-portfolio/assets/hero-bg.png')] bg-center">
         <div className="section-content">
           <HeroSection />
         </div>
@@ -58,7 +58,7 @@ function App() {
       <section
         id="projects"
         style={{
-          background: "url('/assets/grid-bg.png'), url('/assets/light-bg.png')",
+          background: "url('/software-engineer-portfolio/assets/grid-bg.png'), url('/software-engineer-portfolio/assets/light-bg.png')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -70,7 +70,7 @@ function App() {
       {/* Milestone Section */}
       <section
         id="milestone"
-        style={{ background: "url('/assets/fancy-bg.svg') no-repeat" }}
+        style={{ background: "url('/software-engineer-portfolio/assets/fancy-bg.svg') no-repeat" }}
       >
         <div className="section-content">
           <Milestone />
@@ -89,7 +89,7 @@ function App() {
           <Contacts />
         </div>
         <div className="namecard-container absolute bottom-5 right-5">
-          <p className='gradient-text text-xl'>Get my namecard <span>(<img src="/assets/namecard.png" alt="namecard"/>)</span> here</p>
+          <p className='gradient-text text-xl'>Get my namecard <span>(<img src="/software-engineer-portfolio/assets/namecard.png" alt="namecard"/>)</span> here</p>
         </div>
         <div className="name-card">
 

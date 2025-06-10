@@ -9,7 +9,7 @@ export const Milestone = () => {
     <div className="flex flex-col justify-center items-center gap-5">
       <div className="tag">
         <p>Milestones</p>
-        <img src="/assets/tag-icons/achievement.png" alt="milestone" />
+        <img src="/software-engineer-portfolio/assets/tag-icons/achievement.png" alt="milestone" />
       </div>
       <h1 className="section-title gradient-text">Milestone</h1>
       <p className="section-desc">
@@ -19,17 +19,17 @@ export const Milestone = () => {
       <div className="accordion" data-active-accordion="aws-practitioner">
         <div className="thumbnails overflow-hidden">
           {/* <img
-            src="/assets/proj-thumbs/image.png"
+            src="/software-engineer-portfolio/assets/proj-thumbs/image.png"
             alt="aws practitioner"
             data-achievement="aws-practitioner"
           />
           <img
-            src="/assets/proj-thumbs/image-1.png"
+            src="/software-engineer-portfolio/assets/proj-thumbs/image-1.png"
             alt="hackathon"
             data-achievement="hackathon"
           />
           <img
-            src="/assets/proj-thumbs/image-2.png"
+            src="/software-engineer-portfolio/assets/proj-thumbs/image-2.png"
             alt="java competition"
             data-achievement="java-competition"
           /> */}
@@ -51,7 +51,7 @@ export const Milestone = () => {
           >
             <SwiperSlide className="!w-full flex justify-center">
               <img
-                src="/assets/proj-thumbs/image.png"
+                src="/software-engineer-portfolio/assets/proj-thumbs/image.png"
                 alt="aws practitioner"
                 className="mx-auto pb-8 object-contain"
                 data-achievement="aws-practitioner"
@@ -59,7 +59,7 @@ export const Milestone = () => {
             </SwiperSlide>
             <SwiperSlide className="!w-full">
               <img
-                src="/assets/proj-thumbs/image.png"
+                src="/software-engineer-portfolio/assets/proj-thumbs/image.png"
                 alt="aws practitioner"
                 className="mx-auto pb-8 object-contain"
                 data-achievement="aws-practitioner"
@@ -67,7 +67,7 @@ export const Milestone = () => {
             </SwiperSlide>
             <SwiperSlide className="!w-full flex justify-center">
               <img
-                src="/assets/proj-thumbs/image.png"
+                src="/software-engineer-portfolio/assets/proj-thumbs/image.png"
                 alt="aws practitioner"
                 className="mx-auto pb-8 object-contain"
                 data-achievement="aws-practitioner"
@@ -86,7 +86,7 @@ export const Milestone = () => {
             >
               <h2>Lorem ipsum dolor sit amet.</h2>
               <img
-                src="/assets/google-down-arrow.svg"
+                src="/software-engineer-portfolio/assets/google-down-arrow.svg"
                 alt="up-right-arrow"
                 className=""
               />
@@ -107,7 +107,7 @@ export const Milestone = () => {
             >
               <h2>Lorem ipsum dolor sit amet.</h2>
               <img
-                src="/assets/google-down-arrow.svg"
+                src="/software-engineer-portfolio/assets/google-down-arrow.svg"
                 alt="up-right-arrow"
                 className=""
               />
@@ -125,7 +125,7 @@ export const Milestone = () => {
             >
               <h2>Lorem ipsum dolor sit amet.</h2>
               <img
-                src="/assets/google-down-arrow.svg"
+                src="/software-engineer-portfolio/assets/google-down-arrow.svg"
                 alt="up-right-arrow"
                 className=""
               />

@@ -77,20 +77,20 @@ export const Contacts = () => {
             >
               <div className="inner justify-center rounded-[10px] !cursor-pointer flex gap-2 items-center border-2 border-dashed border-main-purple p-2">
                 Submit message
-                <img src="/assets/mail.svg" alt="mail icon" />
-                <img src="/assets/plane.svg" alt="plane icon" />
+                <img src="/software-engineer-portfolio/assets/mail.svg" alt="mail icon" />
+                <img src="/software-engineer-portfolio/assets/plane.svg" alt="plane icon" />
               </div>
             </button>
           </form>
           <div className="social-medias-container">
             <a href="">
-              <img src="/assets/social-media/facebook.png" alt="" />
+              <img src="/software-engineer-portfolio/assets/social-media/facebook.png" alt="" />
             </a>
             <a href="">
-              <img src="/assets/social-media/github.png" alt="" />
+              <img src="/software-engineer-portfolio/assets/social-media/github.png" alt="" />
             </a>
             <a href="">
-              <img src="/assets/social-media/linkedin.png" alt="" />
+              <img src="/software-engineer-portfolio/assets/social-media/linkedin.png" alt="" />
             </a>
           </div>
         </div>

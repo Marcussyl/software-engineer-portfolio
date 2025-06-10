@@ -6,7 +6,7 @@ export const TechStackSection = () => {
       <div className="flex flex-col gap-5 items-center flex-1">
         <div className="tag">
           <p className="whitespace-nowrap">Tech Stack</p>
-          <img src="/assets/tag-icons/tech-stack.png" alt="icon" className="" />
+          <img src="/software-engineer-portfolio/assets/tag-icons/tech-stack.png" alt="icon" className="" />
         </div>
         <h2 className="gradient-text section-title">
           Technologies I Used

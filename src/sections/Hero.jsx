@@ -13,7 +13,7 @@ export const HeroSection = () => {
     <div className="mt-4 flex flex-col justify-center items-center gap-7 w-[80%] mx-auto relative text-center px-7 py-10">
       <div className="tag">
         <p>Hi there</p>
-        <img src="/assets/tag-icons/shake-hand.png" />
+        <img src="/software-engineer-portfolio/assets/tag-icons/shake-hand.png" />
       </div>
       {/* <TextRotate/> */}
       <div className="gradient-text">
