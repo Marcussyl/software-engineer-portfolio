@@ -7,7 +7,7 @@ export const HeroTag = ({ number, desc, moreClass }) => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.25, delay: 0.5, ease: "easeOut" }}
-      className={`absolute ${moreClass}`}
+      className={`absolute hidden md:block ${moreClass}`}
     >
       <Float>
         <div

@@ -167,7 +167,7 @@
 
     /* Mileston Section start */
     #milestone .accordion {
-      @apply flex gap-2 justify-center w-[90%]
+      @apply flex flex-col md:flex-row gap-2 justify-center w-[90%]
     }
     #milestone .accordion .thumbnails {
       @apply flex-1

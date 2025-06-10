@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import './App.css'
-import { NavBar } from './components/NavBar'
+import { Navigations } from './sections/Navigation';
 import { HeroSection } from './sections/Hero';
 import { TechStackSection } from './sections/TechStack';
 import { Projects } from './sections/Projects';
@@ -41,7 +41,9 @@ function App() {
 
   return (
     <div className={"font-mono"}>
-      <NavBar />
+      <section id='navigation'>
+        <Navigations/>
+      </section>
       {/* HERO Section */}
       <section id="hero" className="bg-[url('/software-engineer-portfolio/assets/hero-bg.png')] bg-center">
         <div className="section-content">
