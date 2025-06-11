@@ -76,14 +76,14 @@ export const Contacts = () => {
               <input name='name' type="text" placeholder="Chan Tai Man" />
             </div>
             <br />
-            <label htmlFor="email">Email</label>
-            <div className="input-wrapper">
-              <input name='email' type="email" placeholder="1234@example.com" />
-            </div>
-            <br />
             <label htmlFor="subject">Subject</label>
             <div className="input-wrapper">
               <input name='subject' type="text" placeholder="Enter your subject here" />
+            </div>
+            <br />
+            <label htmlFor="email">Email</label>
+            <div className="input-wrapper">
+              <input name='email' type="email" placeholder="1234@example.com" />
             </div>
             <br />
             <label htmlFor="msg">Message</label>
