@@ -263,6 +263,19 @@
     }
     /* Contacts Section end */
 
+
+    .grid-item {
+      @apply w-[70px] h-[70px] p-6 text-center rounded relative justify-self-center self-center border-[1px] border-indigo-400
+    }
+    
+    .flex-item {
+      @apply h-[90%] w-[2px] bg-gradient-to-b from-transparent via-indigo-600 to-transparent
+    }
+    
+    .flex-item-row {
+      @apply w-[90%] h-[2px] bg-gradient-to-r from-transparent via-indigo-600 to-transparent
+    }
+
 }
 
 body {
