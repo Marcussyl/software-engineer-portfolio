@@ -1,4 +1,6 @@
 import { motion, useSpring, useTransform, useMotionValue } from "motion/react";
+import emailjs from '@emailjs/browser';
+import { useRef } from "react";
 
 export const Contacts = () => {
   const x = useMotionValue(0);
@@ -31,6 +33,25 @@ export const Contacts = () => {
     y.set(0);
   }
 
+  const form = useRef();
+  const sendEmail = (e) => {
+    console.log("sending email...");
+    e.preventDefault();
+
+    emailjs
+    .sendForm('service_j34e6op', 'template_qdwmjme', form.current, {
+      publicKey: 'Ppd8kmEE1F2BBcDZv',
+    })
+    .then(
+      () => {
+        console.log('SUCCESS!');
+      },
+      (error) => {
+        console.log('FAILED...', error.text);
+      },
+    );
+  }
+
   return (
     <div className="flex flex-col items-center pt-10 m-5 relative">
       <motion.div
@@ -49,22 +70,26 @@ export const Contacts = () => {
             Get in touch
           </h2>
           <br />
-          <form action="https://example.com/submit" className="">
+          <form onSubmit={sendEmail} ref={form}>
             <label htmlFor="name">Name</label>
             <div className="input-wrapper">
-              <input id="name" type="text" placeholder="Chan Tai Man" />
+              <input name='name' type="text" placeholder="Chan Tai Man" />
             </div>
             <br />
             <label htmlFor="email">Email</label>
             <div className="input-wrapper">
-              <input id="email" type="email" placeholder="1234@example.com" />
+              <input name='email' type="email" placeholder="1234@example.com" />
+            </div>
+            <br />
+            <label htmlFor="subject">Subject</label>
+            <div className="input-wrapper">
+              <input name='subject' type="text" placeholder="Enter your subject here" />
             </div>
             <br />
             <label htmlFor="msg">Message</label>
             <div className="input-wrapper">
               <textarea
-                id="msg"
-                name="msg"
+                name="message"
                 rows="4"
                 cols="50"
                 placeholder="Write your message here"
@@ -74,6 +99,7 @@ export const Contacts = () => {
             <button
               className="block mx-auto w-full"
               type="submit"
+              value={"Send"}
             >
               <div className="inner justify-center rounded-[10px] !cursor-pointer flex gap-2 items-center border-2 border-dashed border-main-purple p-2">
                 Submit
