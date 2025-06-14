@@ -3,6 +3,7 @@ import './App.css'
 import { Navigations } from './sections/Navigation';
 import { HeroSection } from './sections/Hero';
 import { TechStackSection } from './sections/TechStack';
+import { NewTechStackSection } from './sections/NewTechStack';
 import { Projects } from './sections/Projects';
 import { Milestone } from './sections/Milestone';
 import { Contacts } from './sections/Contacts';
@@ -53,7 +54,8 @@ function App() {
       {/* TECH STACK Section */}
       <section id="tech-stack">
         <div className="section-content">
-          <TechStackSection />
+          {/* <TechStackSection /> */}
+          <NewTechStackSection />
         </div>
       </section>
       {/* PROJECTS Section */}
