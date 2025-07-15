@@ -2,7 +2,6 @@ import $ from 'jquery';
 import './App.css'
 import { Navigations } from './sections/Navigation';
 import { HeroSection } from './sections/Hero';
-import { TechStackSection } from './sections/TechStack';
 import { NewTechStackSection } from './sections/NewTechStack';
 import { Projects } from './sections/Projects';
 import { Milestone } from './sections/Milestone';
@@ -46,7 +45,7 @@ function App() {
         <Navigations/>
       </section>
       {/* HERO Section */}
-      <section id="hero" className="bg-[url('/software-engineer-portfolio/assets/hero-bg.png')] bg-center">
+      <section id="hero" className="bg-[url('/software-engineer-portfolio/assets/hero-bg.png')] bg-center py-15">
         <div className="section-content">
           <HeroSection />
         </div>
@@ -74,7 +73,7 @@ function App() {
       {/* Milestone Section */}
       <section
         id="milestone"
-        style={{ background: "url('/software-engineer-portfolio/assets/fancy-bg.svg') no-repeat" }}
+        style={{ background: "url('/software-engineer-portfolio/assets/fancy-bg.svg') no-repeat", backgroundSize: "cover" }}
       >
         <div className="section-content">
           <Milestone />

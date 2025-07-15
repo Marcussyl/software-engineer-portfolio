@@ -1,4 +1,16 @@
+import { useState } from "react";
+import ProjectDetailCard from "../components/ProjectDetailCard";
+import { motion, AnimatePresence } from "motion/react";
+
 export const Projects = () => {
+  const [openProjectId, setOpenProjectId] = useState(null);
+
+  const handleCardClick = (e) => {
+    const projectId = e.currentTarget.getAttribute("data-project-id");
+    setOpenProjectId(projectId);
+    console.log("openProjectId", openProjectId);
+  };
+
   return (
     <div className="flex flex-col justify-center items-center gap-5">
       <div className="tag">
@@ -13,7 +25,7 @@ export const Projects = () => {
         design. Each project reflects innovation and user-focused solutions.
       </p>
       <div className="flex flex-col md:flex-row py-4 px-6 md:px-10 gap-5">
-        <div className="expandable-card">
+        <div className="expandable-card" data-project-id="1" onClick={handleCardClick}>
           <img
             src="/software-engineer-portfolio/assets/proj-thumbs/image.png"
             alt="project thumbnail"
@@ -35,7 +47,7 @@ export const Projects = () => {
             </div>
           </div>
         </div>
-        <div className="expandable-card">
+        <div className="expandable-card" data-project-id="2" onClick={handleCardClick}>
           <img
             src="/software-engineer-portfolio/assets/proj-thumbs/image-1.png"
             alt="project thumbnail"
@@ -57,7 +69,7 @@ export const Projects = () => {
             </div>
           </div>
         </div>
-        <div className="expandable-card">
+        <div className="expandable-card" data-project-id="3" onClick={handleCardClick}>
           <img
             src="/software-engineer-portfolio/assets/proj-thumbs/image-2.png"
             alt="project thumbnail"
@@ -85,70 +97,79 @@ export const Projects = () => {
       </div>
 
       {/* Project Detail Card */}
-      <div className="proj-detail-card hidden">
-        <button className="close-btn absolute top-0 right-2">x</button>
-        <div className="basic-info flex-1 flex flex-col gap-5">
-          <img
-            src="/software-engineer-portfolio/assets/proj-thumbs/image.png"
-            alt="swiper img"
-            className="proj-thumb"
-          />
-          <div className="tags flex gap-2 flex-wrap">
-            <div className="proj-tag">API Integration</div>
-            <div className="proj-tag">Frontend</div>
-            <div className="proj-tag">Responsive</div>
-            <div className="proj-tag">Responsive</div>
-            <div className="proj-tag">Responsive</div>
-          </div>
-        </div>
-        <div className="details flex-1 flex flex-col gap-5">
-          <h2 className="proj-title">Jimming</h2>
-          <div className="overview">
-            <h3 className="proj-subtitle">Overview</h3>
-            <p className="proj-desc">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Asperiores ab vel nam quis aut eligendi quaerat facilis mollitia
-              tempora corporis odio quam ipsam, ad fugit eos est qui eum
-              possimus.
-            </p>
-          </div>
-          <div className="features">
-            <h3 className="proj-subtitle">Key Features</h3>
-            <div className="feature-item flex gap-2">
-              <img src="/software-engineer-portfolio/assets/tick.png" alt="icon" />
-              <p className="proj-desc">Frontend</p>
-            </div>
-            <div className="feature-item flex gap-2">
-              <img src="/software-engineer-portfolio/assets/tick.png" alt="icon" />
-              <p className="proj-desc">Responsive Design</p>
-            </div>
-            <div className="feature-item flex gap-2">
-              <img src="/software-engineer-portfolio/assets/tick.png" alt="icon" />
-              <p className="proj-desc">API Integration</p>
-            </div>
-          </div>
-          <div className="buttons flex gap-5">
-            <a href="" className="glowing-btn">
-              <div className="inner">
-                View Source Code
-                <img
-                  src="/software-engineer-portfolio/assets/github.png"
-                  alt="icon"
-                  className="object-contain w-[12px]"
-                />
-              </div>
-            </a>
-            <div className="flex items-center px-2 gap-2 border-2 border-grayish-white">
-              <p>Live Preview</p>
-              <img
-                src="/software-engineer-portfolio/assets/play.png"
-                alt="icon"
-                className="object-contain w-[12px]"
+      {openProjectId && <div className="blury-bg fixed top-0 left-0 w-full h-full z-50 bg-black/20 cursor-pointer backdrop-blur-xs" onClick={() => setOpenProjectId(null)}></div>}
+      <AnimatePresence>
+        {openProjectId === '1' && (
+          <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-100">
+            <motion.div
+              initial={{ opacity: 0, y: 100 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -100 }}
+              transition={{ duration: 0.3 }}
+            >
+              <ProjectDetailCard
+                setOpenProjectId={setOpenProjectId}
+                title="Jammming"
+                desc="A web application that allows users to search for songs, albums, and artists, and add them to a playlist."
+                features={["Playlist Generation", "Spotify API Integration", "Responsive Design"]}
+                challenges={["API Integration", "Responsive Design", "User Authentication"]}
+                githubLink="https://github.com/your-username/jammming"
+                liveLink="https://jammming.your-domain.com"
+                tags={["React", "JavaScript", "Responsive Design"]}
+                swiperImgs={["/software-engineer-portfolio/assets/proj-thumbs/image.png", "/software-engineer-portfolio/assets/proj-thumbs/image-1.png", "/software-engineer-portfolio/assets/proj-thumbs/image-2.png"]}
               />
-            </div>
+            </motion.div>
           </div>
-        </div>
-      </div>
+        )}
+      </AnimatePresence>
+      <AnimatePresence>
+        {openProjectId === '2' && (
+          <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-100">
+            <motion.div
+              initial={{ opacity: 0, y: 100 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -100 }}
+              transition={{ duration: 0.3 }}
+            >
+              <ProjectDetailCard
+                setOpenProjectId={setOpenProjectId}
+                title="Jammming"
+                desc="A web application that allows users to search for songs, albums, and artists, and add them to a playlist."
+                features={["Playlist Generation", "Spotify API Integration", "Responsive Design"]}
+                challenges={["API Integration", "Responsive Design", "User Authentication"]}
+                githubLink="https://github.com/your-username/jammming"
+                liveLink="https://jammming.your-domain.com"
+                tags={["React", "JavaScript", "Responsive Design"]}
+                swiperImgs={["/software-engineer-portfolio/assets/proj-thumbs/image.png", "/software-engineer-portfolio/assets/proj-thumbs/image-1.png", "/software-engineer-portfolio/assets/proj-thumbs/image-2.png"]}
+              />
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
+      <AnimatePresence>
+        {openProjectId === '3' && (
+          <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-100">
+            <motion.div
+              initial={{ opacity: 0, y: 100 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -100 }}
+              transition={{ duration: 0.3 }}
+            >
+              <ProjectDetailCard
+                setOpenProjectId={setOpenProjectId}
+                title="Jammming"
+                desc="A web application that allows users to search for songs, albums, and artists, and add them to a playlist."
+                features={["Playlist Generation", "Spotify API Integration", "Responsive Design"]}
+                challenges={["API Integration", "Responsive Design", "User Authentication"]}
+                githubLink="https://github.com/your-username/jammming"
+                liveLink="https://jammming.your-domain.com"
+                tags={["React", "JavaScript", "Responsive Design"]}
+                swiperImgs={["/software-engineer-portfolio/assets/proj-thumbs/image.png", "/software-engineer-portfolio/assets/proj-thumbs/image-1.png", "/software-engineer-portfolio/assets/proj-thumbs/image-2.png"]}
+              />
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

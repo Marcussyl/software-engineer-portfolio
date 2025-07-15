@@ -26,7 +26,11 @@
     /* global classes start */
 
     .section-content {
-        @apply w-9/10 py-10 mx-auto flex justify-center;
+        @apply max-w-[1700px] py-15 px-5 mx-auto block;
+    }
+    
+    .content-container {
+        @apply max-w-[1700px] px-5 mx-auto block;
     }
 
     .section-title {
@@ -74,7 +78,7 @@
     /* Nav Bar start */
 
     .section-linker {
-      @apply text-grayish-white hover:text-light-purple transition-colors text-base
+      @apply text-grayish-white hover:text-light-purple transition-colors text-lg focus:outline-none
     }
 
     .section-linker.active {
@@ -114,7 +118,7 @@
     /* Projects Showcase Section start */
 
     #projects .expandable-card {
-      @apply flex-1 p-4 border-2 border-dashed border-main-purple rounded-md bg-[rgba(133,78,243,10%)] text-white relative transition-all duration-200 ease-out
+      @apply flex-1 p-4 border-2 border-dashed border-main-purple rounded-md bg-[rgba(133,78,243,10%)] text-white relative transition-all duration-200 ease-out cursor-pointer
       /* @apply flex-1 p-4 border-2 border-dashed border-main-purple rounded-md bg-[rgba(133,78,243,10%)] text-white relative hover:shadow-xl hover:shadow-indigo-500 ease-out transition-all duration-200 */
     }
 
@@ -139,7 +143,7 @@
     }
 
     #projects .proj-detail-card {
-      @apply mx-auto text-grayish-white flex flex-col gap-7 p-6 border-2 border-dashed border-main-purple rounded-xl w-[90%] md:flex-row bg-dark-purple
+      @apply text-grayish-white flex flex-col gap-7 p-8 border-2 border-dashed border-main-purple rounded-xl w-full md:flex-row bg-dark-purple
     }
 
     #projects .proj-detail-card .proj-title {
