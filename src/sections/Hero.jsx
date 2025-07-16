@@ -10,7 +10,7 @@ export const HeroSection = () => {
   );
 
   return (
-    <div className="mt-4 flex flex-col justify-center items-center gap-7 w-[80%] mx-auto relative text-center px-7 py-10">
+    <div className="mt-4 flex flex-col justify-center items-center gap-7 w-full mx-auto relative text-center px-7">
       <div className="tag">
         <p>Hi there</p>
         <img src="/software-engineer-portfolio/assets/tag-icons/shake-hand.png" />
@@ -19,7 +19,7 @@ export const HeroSection = () => {
       <div className="gradient-text">
         <h2 className="text-xl">I'm Marcus,</h2>
         <h1 className="section-title text-4xl leading-relaxed">
-          Full-Stack Software Engineer
+          Software Engineer
         </h1>
       </div>
       <p className="section-desc inline-block typewriter-effect">

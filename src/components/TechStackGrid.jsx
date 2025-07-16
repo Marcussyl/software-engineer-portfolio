@@ -1,104 +1,53 @@
 import { motion } from "motion/react";
 import TechStackItem from "./TechStackItem";
 
-const gridCols = 4;
-const techStackItems = [
-    {
-        imgPath: "/software-engineer-portfolio/assets/tech-icos/ico-redux.png",
-        imgAlt: "redux",
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.08,
     },
-    {
-        imgPath: "/software-engineer-portfolio/assets/tech-icos/ico-js.png",
-        imgAlt: "js",
-    },
-    {
-        imgPath: "/software-engineer-portfolio/assets/tech-icos/ico-react.png",
-        imgAlt: "react",
-    },
-    {
-        imgPath: "",
-        imgAlt: "",
-    },
-    {
-        imgPath: "/software-engineer-portfolio/assets/tech-icos/ico-vue.png",
-        imgAlt: "vue",
-    },
-    {
-        imgPath: "/software-engineer-portfolio/assets/tech-icos/ico-nodejs.png",
-        imgAlt: "nodejs",
-    },
-    {
-        imgPath: "/software-engineer-portfolio/assets/tech-icos/ico-aws.png",
-        imgAlt: "express",
-    },
-    {
-        imgPath: "/software-engineer-portfolio/assets/tech-icos/ico-azure.png",
-        imgAlt: "mongodb",
-    },
-    {
-        imgPath: "/software-engineer-portfolio/assets/tech-icos/ico-docker.png",
-        imgAlt: "postgresql",
-    },
-    {
-        imgPath: "/software-engineer-portfolio/assets/tech-icos/ico-jest.png",
-        imgAlt: "mysql",
-    },
-    {
-        imgPath: "/software-engineer-portfolio/assets/tech-icos/ico-mocha.png",
-        imgAlt: "mysql",
-    },
-    {
-        imgPath: "/software-engineer-portfolio/assets/tech-icos/ico-passportjs.png",
-        imgAlt: "mysql",
-    },
-    {
-        imgPath: "",
-        imgAlt: "",
-    },
-    {
-        imgPath: "/software-engineer-portfolio/assets/tech-icos/ico-google-cloud.png",
-        imgAlt: "mysql",
-    },
-    {
-        imgPath: "/software-engineer-portfolio/assets/tech-icos/ico-google-cloud.png",
-        imgAlt: "mysql",
-    },
-    {
-        imgPath: "/software-engineer-portfolio/assets/tech-icos/ico-google-cloud.png",
-        imgAlt: "mysql",
-    },
-]
+  },
+};
 
-const baseDelay = 0.1;
+const itemVariants = {
+  hidden: { opacity: 0, y: 20, scale: 0.8 },
+  visible: { opacity: 1, y: 0, scale: 1 },
+};
 
-const TechStackGrid = () => {
+const TechStackGrid = ({techStackItems}) => {
     return (
-      <div className="grid grid-cols-4 grid-rows-4 gap-4 w-fit m-5 z-20 cursor-pointer">
+      <motion.div
+        className="grid grid-cols-[repeat(auto-fit,minmax(120px,1fr))] gap-4 w-full"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, amount: 0.3 }}
+      >
         {techStackItems.map((item, idx) => {
-          const row = Math.floor(idx / gridCols);
-          const col = idx % gridCols;
-          const delay = (row + col) * baseDelay;
-
           if (!item) return <div key={idx}></div>;
 
           if (item.imgPath === "") {
             return (
-              <div key={idx} className="w-10 h-10 bg-transparent rounded-sm"></div>
-            )
+              <div
+                key={idx}
+                className="w-10 h-10 bg-transparent rounded-sm"
+              ></div>
+            );
           }
 
           return (
             <motion.div
               key={idx}
-              initial={{ opacity: 0, y: 20, scale: 0.8 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              transition={{ delay, duration: 0.5, type: "spring" }}
+              variants={itemVariants}
+              transition={{ duration: 0.5, type: "spring" }}
+              style={{justifySelf: "center"}}
             >
               <TechStackItem imgPath={item.imgPath} imgAlt={item.imgAlt} />
             </motion.div>
           );
         })}
-      </div>
+      </motion.div>
     );
 
 }

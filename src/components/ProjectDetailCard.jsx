@@ -54,7 +54,7 @@ const ProjectDetailCard = ({ setOpenProjectId, title, desc, features, challenges
             <div className="buttons flex gap-5 mt-5">
             <a href={githubLink} target="_blank" className="glowing-btn flex-1">
                 <div className="inner w-full justify-center p-3 text-base gap-4">
-                View Source Code
+                GitHub
                 <img
                     src="/software-engineer-portfolio/assets/github.png"
                     alt="icon"
@@ -63,7 +63,7 @@ const ProjectDetailCard = ({ setOpenProjectId, title, desc, features, challenges
                 </div>
             </a>
             <a href={liveLink} target="_blank" className="flex justify-center p-3 text-base items-center px-2 gap-4 border-2 border-grayish-white flex-1 cursor-pointer">
-                <p>Live Preview</p>
+                <p>Live Site</p>
                 <img
                 src="/software-engineer-portfolio/assets/play.png"
                 alt="icon"

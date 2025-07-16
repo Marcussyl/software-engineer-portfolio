@@ -1,6 +1,6 @@
 const TechStackItem = ({imgPath, imgAlt}) => {
   return (
-    <div className="w-25 h-25">
+    <div className="w-25 h-25 p-7">
       <img src={imgPath} alt={imgAlt} className="rounded-sm"/>
     </div>
   );

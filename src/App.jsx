@@ -8,12 +8,6 @@ import { Milestone } from './sections/Milestone';
 import { Contacts } from './sections/Contacts';
 import { useEffect } from 'react';
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-
 function App() {
   useEffect(() => {
     const handleClick = function () {
@@ -41,11 +35,14 @@ function App() {
 
   return (
     <div className={"font-mono"}>
-      <section id='navigation'>
-        <Navigations/>
+      <section id="navigation">
+        <Navigations />
       </section>
       {/* HERO Section */}
-      <section id="hero" className="bg-[url('/software-engineer-portfolio/assets/hero-bg.png')] bg-center py-15">
+      <section
+        id="hero"
+        className="bg-[url('/software-engineer-portfolio/assets/hero-bg.png')] bg-center py-0 h-[100vh] flex items-center"
+      >
         <div className="section-content">
           <HeroSection />
         </div>
@@ -61,7 +58,8 @@ function App() {
       <section
         id="projects"
         style={{
-          background: "url('/software-engineer-portfolio/assets/grid-bg.png') no-repeat, url('/software-engineer-portfolio/assets/light-bg.png') no-repeat",
+          background:
+            "url('/software-engineer-portfolio/assets/grid-bg.png') no-repeat, url('/software-engineer-portfolio/assets/light-bg.png') no-repeat",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -73,17 +71,18 @@ function App() {
       {/* Milestone Section */}
       <section
         id="milestone"
-        style={{ background: "url('/software-engineer-portfolio/assets/fancy-bg.svg') no-repeat", backgroundSize: "cover" }}
+        style={{
+          background:
+            "url('/software-engineer-portfolio/assets/fancy-bg.svg') no-repeat",
+          backgroundSize: "cover",
+        }}
       >
         <div className="section-content">
           <Milestone />
         </div>
       </section>
       {/* CONTACT Section */}
-      <section
-        id="contact"
-        className="relative overflow-hidden"
-      >
+      <section id="contact" className="relative overflow-hidden">
         <div className="absolute z-50 h-30 w-3/5 left-1/5 -translate-y-1/2 rounded-full bg-purple-500 opacity-50 blur-3xl"></div>
         <div className="section-content">
           <Contacts />

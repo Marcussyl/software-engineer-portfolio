@@ -4,33 +4,22 @@ export const NavBar = () => {
       <div className="flex items-center justify-between">
         {/* Left side - Logo */}
         <div className="flex items-center gap-2">
-          <p className={"font-bold"}>Marcus</p>
+          <img src="/software-engineer-portfolio/assets/globe.svg" alt="" />
+          <p className="font-black text-sharp-purple font-pacifico text-xl">Mars</p>
         </div>
 
         {/* Right side - Navigation Links */}
         <div className="flex items-center space-x-8">
-          <a
-            href="#"
-            className="section-linker"
-          >
+          <a href="#" className="section-linker">
             About
           </a>
-          <a
-            href="#tech-stack"
-            className="section-linker"
-          >
+          <a href="#tech-stack" className="section-linker">
             Technologies
           </a>
-          <a
-            href="#projects"
-            className="section-linker"
-          >
+          <a href="#projects" className="section-linker">
             Projects
           </a>
-          <a
-            href="#contact"
-            className="section-linker"
-          >
+          <a href="#contact" className="section-linker">
             Contact
           </a>
         </div>

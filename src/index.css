@@ -3,6 +3,7 @@
 @import "tailwindcss/preflight.css" layer(base);
 @import "tailwindcss/utilities.css" layer(utilities);
 @import "tw-animate-css";
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
 @custom-variant dark (&:is(.dark *));
 @layer theme, base, components, utilities;
@@ -14,6 +15,8 @@
     --color-dark-purple: #0d061a;
     --color-ambient-purple: #1e103a;
     --color-grayish-white: rgb(181,178,186);
+
+    --font-pacifico: "Pacifico", cursive;
 
     --animate-blinking-caret: blinking-caret .5s infinite;
 
@@ -119,7 +122,7 @@
     /* Projects Showcase Section start */
 
     #projects .expandable-card {
-      @apply flex-1 p-4 border-2 border-dashed border-main-purple rounded-md bg-[rgba(133,78,243,10%)] text-white relative transition-all duration-200 ease-out cursor-pointer
+      @apply p-4 border-2 border-dashed border-main-purple rounded-md bg-[rgba(133,78,243,10%)] text-white relative transition-all duration-200 ease-out cursor-pointer w-full md:w-1/4
       /* @apply flex-1 p-4 border-2 border-dashed border-main-purple rounded-md bg-[rgba(133,78,243,10%)] text-white relative hover:shadow-xl hover:shadow-indigo-500 ease-out transition-all duration-200 */
     }
 
