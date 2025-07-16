@@ -6,39 +6,94 @@ import { motion, AnimatePresence } from "motion/react";
 const projects = [
   {
     projectId: "1",
-    thumbImg: "/software-engineer-portfolio/assets/proj-thumbs/image.png",
+    thumbImgs: ["/software-engineer-portfolio/assets/proj-thumbs/jamming.png"],
     title: "Jammming",
-    tags: ["React", "JavaScript", "Responsive Design"],
+    tags: ["React", "JavaScript", "OAuth2", "Responsive Design", "Spotify API"],
+    overview:
+      "Jammming is a sleek, user-friendly web app built with React that empowers users to search for tracks, artists, and albums through the Spotify API. Once users find their favorite songs, they can effortlessly assemble a custom playlist and save it directly to their Spotify account.",
+    features: null,
+    challenges: null,
+    githubLink: "https://github.com/Marcussyl/jamming",
+    liveSiteLink: "https://marcussyl.github.io/jamming/",
+    videoLink: "",
   },
   {
     projectId: "2",
-    thumbImg: "/software-engineer-portfolio/assets/proj-thumbs/image-1.png",
+    thumbImgs: ["/software-engineer-portfolio/assets/proj-thumbs/ai-racer.png"],
     title: "AI Racer",
-    tags: ["React", "JavaScript", "Responsive Design"],
+    tags: ["MkDocs", "SSG", "Responsive Design", "Light/Dark Mode Support"],
+    overview:
+      "AI Racer is a beautifully structured landing page crafted to showcase and document participation in the AWS DeepRacer competition. Powered by MkDocs and styled with MkDocs Material, the page delivers clean, fast-loading documentation that’s as sleek as the autonomous vehicles it represents.",
+    features: null,
+    challenges: null,
+    githubLink: null,
+    liveSiteLink: "https://github.com/Marcussyl/deepracer",
+    videoLink: "",
   },
   {
     projectId: "3",
-    thumbImg: "/software-engineer-portfolio/assets/proj-thumbs/image-2.png",
+    thumbImgs: [
+      "/software-engineer-portfolio/assets/proj-thumbs/mark-sixer.png",
+    ],
     title: "Mark Sixer",
-    tags: ["React", "JavaScript", "Responsive Design"],
+    tags: ["React", "Vite", "Puppeteer", "OCR", "Netlify"],
+    overview:
+      "Mark Sixer is designed to streamline access to Mark Six lottery results. The app automatically scrapes the latest lottery results from official websites, and leverages OCR technology to extract numerical data from result images.",
+    features: null,
+    challenges: null,
+    githubLink: "https://marcussyl.github.io/mark-sixer/",
+    liveSiteLink: "https://github.com/Marcussyl/mark-sixer",
+    videoLink: "",
   },
   {
     projectId: "4",
-    thumbImg: "/software-engineer-portfolio/assets/proj-thumbs/image-2.png",
-    title: "Mark Sixer",
-    tags: ["React", "JavaScript", "Responsive Design"],
+    thumbImgs: [
+      "/software-engineer-portfolio/assets/proj-thumbs/horizon-banking.png",
+    ],
+    title: "Horizon Banking",
+    tags: [
+      "Next.js",
+      "OAuth2",
+      "SSR",
+      "Cloud-hosted",
+      "Full-Stack",
+      "Restful API Integration",
+    ],
+    overview:
+      "Horizon is a full-stack financial platform that empowers users to connect their bank accounts, monitor transactions, transfer money between platform users, and generate insightful financial reports.",
+    features: null,
+    challenges: null,
+    githubLink: "https://github.com/Marcussyl/banking",
+    liveSiteLink: "https://banking-two-ochre.vercel.app/sign-in",
+    videoLink: "",
   },
   {
     projectId: "5",
-    thumbImg: "/software-engineer-portfolio/assets/proj-thumbs/image-2.png",
-    title: "Mark Sixer",
-    tags: ["React", "JavaScript", "Responsive Design"],
+    thumbImgs: [
+      "/software-engineer-portfolio/assets/proj-thumbs/towngas-lifestyle.png",
+    ],
+    title: "Towngas Lifestyle",
+    tags: ["Astro", "SSG", "SSR", "React", "Multi-language"],
+    overview:
+      "Towngas Lifestyle Revamp is a redesigned landing page project aimed at refreshing the digital identity of Towngas Lifestyle. This clean, responsive interface highlights the brand’s expanded offerings—from smart kitchens and home services to premium retail experiences.",
+    features: null,
+    challenges: null,
+    githubLink: "https://github.com/Marcussyl/banking",
+    liveSiteLink: null,
+    videoLink: "",
   },
   {
     projectId: "6",
-    thumbImg: "/software-engineer-portfolio/assets/proj-thumbs/image-2.png",
-    title: "Mark Sixer",
-    tags: ["React", "JavaScript", "Responsive Design"],
+    thumbImgs: ["/software-engineer-portfolio/assets/proj-thumbs/big-two.png"],
+    title: "Big Two",
+    tags: ["Java", "Java Swing", "OOP", "Event-driven Programming", "Real-time Game Validation"],
+    overview:
+      "Big Two is a Java-based desktop application that simulates the popular East Asian card game in an intuitive, interactive format. Built with Java Swing, the project delivers a familiar gaming experience through a custom graphical user interface, complete with card visuals, player turns, and game logic.",
+    features: null,
+    challenges: null,
+    githubLink: "https://github.com/Marcussyl/banking",
+    liveSiteLink: null,
+    videoLink: "",
   },
 ];
 
@@ -53,7 +108,6 @@ export const Projects = () => {
   const handleCardClick = (e) => {
     const projectId = e.currentTarget.getAttribute("data-project-id");
     setOpenProjectId(projectId);
-    console.log("openProjectId", openProjectId);
   };
 
   useEffect(() => {
@@ -116,43 +170,35 @@ export const Projects = () => {
           onClick={() => setOpenProjectId(null)}
         ></div>
       )}
-      <AnimatePresence>
-        {openProjectId === "1" && (
-          <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-100 w-4/5">
-            <motion.div
-              initial={{ opacity: 0, y: 100 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -100 }}
-              transition={{ duration: 0.3 }}
-            >
-              <ProjectDetailCard
-                setOpenProjectId={setOpenProjectId}
-                title="Jammming"
-                desc="A web application that allows users to search for songs, albums, and artists, and add them to a playlist."
-                features={[
-                  "Playlist Generation",
-                  "Spotify API Integration",
-                  "Responsive Design",
-                ]}
-                challenges={[
-                  "API Integration",
-                  "Responsive Design",
-                  "User Authentication",
-                ]}
-                githubLink="https://github.com/your-username/jammming"
-                liveLink="https://jammming.your-domain.com"
-                tags={["React", "JavaScript", "Responsive Design"]}
-                swiperImgs={[
-                  "/software-engineer-portfolio/assets/proj-thumbs/image.png",
-                  "/software-engineer-portfolio/assets/proj-thumbs/image-1.png",
-                  "/software-engineer-portfolio/assets/proj-thumbs/image-2.png",
-                ]}
-              />
-            </motion.div>
-          </div>
-        )}
-      </AnimatePresence>
-      <AnimatePresence>
+      {
+        projects.map((project, idx) => (
+          <AnimatePresence key={idx}>
+            {openProjectId === project.projectId && (
+              <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-100 w-4/5 max-w-[1080px]">
+                <motion.div
+                  initial={{ opacity: 0, y: 100 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -100 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <ProjectDetailCard
+                    setOpenProjectId={setOpenProjectId}
+                    title={project.title}
+                    desc={project.overview}
+                    features={project.features}
+                    challenges={project.challenges}
+                    githubLink={project.githubLink}
+                    liveLink={project.liveSiteLink}
+                    tags={project.tags}
+                    thumbImgs={project.thumbImgs}
+                  />
+                </motion.div>
+              </div>
+            )}
+          </AnimatePresence>
+        ))
+      }
+      {/* <AnimatePresence>
         {openProjectId === "2" && (
           <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-100 w-4/5">
             <motion.div
@@ -223,7 +269,7 @@ export const Projects = () => {
             </motion.div>
           </div>
         )}
-      </AnimatePresence>
+      </AnimatePresence> */}
     </div>
   );
 }

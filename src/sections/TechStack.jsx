@@ -87,11 +87,6 @@ const techStackItems = [
     imgPath: "/software-engineer-portfolio/assets/tech-icos/ico-docker.png",
     imgAlt: "docker",
   },
-  {
-    imgPath:
-      "/software-engineer-portfolio/assets/tech-icos/ico-google-cloud.png",
-    imgAlt: "google cloud",
-  },
 ];
 
 const TechStackSection = () => {

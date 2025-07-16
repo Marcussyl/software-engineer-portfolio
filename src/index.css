@@ -1,9 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import "tailwindcss";
 @import "tailwindcss/theme.css" layer(theme);
 @import "tailwindcss/preflight.css" layer(base);
 @import "tailwindcss/utilities.css" layer(utilities);
 @import "tw-animate-css";
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
 @custom-variant dark (&:is(.dark *));
 @layer theme, base, components, utilities;
@@ -193,9 +193,9 @@
       @apply border-b-[1px] border-main-purple cursor-pointer
     }
     /* control accordion thumbnail */
-    #milestone .accordion .thumbnails img {
+    /* #milestone .accordion .thumbnails img {
       @apply hidden object-contain w-full rounded py-3
-    }
+    } */
     #milestone .accordion[data-active-accordion="aws-practitioner"] .thumbnails img[data-achievement="aws-practitioner"],
     #milestone .accordion[data-active-accordion="hackathon"] .thumbnails img[data-achievement="hackathon"],
     #milestone .accordion[data-active-accordion="java-competition"] .thumbnails img[data-achievement="java-competition"]

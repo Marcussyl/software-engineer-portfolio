@@ -1,5 +1,4 @@
 import { motion } from "motion/react";
-import TechStackItem from "./TechStackItem";
 
 const containerVariants = {
   hidden: {},
@@ -41,9 +40,15 @@ const TechStackGrid = ({techStackItems}) => {
               key={idx}
               variants={itemVariants}
               transition={{ duration: 0.5, type: "spring" }}
-              style={{justifySelf: "center"}}
+              style={{ justifySelf: "center" }}
             >
-              <TechStackItem imgPath={item.imgPath} imgAlt={item.imgAlt} />
+              <div className="w-25 h-25 p-7">
+                <img
+                  src={item.imgPath}
+                  alt={item.imgAlt}
+                  className="rounded-sm"
+                />
+              </div>
             </motion.div>
           );
         })}

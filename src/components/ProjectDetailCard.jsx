@@ -1,4 +1,4 @@
-const ProjectDetailCard = ({ setOpenProjectId, title, desc, features, challenges, githubLink, liveLink, tags, swiperImgs }) => {
+const ProjectDetailCard = ({ setOpenProjectId, title, desc, features, challenges, githubLink, liveLink, tags, thumbImgs }) => {
     return (
         <div className="proj-detail-card">
         <button
@@ -9,7 +9,7 @@ const ProjectDetailCard = ({ setOpenProjectId, title, desc, features, challenges
         </button>
         <div className="basic-info flex-1 flex flex-col gap-5">
             <img
-            src={swiperImgs[0]}
+            src={thumbImgs[0]}
             alt="swiper img"
             className="proj-thumb"
             />
@@ -28,7 +28,7 @@ const ProjectDetailCard = ({ setOpenProjectId, title, desc, features, challenges
             </p>
             </div>
             <div className="flex gap-10">
-                <div className="features flex flex-col gap-2">
+                {features && <div className="features flex flex-col gap-2">
                     <h3 className="proj-subtitle">Key Features</h3>
                     {
                         features.map((feature, index) => (
@@ -38,8 +38,8 @@ const ProjectDetailCard = ({ setOpenProjectId, title, desc, features, challenges
                             </div>
                         ))
                     }
-                </div>
-                <div className="challenges flex flex-col gap-2">
+                </div>}
+                {challenges && <div className="challenges flex flex-col gap-2">
                     <h3 className="proj-subtitle">Challenges</h3>
                     {
                         challenges.map((challenge, index) => (
@@ -49,10 +49,10 @@ const ProjectDetailCard = ({ setOpenProjectId, title, desc, features, challenges
                             </div>
                         ))
                     }
-                </div>
+                </div>}
             </div>
             <div className="buttons flex gap-5 mt-5">
-            <a href={githubLink} target="_blank" className="glowing-btn flex-1">
+            {githubLink && <a href={githubLink} target="_blank" className="glowing-btn w-1/2">
                 <div className="inner w-full justify-center p-3 text-base gap-4">
                 GitHub
                 <img
@@ -61,15 +61,15 @@ const ProjectDetailCard = ({ setOpenProjectId, title, desc, features, challenges
                     className="object-contain w-[15px]"
                 />
                 </div>
-            </a>
-            <a href={liveLink} target="_blank" className="flex justify-center p-3 text-base items-center px-2 gap-4 border-2 border-grayish-white flex-1 cursor-pointer">
+            </a>}
+            {liveLink && <a href={liveLink} target="_blank" className="flex justify-center p-3 text-base items-center px-2 gap-4 border-2 border-grayish-white w-1/2 cursor-pointer">
                 <p>Live Site</p>
                 <img
                 src="/software-engineer-portfolio/assets/play.png"
                 alt="icon"
                 className="object-contain w-[15px]"
                 />
-            </a>
+            </a>}
             </div>
         </div>
         </div>
