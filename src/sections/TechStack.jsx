@@ -2,64 +2,95 @@ import TechStackGrid from "../components/TechStackGrid";
 import { motion } from "motion/react";
 
 const techStackItems = [
+  // frontend
+  {
+    imgPath: "/software-engineer-portfolio/assets/tech-icos/ico-react.png",
+    imgAlt: "react",
+  },
+  {
+    imgPath: "/software-engineer-portfolio/assets/tech-icos/ico-vite.png",
+    imgAlt: "vite",
+  },
+  {
+    imgPath: "/software-engineer-portfolio/assets/tech-icos/ico-react-native.png",
+    imgAlt: "react native",
+  },
+  {
+    imgPath: "/software-engineer-portfolio/assets/tech-icos/ico-motion.png",
+    imgAlt: "framer motion",
+  },
+  {
+    imgPath: "/software-engineer-portfolio/assets/tech-icos/ico-jquery.png",
+    imgAlt: "jquery",
+  },
   {
     imgPath: "/software-engineer-portfolio/assets/tech-icos/ico-redux.png",
     imgAlt: "redux",
+  },
+  {
+    imgPath: "/software-engineer-portfolio/assets/tech-icos/ico-tailwindcss.png",
+    imgAlt: "tailwind css",
+  },
+  {
+    imgPath: "/software-engineer-portfolio/assets/tech-icos/ico-astro.png",
+    imgAlt: "astro",
+  },
+  {
+    imgPath: "/software-engineer-portfolio/assets/tech-icos/ico-nextjs.png",
+    imgAlt: "nextjs",
   },
   {
     imgPath: "/software-engineer-portfolio/assets/tech-icos/ico-js.png",
     imgAlt: "js",
   },
   {
-    imgPath: "/software-engineer-portfolio/assets/tech-icos/ico-react.png",
-    imgAlt: "react",
-  },
-  {
-    imgPath: "/software-engineer-portfolio/assets/tech-icos/ico-vue.png",
-    imgAlt: "vue",
+    imgPath: "/software-engineer-portfolio/assets/tech-icos/ico-ts.png",
+    imgAlt: "ts",
   },
   {
     imgPath: "/software-engineer-portfolio/assets/tech-icos/ico-nodejs.png",
     imgAlt: "nodejs",
   },
   {
+    imgPath: "/software-engineer-portfolio/assets/tech-icos/ico-csharp.png",
+    imgAlt: "csharp",
+  },
+  {
+    imgPath: "/software-engineer-portfolio/assets/tech-icos/ico-java.png",
+    imgAlt: "java",
+  },
+  {
+    imgPath: "/software-engineer-portfolio/assets/tech-icos/ico-net.png",
+    imgAlt: "net",
+  },
+  {
+    imgPath: "/software-engineer-portfolio/assets/tech-icos/ico-umbraco.png",
+    imgAlt: "umbraco",
+  },
+  {
+    imgPath: "/software-engineer-portfolio/assets/tech-icos/ico-mysql.png",
+    imgAlt: "mysql",
+  },
+  {
+    imgPath: "/software-engineer-portfolio/assets/tech-icos/ico-openapi.png",
+    imgAlt: "open api",
+  },
+  {
     imgPath: "/software-engineer-portfolio/assets/tech-icos/ico-aws.png",
-    imgAlt: "express",
+    imgAlt: "aws",
   },
   {
     imgPath: "/software-engineer-portfolio/assets/tech-icos/ico-azure.png",
-    imgAlt: "mongodb",
+    imgAlt: "azure",
   },
   {
     imgPath: "/software-engineer-portfolio/assets/tech-icos/ico-docker.png",
-    imgAlt: "postgresql",
-  },
-  {
-    imgPath: "/software-engineer-portfolio/assets/tech-icos/ico-jest.png",
-    imgAlt: "mysql",
-  },
-  {
-    imgPath: "/software-engineer-portfolio/assets/tech-icos/ico-mocha.png",
-    imgAlt: "mysql",
-  },
-  {
-    imgPath: "/software-engineer-portfolio/assets/tech-icos/ico-passportjs.png",
-    imgAlt: "mysql",
+    imgAlt: "docker",
   },
   {
     imgPath:
       "/software-engineer-portfolio/assets/tech-icos/ico-google-cloud.png",
-    imgAlt: "mysql",
-  },
-  {
-    imgPath:
-      "/software-engineer-portfolio/assets/tech-icos/ico-google-cloud.png",
-    imgAlt: "mysql",
-  },
-  {
-    imgPath:
-      "/software-engineer-portfolio/assets/tech-icos/ico-google-cloud.png",
-    imgAlt: "mysql",
+    imgAlt: "google cloud",
   },
 ];
 
