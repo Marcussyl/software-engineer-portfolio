@@ -1,12 +1,18 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
+import { motion } from "motion/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 export const Milestone = () => {
   return (
-    <div className="flex flex-col justify-center items-center gap-5">
+    <motion.div className="flex flex-col justify-center items-center gap-5"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+      >
       <div className="tag">
         <p>Milestones</p>
         <img src="/software-engineer-portfolio/assets/tag-icons/achievement.png" alt="milestone" />
@@ -141,6 +147,6 @@ export const Milestone = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };

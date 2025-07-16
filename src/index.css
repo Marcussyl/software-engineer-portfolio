@@ -8,6 +8,7 @@
 @layer theme, base, components, utilities;
 
 @theme {
+    --color-sharp-purple: #844EF2;
     --color-main-purple: #5f3aa6;
     --color-light-purple: #9772e2;
     --color-dark-purple: #0d061a;
@@ -147,7 +148,7 @@
     }
 
     #projects .proj-detail-card .proj-title {
-      @apply text-2xl font-bold text-main-purple
+      @apply text-2xl font-bold text-sharp-purple
     }
 
     #projects .proj-detail-card .proj-subtitle {
