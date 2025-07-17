@@ -11,7 +11,7 @@ import { HeaderContext } from './lib/HeaderContext';
 
 
 function App() {
-  const [activeHeaderLink, setActiveHeaderLink] = useState('about');
+  const [activeHeaderLink, setActiveHeaderLink] = useState('#about');
 
   useEffect(() => {
     const handleClick = function () {
@@ -125,7 +125,7 @@ function App() {
       </section>
       {/* CONTACT Section */}
       <section id="contact" className="relative overflow-hidden">
-        <div className="absolute z-50 h-30 w-3/5 left-1/5 -translate-y-1/2 rounded-full bg-purple-500 opacity-50 blur-3xl"></div>
+        <div className="absolute z-20 h-30 w-3/5 left-1/5 -translate-y-1/2 rounded-full bg-purple-500 opacity-50 blur-3xl"></div>
         <div className="section-content">
           <Contacts />
         </div>

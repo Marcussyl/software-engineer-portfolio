@@ -19,7 +19,7 @@ export const HeroSection = () => {
       <div className="gradient-text">
         <h2 className="text-xl">I'm Marcus,</h2>
         <h1 className="section-title text-4xl leading-relaxed">
-          Software Engineer
+          Web Developer
         </h1>
       </div>
       <p className="section-desc inline-block typewriter-effect">
@@ -54,6 +54,28 @@ export const HeroSection = () => {
           </svg>
         </div>
       </motion.button>
+      <div className="flex gap-4 items-center justify-center mt-4">
+        <a
+          href="https://github.com/Marcussyl"
+          target="_blank"
+          className="flex justify-center items-center w-[40px] h-[40px] p-2 border-1 rounded-full border-main-purple"
+        >
+          <img
+            src="/software-engineer-portfolio/assets/social-media/github.png"
+            alt="github icon"
+          />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/marcus-sze-3538ba229/"
+          target="_blank"
+          className="flex justify-center items-center w-[40px] h-[40px] p-2 border-1 rounded-full border-main-purple"
+        >
+          <img
+            src="/software-engineer-portfolio/assets/social-media/linkedin.png"
+            alt="linkedin icon"
+          />
+        </a>
+      </div>
       {/* <HeroTag
         number={"05+"}
         desc={"Technologies<br>mastered"}

@@ -72,13 +72,13 @@ export const Contacts = () => {
   };
 
   return (
-    <motion.div 
-        className="flex flex-col items-center pt-10 m-5 relative"
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
-        transition={{ duration: 0.7, ease: "easeOut" }}
-      >
+    <motion.div
+      className="flex flex-col items-center pt-10 m-5 relative"
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.7, ease: "easeOut" }}
+    >
       <motion.div
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
@@ -162,22 +162,19 @@ export const Contacts = () => {
             </button>
           </form>
           <div className="social-medias-container">
-            <a href="">
-              <img
-                src="/software-engineer-portfolio/assets/social-media/facebook.png"
-                alt=""
-              />
-            </a>
-            <a href="">
+            <a href="https://github.com/Marcussyl" target="_blank">
               <img
                 src="/software-engineer-portfolio/assets/social-media/github.png"
-                alt=""
+                alt="github icon"
               />
             </a>
-            <a href="">
+            <a
+              href="https://www.linkedin.com/in/marcus-sze-3538ba229/"
+              target="_blank"
+            >
               <img
                 src="/software-engineer-portfolio/assets/social-media/linkedin.png"
-                alt=""
+                alt="linkedin icon"
               />
             </a>
           </div>
