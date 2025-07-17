@@ -8,7 +8,7 @@ const ProjectCard = ({ handleCardClick, projectId, thumbImgs, title, tags }) => 
         <img
           src={thumbImgs[0]}
           alt="project thumbnail"
-          className="proj-thumb"
+          className="proj-thumb h-[60%] object-cover"
         />
         <div className="mt-3">
           <div className="flex justify-between items-center p-2 ">
