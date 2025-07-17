@@ -54,7 +54,7 @@ export const HeroSection = () => {
           </svg>
         </div>
       </motion.button>
-      <HeroTag
+      {/* <HeroTag
         number={"05+"}
         desc={"Technologies<br>mastered"}
         moreClass="top-6 left-10"
@@ -63,7 +63,7 @@ export const HeroSection = () => {
         number={"2+"}
         desc={"Years of<br>experiences"}
         moreClass="bottom-5 right-3"
-      />
+      /> */}
     </div>
   );
 }

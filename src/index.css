@@ -84,7 +84,7 @@
     /* Nav Bar start */
 
     .section-linker {
-      @apply text-grayish-white hover:text-light-purple transition-colors text-lg focus:outline-none
+      @apply text-grayish-white hover:text-light-purple transition-colors text-lg focus:outline-none py-4 font-medium
     }
 
     .section-linker.active {

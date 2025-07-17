@@ -6,9 +6,13 @@ import TechStackSection from './sections/TechStack';
 import { Projects } from './sections/Projects';
 import { Milestone } from './sections/Milestone';
 import { Contacts } from './sections/Contacts';
-import { useEffect } from 'react';
+import { useEffect, useState } from "react";
+import { HeaderContext } from './lib/HeaderContext';
+
 
 function App() {
+  const [activeHeaderLink, setActiveHeaderLink] = useState('about');
+
   useEffect(() => {
     const handleClick = function () {
       const accordionItem = $(this).closest(".accordion-item");
@@ -33,34 +37,53 @@ function App() {
     };
   }, []);
 
+  // 1. Extract the scroll logic to a function
+  const scrollToTargetId = (targetId) => {
+    const target = document.querySelector(targetId);
+    if (target) {
+      const headerOffset = 80; // Adjust to your header's height
+      const elementPosition =
+        target.getBoundingClientRect().top + window.scrollY;
+      const offsetPosition = elementPosition - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+
+      // Optionally update the URL hash
+      window.history.pushState(null, "", targetId);
+    }
+  };
+
+  // 2. Use in useEffect
   useEffect(() => {
     const hash = window.location.hash;
     if (hash) {
-      const target = document.querySelector(hash);
-      if (target) {
-        const headerOffset = 80; // Adjust based on your header height
-        const elementPosition =
-          target.getBoundingClientRect().top + window.scrollY;
-        const offsetPosition = elementPosition - headerOffset;
-
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: "smooth",
-        });
-      }
+      scrollToTargetId(hash);
+      console.log(hash);
     }
   }, []);
 
+  // 3. Use in click handler
+  const handleHeaderLinkClick = (e, targetId) => {
+    e.preventDefault();
+    scrollToTargetId(targetId);
+    setActiveHeaderLink(targetId);
+    console.log(targetId);
+  };
 
   return (
     <div className={"font-mono"}>
       <section id="navigation">
-        <Navigations />
+        <HeaderContext.Provider value={{handleHeaderLinkClick, activeHeaderLink}}>
+          <Navigations handleHeaderLinkClick={handleHeaderLinkClick}/>
+        </HeaderContext.Provider>
       </section>
       {/* HERO Section */}
       <section
-        id="hero"
-        className="bg-[url('/software-engineer-portfolio/assets/hero-bg.png')] bg-center py-0 h-[100vh] flex items-center"
+        id="about"
+        className="bg-[url('/software-engineer-portfolio/assets/hero-bg.png')] bg-center py-0 h-[55vh] flex items-center"
       >
         <div className="section-content">
           <HeroSection />

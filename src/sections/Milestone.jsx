@@ -41,7 +41,7 @@ export const Milestone = () => {
             <Swiper
               // navigation={true}
               autoplay={true}
-              loop={true}
+              loop={false}
               slidesPerView={1}
               cssMode={true}
               mousewheel={true}
@@ -63,8 +63,6 @@ export const Milestone = () => {
                 />
               </SwiperSlide>
               <div className="swiper-pagination-1 flex justify-center gap-2"></div>
-              {/* <div className="absolute bottom-0 left-0 w-full">
-          </div> */}
             </Swiper>
           )}
           {/* link: https://www.ieeehkblockchain.org/ieee-hackathon-2022 */}
@@ -72,7 +70,7 @@ export const Milestone = () => {
             <Swiper
               // navigation={true}
               autoplay={true}
-              loop={true}
+              loop={false}
               slidesPerView={1}
               cssMode={true}
               mousewheel={true}
@@ -102,7 +100,7 @@ export const Milestone = () => {
             <Swiper
               // navigation={true}
               autoplay={true}
-              loop={true}
+              loop={false}
               slidesPerView={1}
               cssMode={true}
               mousewheel={true}
