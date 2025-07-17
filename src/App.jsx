@@ -83,9 +83,9 @@ function App() {
       {/* HERO Section */}
       <section
         id="about"
-        className="bg-[url('/software-engineer-portfolio/assets/hero-bg.png')] bg-center py-0 h-[55vh] flex items-center"
+        className="bg-[url('/software-engineer-portfolio/assets/hero-bg.png')] bg-center flex items-center"
       >
-        <div className="section-content">
+        <div className="section-content py-30">
           <HeroSection />
         </div>
       </section>

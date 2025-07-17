@@ -10,7 +10,7 @@ export const HeroSection = () => {
   );
 
   return (
-    <div className="mt-4 flex flex-col justify-center items-center gap-7 w-full mx-auto relative text-center px-7">
+    <div className="mt-4 flex flex-col justify-center items-center gap-7 w-full mx-auto relative text-center">
       <div className="tag">
         <p>Hi there</p>
         <img src="/software-engineer-portfolio/assets/tag-icons/shake-hand.png" />
