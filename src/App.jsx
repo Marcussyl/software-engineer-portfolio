@@ -33,6 +33,25 @@ function App() {
     };
   }, []);
 
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash) {
+      const target = document.querySelector(hash);
+      if (target) {
+        const headerOffset = 80; // Adjust based on your header height
+        const elementPosition =
+          target.getBoundingClientRect().top + window.scrollY;
+        const offsetPosition = elementPosition - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+      }
+    }
+  }, []);
+
+
   return (
     <div className={"font-mono"}>
       <section id="navigation">

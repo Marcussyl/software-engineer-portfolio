@@ -20,6 +20,8 @@
 
     --animate-blinking-caret: blinking-caret .5s infinite;
 
+    --breakpoint-project-card-desktop: "1450px";
+
     @keyframes blinking-caret {
       from, to { border-color: transparent }
       50% { border-color: var(--color-main-purple) }

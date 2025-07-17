@@ -90,7 +90,6 @@ const projects = [
       "Java",
       "Java Swing",
       "OOP",
-      "Event-driven Programming",
       "Real-time Game Validation",
     ],
     overview:
