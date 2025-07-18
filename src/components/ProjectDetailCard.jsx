@@ -28,7 +28,7 @@ const ProjectDetailCard = ({
           className="hidden group-hover:block w-6 h-6"
         />
       </button>
-      <div className="flex flex-col md:flex-row gap-2 md:gap-7 overflow-y-scroll max-h-[75dvh] md:h-auto">
+      <div className="flex flex-col md:flex-row gap-2 md:gap-7 max-h-[75dvh] md:h-auto" style={{overflowY: "auto", WebkitOverflowScrolling: "touch"}}>
         <div className="basic-info flex-1 flex flex-col gap-5">
           <img src={thumbImgs[0]} alt="swiper img" className="proj-thumb" />
           <div className="tags flex gap-2 flex-wrap">
