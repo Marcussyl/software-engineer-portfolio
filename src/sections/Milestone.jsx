@@ -51,7 +51,7 @@ export const Milestone = () => {
                 clickable: true,
               }}
               modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-              className="mySwiper w-full rounded-lg mx-0"
+              className="mySwiper w-full rounded-lg"
             >
               <SwiperSlide className="!w-full flex justify-center">
                 <img
@@ -80,7 +80,7 @@ export const Milestone = () => {
                 clickable: true,
               }}
               modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-              className="mySwiper w-[90%] rounded-lg mx-0"
+              className="mySwiper w-full rounded-lg"
             >
               <SwiperSlide className="!w-full flex justify-center">
                 <img
@@ -110,7 +110,7 @@ export const Milestone = () => {
                 clickable: true,
               }}
               modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-              className="mySwiper w-[90%] rounded-lg mx-0"
+              className="mySwiper w-full rounded-lg"
             >
               <SwiperSlide className="!w-full flex justify-center">
                 <img

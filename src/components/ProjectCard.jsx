@@ -5,7 +5,7 @@ const ProjectCard = ({ handleCardClick, projectId, thumbImgs, title, tags }) => 
         data-project-id={projectId}
         onClick={handleCardClick}
       >
-        <div className="aspect-video overflow-hidden">
+        <div className="aspect-video overflow-hidden rounded">
           <img
             src={thumbImgs[0]}
             alt="project thumbnail"

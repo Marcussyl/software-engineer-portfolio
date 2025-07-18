@@ -83,13 +83,13 @@
 
     /* Nav Bar start */
 
-    .section-linker {
+    /* .section-linker {
       @apply text-grayish-white hover:text-light-purple transition-colors text-lg focus:outline-none py-4 font-medium
     }
 
     .section-linker.active {
       @apply underline font-bold text-light-purple underline-offset-3
-    }
+    } */
 
     /* Nav Bar end */
 

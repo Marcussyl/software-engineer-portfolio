@@ -12,14 +12,23 @@ const ProjectDetailCard = ({
   thumbImgs,
 }) => {
   return (
-    <div className="text-grayish-white p-5 md:p-8 pt-12 md:pt-8 border-2 border-dashed border-main-purple rounded-xl w-full bg-dark-purple">
+    <div className="relative text-grayish-white p-5 md:p-8 pt-12 md:pt-8 border-2 border-dashed border-main-purple rounded-xl w-full bg-dark-purple">
       <button
-        className="close-btn absolute top-2 right-12 cursor-pointer text-white text-2xl z-20"
+        className="absolute top-4 right-4 cursor-pointer z-20 group"
         onClick={() => setOpenProjectId(null)}
       >
-        x
+        <img
+          src="/software-engineer-portfolio/assets/icon-close.svg"
+          alt="close icon"
+          className="group-hover:hidden w-6 h-6"
+        />
+        <img
+          src="/software-engineer-portfolio/assets/icon-close-purple.svg"
+          alt="close icon"
+          className="hidden group-hover:block w-6 h-6"
+        />
       </button>
-      <div className="flex flex-col md:flex-row gap-2 md:gap-7 overflow-y-auto max-h-[75dvh] md:h-auto">
+      <div className="flex flex-col md:flex-row gap-2 md:gap-7 overflow-y-scroll max-h-[75dvh] md:h-auto">
         <div className="basic-info flex-1 flex flex-col gap-5">
           <img src={thumbImgs[0]} alt="swiper img" className="proj-thumb" />
           <div className="tags flex gap-2 flex-wrap">
@@ -78,7 +87,6 @@ const ProjectDetailCard = ({
                 target="_blank"
                 className="glowing-btn flex-1"
                 whileTap={{ scale: 0.92 }}
-                whileHover={{ scale: 1.04 }}
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
               >
                 <div className="inner w-full justify-center py-2 text-sm md:text-base gap-3">
@@ -97,7 +105,6 @@ const ProjectDetailCard = ({
                 target="_blank"
                 className="flex justify-center flex-1 py-2 text-sm md:text-base items-center px-2 gap-3 border-2 border-grayish-white cursor-pointer"
                 whileTap={{ scale: 0.92 }}
-                whileHover={{ scale: 1.04 }}
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
               >
                 <p>Live</p>

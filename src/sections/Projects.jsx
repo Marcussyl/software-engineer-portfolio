@@ -78,7 +78,7 @@ const projects = [
     projectId: "5",
     thumbImgs: ["/software-engineer-portfolio/assets/proj-thumbs/ai-racer.png"],
     title: "AI Racer",
-    tags: ["MkDocs", "SSG", "Responsive Design", "Light/Dark Mode Support"],
+    tags: ["MkDocs", "SSG", "Light/Dark Mode Support"],
     overview:
       "AI Racer is a beautifully structured landing page crafted to showcase and document participation in the AWS DeepRacer competition. Powered by MkDocs and styled with MkDocs Material, the page delivers clean, fast-loading documentation that’s as sleek as the autonomous vehicles it represents.",
     features: null,

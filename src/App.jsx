@@ -57,12 +57,12 @@ function App() {
   };
 
   // 2. Use in useEffect
-  useEffect(() => {
-    const hash = window.location.hash;
-    if (hash) {
-      scrollToTargetId(hash);
-    }
-  }, []);
+  // useEffect(() => {
+  //   const hash = window.location.hash;
+  //   if (hash) {
+  //     scrollToTargetId(hash);
+  //   }
+  // }, []);
 
   // 3. Use in click handler
   const handleHeaderLinkClick = (e, targetId) => {

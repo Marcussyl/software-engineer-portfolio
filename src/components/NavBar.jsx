@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { HeaderContext } from "@/lib/HeaderContext.js";
 import { motion, AnimatePresence } from "motion/react";
 
@@ -9,50 +9,55 @@ export const NavBar = () => {
       <nav className="fixed left-1/2 -translate-x-1/2 top-5 w-9/10 bg-[#160c2a]/70 backdrop-blur-sm border-[#2c1854] border-2 shadow-[0_0_10px_rgba(0,0,0,0.1)] z-50 px-7 rounded-full mx-auto max-w-[1300px]">
         <div className="flex items-center justify-between">
           {/* Left side - Logo */}
-          <div className="flex items-center gap-2">
-            <img src="/software-engineer-portfolio/assets/globe.svg" alt="" />
+          <div
+            className="flex items-center gap-2 cursor-pointer"
+            onClick={(e) => handleHeaderLinkClick(e, "#about")}
+          >
+            <img
+              src="/software-engineer-portfolio/assets/globe.svg"
+              alt="globe icon"
+            />
             <p className="font-black text-sharp-purple font-pacifico text-xl">
               Mars
             </p>
           </div>
           {/* Right side - Navigation Links */}
-          <div className="hidden md:flex items-center space-x-8">
-            <a
-              href="#about"
-              className={`section-linker ${
+          <div className="hidden md:flex items-center gap-6">
+            <div
+              className={`text-grayish-white hover:text-light-purple transition-colors text-lg focus:outline-none py-4 font-medium cursor-pointer ${
                 activeHeaderLink === "#about" ? "text-sharp-purple" : ""
               }`}
               onClick={(e) => handleHeaderLinkClick(e, "#about")}
             >
-              About
-            </a>
-            <a
-              href="#tech-stack"
-              className={`section-linker ${
+              About Me
+            </div>
+            <div className="h-3 w-[1px] bg-grayish-white/50"></div>
+            <div
+              className={`text-grayish-white hover:text-light-purple transition-colors text-lg focus:outline-none py-4 font-medium cursor-pointer ${
                 activeHeaderLink === "#tech-stack" ? "text-sharp-purple" : ""
               }`}
               onClick={(e) => handleHeaderLinkClick(e, "#tech-stack")}
             >
               Technologies
-            </a>
-            <a
-              href="#projects"
-              className={`section-linker ${
+            </div>
+            <div className="h-3 w-[1px] bg-grayish-white/50"></div>
+            <div
+              className={`text-grayish-white hover:text-light-purple transition-colors text-lg focus:outline-none py-4 font-medium cursor-pointer ${
                 activeHeaderLink === "#projects" ? "text-sharp-purple" : ""
               }`}
               onClick={(e) => handleHeaderLinkClick(e, "#projects")}
             >
               Projects
-            </a>
-            <a
-              href="#contact"
-              className={`section-linker ${
+            </div>
+            <div className="h-3 w-[1px] bg-grayish-white/50"></div>
+            <div
+              className={`text-grayish-white hover:text-light-purple transition-colors text-lg focus:outline-none py-4 font-medium cursor-pointer ${
                 activeHeaderLink === "#contact" ? "text-sharp-purple" : ""
               }`}
               onClick={(e) => handleHeaderLinkClick(e, "#contact")}
             >
               Contact
-            </a>
+            </div>
           </div>
           <div
             className="block md:hidden cursor-pointer"
@@ -107,7 +112,7 @@ export const NavBar = () => {
                 }`}
                 onClick={(e) => handleHeaderLinkClick(e, "#about")}
               >
-                About
+                About Me
               </a>
               <a
                 href="#tech-stack"
