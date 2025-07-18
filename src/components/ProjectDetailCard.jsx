@@ -12,9 +12,9 @@ const ProjectDetailCard = ({
   thumbImgs,
 }) => {
   return (
-    <div className="proj-detail-card">
+    <div className="text-grayish-white flex flex-col gap-7 p-5 md:p-8 pt-15 md:pt-8 border-2 border-dashed border-main-purple rounded-xl w-full md:flex-row bg-dark-purple overflow-y-auto">
       <button
-        className="close-btn absolute top-5 right-6 cursor-pointer text-white text-2xl z-20"
+        className="close-btn absolute top-5 right-5 cursor-pointer text-white text-2xl z-20"
         onClick={() => setOpenProjectId(null)}
       >
         x
@@ -23,7 +23,10 @@ const ProjectDetailCard = ({
         <img src={thumbImgs[0]} alt="swiper img" className="proj-thumb" />
         <div className="tags flex gap-2 flex-wrap">
           {tags.map((tag, index) => (
-            <div className="proj-tag" key={index}>
+            <div
+              className="text-xs md:text-sm border-1 border-grayish-white py-1 px-2 md:px-[13px] rounded-[18px] whitespace-nowrap text-grayish-white"
+              key={index}
+            >
               {tag}
             </div>
           ))}
@@ -33,49 +36,54 @@ const ProjectDetailCard = ({
         <h2 className="proj-title">{title}</h2>
         <div className="overview">
           <h3 className="proj-subtitle">Overview</h3>
-          <p className="proj-desc">{desc}</p>
+          <p className="text-sm md:text-base text-grayish-white overflow-y-auto max-h-[200px]">
+            {desc}
+          </p>
         </div>
-        <div className="flex gap-10">
-          {features && (
-            <div className="features flex flex-col gap-2">
-              <h3 className="proj-subtitle">Key Features</h3>
-              {features.map((feature, index) => (
-                <div className="feature-item flex gap-2" key={index}>
-                  <img
-                    src="/software-engineer-portfolio/assets/tick.png"
-                    alt="icon"
-                  />
-                  <p className="proj-desc">{feature}</p>
-                </div>
-              ))}
-            </div>
-          )}
-          {challenges && (
-            <div className="challenges flex flex-col gap-2">
-              <h3 className="proj-subtitle">Challenges</h3>
-              {challenges.map((challenge, index) => (
-                <div className="feature-item flex gap-2" key={index}>
-                  <img
-                    src="/software-engineer-portfolio/assets/tick.png"
-                    alt="icon"
-                  />
-                  <p className="proj-desc">{challenge}</p>
-                </div>
-              ))}
-            </div>
-          )}
-        </div>
-        <div className="buttons flex gap-5 mt-5">
+        {(features || challenges) && (
+          <div className="flex gap-10">
+            {features && (
+              <div className="features flex flex-col gap-2">
+                <h3 className="proj-subtitle">Key Features</h3>
+                {features.map((feature, index) => (
+                  <div className="feature-item flex gap-2" key={index}>
+                    <img
+                      src="/software-engineer-portfolio/assets/tick.png"
+                      alt="icon"
+                    />
+                    <p className="proj-desc">{feature}</p>
+                  </div>
+                ))}
+              </div>
+            )}
+            {challenges && (
+              <div className="challenges flex flex-col gap-2">
+                <h3 className="proj-subtitle">Challenges</h3>
+                {challenges.map((challenge, index) => (
+                  <div className="feature-item flex gap-2" key={index}>
+                    <img
+                      src="/software-engineer-portfolio/assets/tick.png"
+                      alt="icon"
+                    />
+                    <p className="proj-desc">{challenge}</p>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        )}
+        <div className="buttons flex gap-2 md:gap-5">
           {githubLink && (
             <motion.a
               href={githubLink}
               target="_blank"
-              className="glowing-btn w-1/2"
-              initial={{ scale: 0.9 }}
-              whileHover={{ scale: 1 }}
+              className="glowing-btn flex-1"
+              whileTap={{ scale: 0.92 }}
+              whileHover={{ scale: 1.04 }}
+              transition={{ type: "spring", stiffness: 400, damping: 17 }}
             >
-              <div className="inner w-full justify-center p-3 text-base gap-4">
-                GitHub Repo
+              <div className="inner w-full justify-center py-2 text-sm md:text-base gap-3">
+                GitHub
                 <img
                   src="/software-engineer-portfolio/assets/github.png"
                   alt="icon"
@@ -88,11 +96,12 @@ const ProjectDetailCard = ({
             <motion.a
               href={liveLink}
               target="_blank"
-              className="flex justify-center p-3 text-base items-center px-2 gap-4 border-2 border-grayish-white w-1/2 cursor-pointer"
-              initial={{ scale: 0.9 }}
-              whileHover={{ scale: 1 }}
+              className="flex justify-center flex-1 py-2 text-sm md:text-base items-center px-2 gap-3 border-2 border-grayish-white cursor-pointer"
+              whileTap={{ scale: 0.92 }}
+              whileHover={{ scale: 1.04 }}
+              transition={{ type: "spring", stiffness: 400, damping: 17 }}
             >
-              <p>Live Site</p>
+              <p>Live</p>
               <img
                 src="/software-engineer-portfolio/assets/play.png"
                 alt="icon"

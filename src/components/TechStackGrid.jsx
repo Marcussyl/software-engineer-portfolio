@@ -17,7 +17,7 @@ const itemVariants = {
 const TechStackGrid = ({techStackItems}) => {
     return (
       <motion.div
-        className="grid grid-cols-[repeat(auto-fit,minmax(95px,1fr))] lg:grid-cols-[repeat(auto-fit,minmax(120px,1fr))] gap-4 w-full"
+        className="grid grid-cols-[repeat(auto-fit,minmax(80px,1fr))] lg:grid-cols-[repeat(auto-fit,minmax(120px,1fr))] gap-4 w-full"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"

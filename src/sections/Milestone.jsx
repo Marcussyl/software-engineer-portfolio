@@ -11,7 +11,6 @@ export const Milestone = () => {
 
   const handleAccordionClick = (e) => {
     const achievement = e.currentTarget.getAttribute("data-achievement");
-    console.log(achievement);
     setOpenAchievement(achievement);
   };
 
@@ -35,7 +34,7 @@ export const Milestone = () => {
         A showcase of certifications, awards, and achievements highlighting
         expertise, innovation, and dedication to front-end development.
       </p> */}
-      <div className="accordion">
+      <div className="accordion" data-active-accordion="aws-practitioner">
         <div className="thumbnails">
           {openAchievement === "aws-practitioner" && (
             <Swiper
@@ -52,7 +51,7 @@ export const Milestone = () => {
                 clickable: true,
               }}
               modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-              className="mySwiper w-[90%] rounded-lg"
+              className="mySwiper w-full rounded-lg mx-0"
             >
               <SwiperSlide className="!w-full flex justify-center">
                 <img
@@ -81,7 +80,7 @@ export const Milestone = () => {
                 clickable: true,
               }}
               modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-              className="mySwiper w-[90%] rounded-lg"
+              className="mySwiper w-[90%] rounded-lg mx-0"
             >
               <SwiperSlide className="!w-full flex justify-center">
                 <img
@@ -111,7 +110,7 @@ export const Milestone = () => {
                 clickable: true,
               }}
               modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-              className="mySwiper w-[90%] rounded-lg"
+              className="mySwiper w-[90%] rounded-lg mx-0"
             >
               <SwiperSlide className="!w-full flex justify-center">
                 <img
@@ -144,15 +143,12 @@ export const Milestone = () => {
               data-achievement="aws-practitioner"
               onClick={handleAccordionClick}
             >
-              Achieved foundational certification from Amazon Web Services,
-              validating deep understanding of core AWS services, cloud
-              concepts, billing models, and architectural principles.
-              <br />
-              <br />
-              This credential demonstrates my ability to navigate cloud
-              environments, communicate technical benefits to stakeholders, and
-              integrate cloud-native thinking into modern software development
-              workflows.
+              The AWS Cloud Practitioner certificate demonstrates my
+              understanding of core AWS services, cloud concepts, billing
+              models, and architectural principles and my ability to navigate
+              cloud environments, communicate technical benefits to
+              stakeholders, and integrate cloud-native thinking into modern
+              software development workflows.
             </div>
           </div>
           <div className="accordion-item">
@@ -161,7 +157,7 @@ export const Milestone = () => {
               data-achievement="hackathon"
               onClick={handleAccordionClick}
             >
-              <h2>IEEE Web3 Hackathon Competition 2022</h2>
+              <h2>IEEE Web3 Hackathon Competition 2022 (First-Runner Up)</h2>
               <img
                 src="/software-engineer-portfolio/assets/google-down-arrow.svg"
                 alt="up-right-arrow"
@@ -169,21 +165,19 @@ export const Milestone = () => {
               />
             </div>
             <div className="accordion-content" data-achievement="hackathon">
-              Awarded First Runner-Up in the IEEE Web3 Hackathon, held online
-              and on-site at Cyberport Hong Kong, where top developers competed
-              to create innovative Web3 applications. Selected from a
-              competitive pool of university talent, our team built a fully
-              functional prototype using blockchain APIs—judged on innovation,
-              technical execution, and social impact. <br />
+              Awarded First Runner-Up in the IEEE Web3 Hackathon, held at
+              Cyberport Hong Kong, where top developers competed to create
+              innovative Web3 applications. Our team built a fully functional
+              prototype called CryptoFlag, which is a decentralized donation
+              platform leveraging blockchain’s immutability and decentralization
+              to allow users to anonymously denote money without revealing their
+              identities. <br />
               <br />
               Through rapid prototyping under time pressure, I sharpened my
               skills in smart contract development using Hardhat and Ethers.js,
-              integrated real blockchain APIs, and collaborated within a
-              multidisciplinary team to bring an innovative idea to life. The
-              mentorship sessions and networking opportunities helped bridge
-              theory with industry insights, while the competitive environment
-              fostered agile thinking, creativity, and technical confidence.
-              <br /><br />
+              integrated real blockchain APIs.
+              <br />
+              <br />
               <a
                 href="https://www.ieeehkblockchain.org/ieee-hackathon-2022"
                 target="_blank"
@@ -212,13 +206,9 @@ export const Milestone = () => {
             >
               Participated in the 2nd Hong Kong Java Mastercode Contest hosted
               by Venturenix and HKSTP, engaging with over 100 developers in a
-              fast-paced competitive environment. <br />
-              <br />
-              The event showcased problem-solving agility, real-time algorithm
-              design, and Java proficiency under time constraints. Alongside the
-              coding challenge, the contest featured insightful tech talks and
-              networking opportunities with industry leaders—emphasizing
-              innovation and community in Hong Kong’s growing tech ecosystem.
+              fast-paced competitive environment, showcased problem-solving
+              agility, real-time algorithm design, and Java proficiency under
+              time constraints.
               <br />
               <br />
               <a

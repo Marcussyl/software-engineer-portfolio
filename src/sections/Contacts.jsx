@@ -73,7 +73,7 @@ export const Contacts = () => {
 
   return (
     <motion.div
-      className="flex flex-col items-center pt-10 m-5 relative"
+      className="flex flex-col items-center pt-10 relative"
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.3 }}
@@ -84,7 +84,7 @@ export const Contacts = () => {
         onMouseLeave={handleMouseLeave}
         className={`${
           isAnyFocused ? "transform-none" : "transform-3d"
-        } flex flex-col items-center px-10 pt-5 pb-10 mx-auto rounded-lg border-2 border-dashed border-main-purple max-w-[500px]`}
+        } flex flex-col items-center px-7 pt-5 pb-5 mx-auto rounded-lg border-2 border-dashed border-main-purple max-w-[500px]`}
         style={{
           rotateX: isAnyFocused ? 0 : rotateX,
           rotateY: isAnyFocused ? 0 : rotateY,
@@ -147,10 +147,13 @@ export const Contacts = () => {
               ></textarea>
             </div>
             <br />
-            <button
+            <motion.button
               className="block mx-auto w-full"
               type="submit"
               value={"Send"}
+              whileTap={{ scale: 0.92 }}
+              whileHover={{ scale: 1.04 }}
+              transition={{ type: "spring", stiffness: 400, damping: 17 }}
             >
               <div className="inner justify-center rounded-[10px] !cursor-pointer flex gap-2 items-center border-2 border-dashed border-main-purple p-2 text-grayish-white">
                 Send Message
@@ -159,7 +162,7 @@ export const Contacts = () => {
                   alt="plane icon"
                 /> */}
               </div>
-            </button>
+            </motion.button>
           </form>
           <div className="social-medias-container">
             <a href="https://github.com/Marcussyl" target="_blank">

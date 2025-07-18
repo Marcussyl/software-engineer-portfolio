@@ -111,7 +111,7 @@ const TechStackSection = () => {
           Technologies I Used
         </h2>
         <p className="section-desc">
-          I've worked with a variety of technologies and frameworks over the
+          I've worked with a variety of modern technologies and frameworks over the
           years, and I'm always eager to learn new ones. Here are some of the
           technologies I've used:
         </p>

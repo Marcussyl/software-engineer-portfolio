@@ -60,7 +60,7 @@ const projects = [
     projectId: "4",
     thumbImgs: ["/software-engineer-portfolio/assets/proj-thumbs/jamming.png"],
     title: "Jammming",
-    tags: ["React", "OAuth2", "Responsive Design", "Spotify API"],
+    tags: ["React", "OAuth2", "Spotify API"],
     overview:
       "Jammming is a sleek, user-friendly web app built with React that empowers users to search for tracks, artists, and albums through the Spotify API. Once users find their favorite songs, they can effortlessly assemble a custom playlist and save it directly to their Spotify account.",
     features: null,
@@ -150,7 +150,7 @@ export const Projects = () => {
           Explore my latest projects, showcasing creativity and precision in
           design. Each project reflects innovation and user-focused solutions.
         </p> */}
-        <div className="flex flex-col items-center justify-center flex-wrap md:flex-row py-4 px-6 md:px-10 gap-5">
+        <div className="flex flex-col items-center justify-center flex-wrap md:flex-row py-4 gap-5">
           {projects.slice(0, visibleCount).map((project) => (
             <ProjectCard
               key={project.projectId + project.title}

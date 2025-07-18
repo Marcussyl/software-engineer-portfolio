@@ -61,7 +61,6 @@ function App() {
     const hash = window.location.hash;
     if (hash) {
       scrollToTargetId(hash);
-      console.log(hash);
     }
   }, []);
 
@@ -70,7 +69,6 @@ function App() {
     e.preventDefault();
     scrollToTargetId(targetId);
     setActiveHeaderLink(targetId);
-    console.log(targetId);
   };
 
   return (

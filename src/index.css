@@ -32,7 +32,7 @@
     /* global classes start */
 
     .section-content {
-        @apply max-w-[1700px] py-15 px-5 mx-auto block;
+        @apply max-w-[1700px] py-15 px-7 mx-auto block;
     }
     
     .content-container {
@@ -140,17 +140,14 @@
       @apply w-full object-contain rounded
     }
 
-    #projects .proj-tag {
+    /* #projects .proj-tag {
       @apply text-sm border-1 border-grayish-white py-1 px-[13px] rounded-[18px] whitespace-nowrap text-grayish-white
-    }
+    } */
 
     #projects .proj-title {
       @apply text-lg text-grayish-white
     }
 
-    #projects .proj-detail-card {
-      @apply text-grayish-white flex flex-col gap-7 p-8 border-2 border-dashed border-main-purple rounded-xl w-full md:flex-row bg-dark-purple
-    }
 
     #projects .proj-detail-card .proj-title {
       @apply text-2xl font-bold text-sharp-purple
@@ -160,9 +157,9 @@
       @apply text-lg font-bold text-grayish-white
     }
 
-    #projects .proj-detail-card .proj-desc {
+    /* #projects .proj-detail-card .proj-desc {
       @apply text-base text-grayish-white
-    }
+    } */
 
     #projects .feature-item {
       @apply flex gap-2
@@ -177,7 +174,7 @@
 
     /* Mileston Section start */
     #milestone .accordion {
-      @apply flex flex-col md:flex-row gap-2 justify-center w-[90%]
+      @apply flex flex-col md:flex-row gap-3 md:gap-7 justify-center w-[100%]
     }
     #milestone .accordion .thumbnails {
       @apply flex-1
@@ -295,32 +292,6 @@ body {
     color: #9166e9;
 }
 
-/* h1 {
-  font-size: 3em;
-  line-height: 1.1;
-} */
-
-/* button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-} */
-
-/* @media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-} */
-
 @theme inline {
     --radius-sm: calc(var(--radius) - 4px);
     --radius-md: calc(var(--radius) - 2px);
@@ -405,13 +376,6 @@ button:focus-visible {
     --swiper-navigation-top-offset: 93%;
     --swiper-navigation-size: 20px !important;
     --swiper-navigation-sides-offset: 35%;
-    /* --swiper-pagination-bullet-active-size: 10px; */
-    /* --swiper-pagination-bullet-active-color: #5f3aa6; */
-    /* --swiper-navigation-width: 44px;
-    --swiper-navigation-height: 44px;
-    --swiper-navigation-border-radius: 50%;
-    --swiper-navigation-button-size: 20px; */
-    /* --swiper-navigation-button-color: #5f3aa6; */
 
     /* swiper end */
 }
