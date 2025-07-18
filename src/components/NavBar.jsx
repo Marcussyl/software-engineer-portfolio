@@ -3,9 +3,7 @@ import { HeaderContext } from "@/lib/HeaderContext.js";
 import { motion, AnimatePresence } from "motion/react";
 
 export const NavBar = () => {
-  const {handleHeaderLinkClick, activeHeaderLink} = useContext(HeaderContext);
-  const [mobileNavOpen, setMobileNavOpen] = useState(false);
-
+  const {handleHeaderLinkClick, activeHeaderLink, mobileNavOpen, setMobileNavOpen} = useContext(HeaderContext);
   return (
     <div>
       <nav className="fixed left-1/2 -translate-x-1/2 top-5 w-9/10 bg-[#160c2a]/70 backdrop-blur-sm border-[#2c1854] border-2 shadow-[0_0_10px_rgba(0,0,0,0.1)] z-50 px-7 rounded-full mx-auto max-w-[1300px]">

@@ -12,6 +12,7 @@ import { HeaderContext } from './lib/HeaderContext';
 
 function App() {
   const [activeHeaderLink, setActiveHeaderLink] = useState('#about');
+  const [mobileNavOpen, setMobileNavOpen] = useState(false);
 
   useEffect(() => {
     const handleClick = function () {
@@ -67,6 +68,7 @@ function App() {
   // 3. Use in click handler
   const handleHeaderLinkClick = (e, targetId) => {
     e.preventDefault();
+    setMobileNavOpen(false);
     scrollToTargetId(targetId);
     setActiveHeaderLink(targetId);
   };
@@ -74,7 +76,7 @@ function App() {
   return (
     <div className={"font-mono"}>
       <section id="navigation">
-        <HeaderContext.Provider value={{handleHeaderLinkClick, activeHeaderLink}}>
+        <HeaderContext.Provider value={{handleHeaderLinkClick, activeHeaderLink, mobileNavOpen, setMobileNavOpen}}>
           <Navigations handleHeaderLinkClick={handleHeaderLinkClick}/>
         </HeaderContext.Provider>
       </section>
