@@ -89,7 +89,7 @@ const techStackItems = [
   },
 ];
 
-const TechStackSection = () => {
+export const TechStackSection = () => {
   return (
     <div className="flex flex-col gap-10 px-5 py-7 justify-center items-center">
       <motion.div
@@ -120,5 +120,3 @@ const TechStackSection = () => {
     </div>
   );
 };
-
-export default TechStackSection;

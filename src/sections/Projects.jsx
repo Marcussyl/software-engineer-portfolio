@@ -192,7 +192,7 @@ export const Projects = () => {
         <AnimatePresence key={idx}>
           {openProjectId === project.projectId && (
             <div
-              className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-100 w-4/5 max-w-[1080px]"
+              className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-100 w-full max-w-[1080px] px-7"
               ref={modalRef}
             >
               <motion.div

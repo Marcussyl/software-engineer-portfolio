@@ -12,9 +12,9 @@ const ProjectDetailCard = ({
   thumbImgs,
 }) => {
   return (
-    <div className="text-grayish-white flex flex-col gap-7 p-5 md:p-8 pt-13 md:pt-8 border-2 border-dashed border-main-purple rounded-xl w-full md:flex-row bg-dark-purple overflow-y-auto">
+    <div className="text-grayish-white flex flex-col md:flex-row gap-2 md:gap-7 p-5 md:p-8 pt-12 md:pt-8 border-2 border-dashed border-main-purple rounded-xl w-full bg-dark-purple overflow-y-auto max-h-[90dvh] md:h-auto">
       <button
-        className="close-btn absolute top-3 right-5 cursor-pointer text-white text-2xl z-20"
+        className="close-btn absolute top-2 right-12 cursor-pointer text-white text-2xl z-20"
         onClick={() => setOpenProjectId(null)}
       >
         x
@@ -36,7 +36,7 @@ const ProjectDetailCard = ({
         <h2 className="text-2xl text-sharp-purple font-bold">{title}</h2>
         <div className="overview">
           <h3 className="text-lg font-bold text-grayish-white">Overview</h3>
-          <p className="text-sm md:text-base text-grayish-white overflow-y-auto max-h-[200px]">
+          <p className="text-sm md:text-base text-grayish-white">
             {desc}
           </p>
         </div>

@@ -1,8 +1,7 @@
 import $ from 'jquery';
-import './App.css'
 import { Navigations } from './sections/Navigation';
 import { HeroSection } from './sections/Hero';
-import TechStackSection from './sections/TechStack';
+import { TechStackSection } from './sections/TechStack';
 import { Projects } from './sections/Projects';
 import { Milestone } from './sections/Milestone';
 import { Contacts } from './sections/Contacts';
