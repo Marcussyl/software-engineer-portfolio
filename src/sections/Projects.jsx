@@ -1,7 +1,12 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import ProjectCard from "../components/ProjectCard";
 import ProjectDetailCard from "../components/ProjectDetailCard";
 import { motion, AnimatePresence } from "motion/react";
+import {
+  disableBodyScroll,
+  enableBodyScroll,
+  clearAllBodyScrollLocks,
+} from "body-scroll-lock";
 
 const projects = [
   {
@@ -105,6 +110,7 @@ const projects = [
 export const Projects = () => {
   const [openProjectId, setOpenProjectId] = useState(null);
   const [visibleCount, setVisibleCount] = useState(3);
+  const modalRef = useRef();
 
   const handleShowMore = () => {
     setVisibleCount((prev) => prev + 3);
@@ -116,14 +122,21 @@ export const Projects = () => {
   };
 
   useEffect(() => {
-    if (openProjectId) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
+    const modal = modalRef.current;
+    if (openProjectId && modal) {
+      // document.body.style.overflow = "hidden";
+      // document.documentElement.style.overflow = "hidden";
+      disableBodyScroll(modal);
+    } else if (modal) {
+      // document.body.style.overflow = "";
+      // document.documentElement.style.overflow = "";
+      enableBodyScroll(modal);
     }
-    // Clean up in case the component unmounts while modal is open
     return () => {
-      document.body.style.overflow = "";
+      // document.body.style.overflow = "";
+      // document.documentElement.style.overflow = "";
+      if(modal) enableBodyScroll(modal);
+      clearAllBodyScrollLocks();
     };
   }, [openProjectId]);
 
@@ -175,34 +188,35 @@ export const Projects = () => {
           onClick={() => setOpenProjectId(null)}
         ></div>
       )}
-      {
-        projects.map((project, idx) => (
-          <AnimatePresence key={idx}>
-            {openProjectId === project.projectId && (
-              <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-100 w-4/5 max-w-[1080px]">
-                <motion.div
-                  initial={{ opacity: 0, y: 100 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -100 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <ProjectDetailCard
-                    setOpenProjectId={setOpenProjectId}
-                    title={project.title}
-                    desc={project.overview}
-                    features={project.features}
-                    challenges={project.challenges}
-                    githubLink={project.githubLink}
-                    liveLink={project.liveSiteLink}
-                    tags={project.tags}
-                    thumbImgs={project.thumbImgs}
-                  />
-                </motion.div>
-              </div>
-            )}
-          </AnimatePresence>
-        ))
-      }
+      {projects.map((project, idx) => (
+        <AnimatePresence key={idx}>
+          {openProjectId === project.projectId && (
+            <div
+              className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-100 w-4/5 max-w-[1080px]"
+              ref={modalRef}
+            >
+              <motion.div
+                initial={{ opacity: 0, y: 100 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -100 }}
+                transition={{ duration: 0.3 }}
+              >
+                <ProjectDetailCard
+                  setOpenProjectId={setOpenProjectId}
+                  title={project.title}
+                  desc={project.overview}
+                  features={project.features}
+                  challenges={project.challenges}
+                  githubLink={project.githubLink}
+                  liveLink={project.liveSiteLink}
+                  tags={project.tags}
+                  thumbImgs={project.thumbImgs}
+                />
+              </motion.div>
+            </div>
+          )}
+        </AnimatePresence>
+      ))}
     </div>
   );
 }

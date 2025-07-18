@@ -144,18 +144,18 @@
       @apply text-sm border-1 border-grayish-white py-1 px-[13px] rounded-[18px] whitespace-nowrap text-grayish-white
     } */
 
-    #projects .proj-title {
+    /* #projects .proj-title {
       @apply text-lg text-grayish-white
-    }
+    } */
 
 
-    #projects .proj-detail-card .proj-title {
+    /* #projects .proj-detail-card .proj-title {
       @apply text-2xl font-bold text-sharp-purple
-    }
+    } */
 
-    #projects .proj-detail-card .proj-subtitle {
+    /* #projects .proj-detail-card .proj-subtitle {
       @apply text-lg font-bold text-grayish-white
-    }
+    } */
 
     /* #projects .proj-detail-card .proj-desc {
       @apply text-base text-grayish-white
