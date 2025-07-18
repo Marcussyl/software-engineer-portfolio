@@ -1,10 +1,31 @@
 import { motion, useSpring, useTransform, useMotionValue } from "motion/react";
 import emailjs from '@emailjs/browser';
-import { useRef, useState } from "react";
+import { useRef, useState, useReducer } from "react";
 
 export const Contacts = () => {
   const [isAnyFocused, setIsAnyFocused] = useState(false);
   const focusCount = useRef(0);
+  const [emailSendState, setEmailSendState] = useState();
+
+  const initialState = {
+    name: "",
+    subject: "",
+    email: "",
+    message: "",
+  };
+
+  function reducer(state, action) {
+    switch (action.type) {
+      case "FIELD":
+        return { ...state, [action.field]: action.value };
+      case "RESET":
+        return initialState;
+      default:
+        return state;
+    }
+  }
+
+  const [state, dispatch] = useReducer(reducer, initialState);
 
   const x = useMotionValue(0);
   const y = useMotionValue(0);
@@ -41,6 +62,13 @@ export const Contacts = () => {
     console.log("sending email...");
     e.preventDefault();
 
+    // Validation: check all fields are filled
+    if (!state.name || !state.subject || !state.email || !state.message) {
+      setEmailSendState("INCOMPLETE");
+      setTimeout(() => setEmailSendState(undefined), 5000);
+      return;
+    }
+
     emailjs
     .sendForm('service_j34e6op', 'template_qdwmjme', form.current, {
       publicKey: 'Ppd8kmEE1F2BBcDZv',
@@ -48,9 +76,14 @@ export const Contacts = () => {
     .then(
       () => {
         console.log('SUCCESS!');
+        dispatch({type: "RESET"});
+        setEmailSendState("SUCCESS");
+        setTimeout(() => setEmailSendState(undefined), 5000);
       },
       (error) => {
         console.log('FAILED...', error.text);
+        setEmailSendState("ERROR");
+        setTimeout(() => setEmailSendState(undefined), 5000);
       },
     );
   }
@@ -107,6 +140,14 @@ export const Contacts = () => {
                 onFocus={handleFocus}
                 onBlur={handleBlur}
                 className="focus:outline-none"
+                value={state.name}
+                onChange={(e) =>
+                  dispatch({
+                    type: "FIELD",
+                    field: "name",
+                    value: e.target.value,
+                  })
+                }
               />
             </div>
             <br />
@@ -119,6 +160,14 @@ export const Contacts = () => {
                 onFocus={handleFocus}
                 onBlur={handleBlur}
                 className="focus:outline-none"
+                value={state.subject}
+                onChange={(e) =>
+                  dispatch({
+                    type: "FIELD",
+                    field: "subject",
+                    value: e.target.value,
+                  })
+                }
               />
             </div>
             <br />
@@ -131,6 +180,14 @@ export const Contacts = () => {
                 onFocus={handleFocus}
                 onBlur={handleBlur}
                 className="focus:outline-none"
+                value={state.email}
+                onChange={(e) =>
+                  dispatch({
+                    type: "FIELD",
+                    field: "email",
+                    value: e.target.value,
+                  })
+                }
               />
             </div>
             <br />
@@ -144,6 +201,14 @@ export const Contacts = () => {
                 onFocus={handleFocus}
                 onBlur={handleBlur}
                 className="focus:outline-none"
+                value={state.message}
+                onChange={(e) =>
+                  dispatch({
+                    type: "FIELD",
+                    field: "message",
+                    value: e.target.value,
+                  })
+                }
               ></textarea>
             </div>
             <br />
@@ -151,16 +216,33 @@ export const Contacts = () => {
               className="block mx-auto w-full"
               type="submit"
               value={"Send"}
-              whileTap={{ scale: 0.92 }}
+              whileTap={{ backgroundColor: "#5f3aa6" }}
+              style={{ borderRadius: "10px" }}
             >
               <div className="inner justify-center rounded-[10px] !cursor-pointer flex gap-2 items-center border-2 border-dashed border-main-purple p-2 text-grayish-white">
-                Send Message
+                {"Send Message"}
                 {/* <img
                   src="/software-engineer-portfolio/assets/send.svg"
                   alt="plane icon"
                 /> */}
               </div>
             </motion.button>
+            {/* Show email send state message */}
+            {emailSendState === "SUCCESS" && (
+              <div className="text-green-400 text-center mt-2 text-xs">
+                Thanks for your message! I’ll respond to you soon.
+              </div>
+            )}
+            {emailSendState === "ERROR" && (
+              <div className="text-red-400 text-center mt-2 text-xs">
+                Failed to send message. Please try again later.
+              </div>
+            )}
+            {emailSendState === "INCOMPLETE" && (
+              <div className="text-yellow-400 text-center mt-2 text-xs">
+                Please fill in all fields before sending your message.
+              </div>
+            )}
           </form>
           <div className="social-medias-container">
             <a href="https://github.com/Marcussyl" target="_blank">
