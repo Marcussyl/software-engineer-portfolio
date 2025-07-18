@@ -152,8 +152,6 @@ export const Contacts = () => {
               type="submit"
               value={"Send"}
               whileTap={{ scale: 0.92 }}
-              whileHover={{ scale: 1.04 }}
-              transition={{ type: "spring", stiffness: 400, damping: 17 }}
             >
               <div className="inner justify-center rounded-[10px] !cursor-pointer flex gap-2 items-center border-2 border-dashed border-main-purple p-2 text-grayish-white">
                 Send Message
