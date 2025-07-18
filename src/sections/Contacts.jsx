@@ -59,7 +59,6 @@ export const Contacts = () => {
 
   const form = useRef();
   const sendEmail = (e) => {
-    console.log("sending email...");
     e.preventDefault();
 
     // Validation: check all fields are filled
@@ -75,7 +74,6 @@ export const Contacts = () => {
     })
     .then(
       () => {
-        console.log('SUCCESS!');
         dispatch({type: "RESET"});
         setEmailSendState("SUCCESS");
         setTimeout(() => setEmailSendState(undefined), 5000);
