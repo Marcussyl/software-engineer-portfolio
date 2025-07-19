@@ -5,13 +5,14 @@ import { TechStackSection } from './sections/TechStack';
 import { Projects } from './sections/Projects';
 import { Milestone } from './sections/Milestone';
 import { Contacts } from './sections/Contacts';
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { HeaderContext } from './lib/HeaderContext';
 
 
 function App() {
   const [activeHeaderLink, setActiveHeaderLink] = useState('#about');
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
+  const scrollHandlerEnabled = useRef(true);
 
   useEffect(() => {
     const handleClick = function () {
@@ -37,11 +38,10 @@ function App() {
     };
   }, []);
 
-  // 1. Extract the scroll logic to a function
   const scrollToTargetId = (targetId) => {
     const target = document.querySelector(targetId);
     if (target) {
-      const headerOffset = 80; // Adjust to your header's height
+      const headerOffset = 80;
       const elementPosition =
         target.getBoundingClientRect().top + window.scrollY;
       const offsetPosition = elementPosition - headerOffset;
@@ -50,27 +50,50 @@ function App() {
         top: offsetPosition,
         behavior: "smooth",
       });
-
-      // Optionally update the URL hash
-      window.history.pushState(null, "", targetId);
     }
   };
 
-  // 2. Use in useEffect
-  // useEffect(() => {
-  //   const hash = window.location.hash;
-  //   if (hash) {
-  //     scrollToTargetId(hash);
-  //   }
-  // }, []);
-
-  // 3. Use in click handler
   const handleHeaderLinkClick = (e, targetId) => {
     e.preventDefault();
     setMobileNavOpen(false);
+    scrollHandlerEnabled.current = false;
     scrollToTargetId(targetId);
     setActiveHeaderLink(targetId);
+
+    setTimeout(() => {
+      setActiveHeaderLink(targetId);
+      scrollHandlerEnabled.current = true;
+    }, 1000);
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!scrollHandlerEnabled.current) return;
+      const sections = [
+        { id: "#about" },
+        { id: "#tech-stack" },
+        { id: "#projects" },
+        { id: "#milestone" },
+        { id: "#contact" },
+      ];
+      let current = "#about";
+      for (const section of sections) {
+        const el = document.querySelector(section.id);
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          const offset =
+            section.id === "#contact" ? window.innerHeight / 3 : 100;
+          if (rect.top <= offset) {
+            current = section.id;
+          }
+        }
+      }
+      setActiveHeaderLink(current);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <div className={"font-mono"}>

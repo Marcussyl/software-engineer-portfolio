@@ -57,6 +57,15 @@ export const NavBar = () => {
             <div className="bg-grayish-white/50 h-3 w-[1px]"></div>
             <div
               className={`text-grayish-white hover:text-light-purple cursor-pointer py-4 text-lg font-medium transition-colors focus:outline-none ${
+                activeHeaderLink === "#milestone" ? "text-sharp-purple" : ""
+              }`}
+              onClick={(e) => handleHeaderLinkClick(e, "#milestone")}
+            >
+              Milestone
+            </div>
+            <div className="bg-grayish-white/50 h-3 w-[1px]"></div>
+            <div
+              className={`text-grayish-white hover:text-light-purple cursor-pointer py-4 text-lg font-medium transition-colors focus:outline-none ${
                 activeHeaderLink === "#contact" ? "text-sharp-purple" : ""
               }`}
               onClick={(e) => handleHeaderLinkClick(e, "#contact")}
