@@ -20,7 +20,7 @@ const ProjectDetailCard = ({
       transition={{ duration: 0.3 }}
       className="fixed top-1/2 left-1/2 z-100 w-full max-w-[1080px] -translate-x-1/2 -translate-y-1/2 px-7"
     >
-      <div className="text-grayish-white border-main-purple bg-dark-purple relative w-full rounded-xl border-2 border-dashed p-5 pt-12 md:h-auto md:p-8 md:pt-8">
+      <div className="text-grayish-white border-main-purple bg-dark-purple relative w-full rounded-xl border-2 border-dashed pb-5 pt-12 md:h-auto md:pb-8 md:pt-8">
         <button
           className="group absolute top-4 right-4 z-20 cursor-pointer"
           onClick={() => setOpenProjectId(null)}
@@ -37,11 +37,9 @@ const ProjectDetailCard = ({
           />
         </button>
         <div
-          className="flex h-full max-h-[500px] flex-col gap-3 md:flex-row md:gap-7"
-          style={{ overflowY: "auto" }}
+          className="flex h-full max-h-[500px] flex-col gap-3 md:flex-row md:gap-7 overflow-y-auto px-5 md:px-8"
           ref={modalRef}
         >
-          {/* WebkitOverflowScrolling: "touch" */}
           <div className="basic-info flex flex-1 flex-col gap-3 md:gap-5">
             <img src={thumbImgs[0]} alt="swiper img" className="proj-thumb" />
             <div className="tags flex flex-wrap gap-2">
