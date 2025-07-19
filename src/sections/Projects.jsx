@@ -91,12 +91,7 @@ const projects = [
     projectId: "6",
     thumbImgs: ["/software-engineer-portfolio/assets/proj-thumbs/big-two.png"],
     title: "Big Two",
-    tags: [
-      "Java",
-      "Java Swing",
-      "OOP",
-      "Real-time Game Validation",
-    ],
+    tags: ["Java", "Java Swing", "OOP", "Real-time Game Validation"],
     overview:
       "Big Two is a Java-based desktop application that simulates the popular East Asian card game in an intuitive, interactive format. Built with Java Swing, the project delivers a familiar gaming experience through a custom graphical user interface, complete with card visuals, player turns, and game logic.",
     features: null,
@@ -135,15 +130,15 @@ export const Projects = () => {
     return () => {
       // document.body.style.overflow = "";
       // document.documentElement.style.overflow = "";
-      if(modal) enableBodyScroll(modal);
+      if (modal) enableBodyScroll(modal);
       clearAllBodyScrollLocks();
     };
   }, [openProjectId]);
 
   return (
-    <div className="flex flex-col justify-center items-center gap-5">
+    <div className="flex flex-col items-center justify-center gap-5">
       <motion.div
-        className="flex flex-col justify-center items-center gap-5"
+        className="flex flex-col items-center justify-center gap-5"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.3 }}
@@ -163,7 +158,7 @@ export const Projects = () => {
           Explore my latest projects, showcasing creativity and precision in
           design. Each project reflects innovation and user-focused solutions.
         </p> */}
-        <div className="flex flex-col items-center justify-center flex-wrap md:flex-row py-4 gap-5">
+        <div className="flex flex-col flex-wrap items-center justify-center gap-5 py-4 md:flex-row">
           {projects.slice(0, visibleCount).map((project) => (
             <ProjectCard
               key={project.projectId + project.title}
@@ -184,7 +179,7 @@ export const Projects = () => {
       {/* Project Detail Card */}
       {openProjectId && (
         <div
-          className="blury-bg fixed top-0 left-0 w-full h-full z-50 bg-black/20 cursor-pointer backdrop-blur-xs"
+          className="blury-bg fixed top-0 left-0 z-50 h-full w-full cursor-pointer bg-black/20 backdrop-blur-xs"
           onClick={() => setOpenProjectId(null)}
         ></div>
       )}
@@ -192,7 +187,7 @@ export const Projects = () => {
         <AnimatePresence key={idx}>
           {openProjectId === project.projectId && (
             <div
-              className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-100 w-full max-w-[1080px] px-7"
+              className="fixed top-1/2 left-1/2 z-100 w-full max-w-[1080px] -translate-x-1/2 -translate-y-1/2 px-7"
               ref={modalRef}
             >
               <motion.div
@@ -219,4 +214,4 @@ export const Projects = () => {
       ))}
     </div>
   );
-}
+};

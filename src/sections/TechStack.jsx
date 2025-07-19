@@ -12,7 +12,8 @@ const techStackItems = [
     imgAlt: "vite",
   },
   {
-    imgPath: "/software-engineer-portfolio/assets/tech-icos/ico-react-native.png",
+    imgPath:
+      "/software-engineer-portfolio/assets/tech-icos/ico-react-native.png",
     imgAlt: "react native",
   },
   {
@@ -28,7 +29,8 @@ const techStackItems = [
     imgAlt: "redux",
   },
   {
-    imgPath: "/software-engineer-portfolio/assets/tech-icos/ico-tailwindcss.png",
+    imgPath:
+      "/software-engineer-portfolio/assets/tech-icos/ico-tailwindcss.png",
     imgAlt: "tailwind css",
   },
   {
@@ -91,9 +93,9 @@ const techStackItems = [
 
 export const TechStackSection = () => {
   return (
-    <div className="flex flex-col gap-10 px-5 py-7 justify-center items-center">
+    <div className="flex flex-col items-center justify-center gap-10 px-5 py-7">
       <motion.div
-        className="inline-flex flex-col gap-5 items-start w-full"
+        className="inline-flex w-full flex-col items-start gap-5"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.3 }}
@@ -107,16 +109,16 @@ export const TechStackSection = () => {
             className=""
           />
         </div>
-        <h2 className="gradient-text section-title leading-normal text-center mx-auto">
+        <h2 className="gradient-text section-title mx-auto text-center leading-normal">
           Technologies I Used
         </h2>
         <p className="section-desc">
-          I've worked with a variety of modern technologies and frameworks over the
-          years, and I'm always eager to learn new ones. Here are some of the
-          technologies I've used:
+          I've worked with a variety of modern technologies and frameworks over
+          the years, and I'm always eager to learn new ones. Here are some of
+          the technologies I've used:
         </p>
       </motion.div>
-      <TechStackGrid techStackItems={techStackItems}/>
+      <TechStackGrid techStackItems={techStackItems} />
     </div>
   );
 };

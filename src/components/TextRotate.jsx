@@ -4,7 +4,7 @@ import TextRotate from "@/fancy/components/text/text-rotate";
 
 export default function Preview() {
   return (
-    <div className="w-dvw h-dvh text-2xl sm:text-3xl md:text-5xl flex flex-row items-center justify-center font-overused-grotesk bg-white dark:text-muted text-foreground font-light overflow-hidden p-12 sm:p-20 md:p-24">
+    <div className="font-overused-grotesk dark:text-muted text-foreground flex h-dvh w-dvw flex-row items-center justify-center overflow-hidden bg-white p-12 text-2xl font-light sm:p-20 sm:text-3xl md:p-24 md:text-5xl">
       <LayoutGroup>
         <motion.p className="flex whitespace-pre" layout>
           <motion.span

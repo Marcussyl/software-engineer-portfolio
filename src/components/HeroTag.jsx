@@ -10,12 +10,10 @@ export const HeroTag = ({ number, desc, moreClass }) => {
       className={`absolute hidden md:block ${moreClass}`}
     >
       <Float>
-        <div
-          className={`flex gap-2 items-center p-3 rounded bg-[#1e103a]`}
-        >
-          <p className="text-2xl font-bold gradient-text">{number}</p>
+        <div className={`flex items-center gap-2 rounded bg-[#1e103a] p-3`}>
+          <p className="gradient-text text-2xl font-bold">{number}</p>
           <p
-            className="text-grayish-white text-xs text-left"
+            className="text-grayish-white text-left text-xs"
             dangerouslySetInnerHTML={{ __html: desc }}
           />
         </div>

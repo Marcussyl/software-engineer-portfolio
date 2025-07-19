@@ -24,36 +24,36 @@ const ProjectDetailCard = ({
       console.log("Is scrollable:", isScrollable);
       setScrollable(isScrollable);
     }
-  }, [])
+  }, []);
 
   return (
     <div
-      className="max-h-[500px] md:h-auto relative text-grayish-white p-5 md:p-8 pt-12 md:pt-8 border-2 border-dashed border-main-purple rounded-xl w-full bg-dark-purple"
+      className="text-grayish-white border-main-purple bg-dark-purple relative max-h-[500px] w-full rounded-xl border-2 border-dashed p-5 pt-12 md:h-auto md:p-8 md:pt-8"
       style={{ overflowY: "auto", WebkitOverflowScrolling: "touch" }}
     >
       <button
-        className="absolute top-4 right-4 cursor-pointer z-20 group"
+        className="group absolute top-4 right-4 z-20 cursor-pointer"
         onClick={() => setOpenProjectId(null)}
       >
         <img
           src="/software-engineer-portfolio/assets/icon-close.svg"
           alt="close icon"
-          className="group-hover:hidden w-6 h-6"
+          className="h-6 w-6 group-hover:hidden"
         />
         <img
           src="/software-engineer-portfolio/assets/icon-close-purple.svg"
           alt="close icon"
-          className="hidden group-hover:block w-6 h-6"
+          className="hidden h-6 w-6 group-hover:block"
         />
       </button>
-      <div ref={ref} className="flex flex-col md:flex-row gap-3 md:gap-7">
+      <div ref={ref} className="flex flex-col gap-3 md:flex-row md:gap-7">
         <h2 className="text-white">{`scrollable: ${scrollable}`}</h2>
-        <div className="basic-info flex-1 flex flex-col gap-3 md:gap-5">
+        <div className="basic-info flex flex-1 flex-col gap-3 md:gap-5">
           <img src={thumbImgs[0]} alt="swiper img" className="proj-thumb" />
-          <div className="tags flex gap-2 flex-wrap">
+          <div className="tags flex flex-wrap gap-2">
             {tags.map((tag, index) => (
               <div
-                className="text-xs md:text-sm border-1 border-grayish-white py-1 px-2 md:px-[13px] rounded-[18px] whitespace-nowrap text-grayish-white"
+                className="border-grayish-white text-grayish-white rounded-[18px] border-1 px-2 py-1 text-xs whitespace-nowrap md:px-[13px] md:text-sm"
                 key={index}
               >
                 {tag}
@@ -61,11 +61,11 @@ const ProjectDetailCard = ({
             ))}
           </div>
         </div>
-        <div className="details flex-1 flex flex-col gap-3 md:gap-5">
-          <h2 className="text-2xl text-sharp-purple font-bold">{title}</h2>
+        <div className="details flex flex-1 flex-col gap-3 md:gap-5">
+          <h2 className="text-sharp-purple text-2xl font-bold">{title}</h2>
           <div className="overview">
-            <h3 className="text-lg font-bold text-grayish-white">Overview</h3>
-            <p className="text-sm md:text-base text-grayish-white">{desc}</p>
+            <h3 className="text-grayish-white text-lg font-bold">Overview</h3>
+            <p className="text-grayish-white text-sm md:text-base">{desc}</p>
           </div>
           {(features || challenges) && (
             <div className="flex gap-10">
@@ -108,12 +108,12 @@ const ProjectDetailCard = ({
                 whileTap={{ scale: 0.92 }}
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
               >
-                <div className="inner w-full justify-center py-2 text-sm md:text-base gap-3">
+                <div className="inner w-full justify-center gap-3 py-2 text-sm md:text-base">
                   GitHub
                   <img
                     src="/software-engineer-portfolio/assets/github.png"
                     alt="icon"
-                    className="object-contain w-[15px]"
+                    className="w-[15px] object-contain"
                   />
                 </div>
               </motion.a>
@@ -122,7 +122,7 @@ const ProjectDetailCard = ({
               <motion.a
                 href={liveLink}
                 target="_blank"
-                className="flex justify-center flex-1 py-2 text-sm md:text-base items-center px-2 gap-3 border-2 border-grayish-white cursor-pointer"
+                className="border-grayish-white flex flex-1 cursor-pointer items-center justify-center gap-3 border-2 px-2 py-2 text-sm md:text-base"
                 whileTap={{ scale: 0.92 }}
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
               >
@@ -130,7 +130,7 @@ const ProjectDetailCard = ({
                 <img
                   src="/software-engineer-portfolio/assets/play.png"
                   alt="icon"
-                  className="object-contain w-[15px]"
+                  className="w-[15px] object-contain"
                 />
               </motion.a>
             )}

@@ -6,11 +6,11 @@ import TextRotate from "../components/TextRotate";
 export const HeroSection = () => {
   const displayText = useTypewriter(
     "I'm a full-stack software engineer passionate about creating responsive, user-friendly web experiences with 2 years of experience in modern technologies.",
-    70
+    70,
   );
 
   return (
-    <div className="mt-4 flex flex-col justify-center items-center gap-7 w-full mx-auto relative text-center">
+    <div className="relative mx-auto mt-4 flex w-full flex-col items-center justify-center gap-7 text-center">
       <div className="tag">
         <p>Hi there</p>
         <img src="/software-engineer-portfolio/assets/tag-icons/shake-hand.png" />
@@ -22,11 +22,14 @@ export const HeroSection = () => {
           Web Developer
         </h1>
       </div>
-      <p className="section-desc inline-block typewriter-effect">
+      <p className="section-desc typewriter-effect inline-block">
         {displayText}
-        <span className="w-3 h-3 inline-block border-b-2 animate-blinking-caret"></span>
+        <span className="animate-blinking-caret inline-block h-3 w-3 border-b-2"></span>
       </p>
-      <a href="/software-engineer-portfolio/assets/Web Developer.pdf" download="Marcus_Sze_CV.pdf">
+      <a
+        href="/software-engineer-portfolio/assets/Web Developer.pdf"
+        download="Marcus_Sze_CV.pdf"
+      >
         <motion.button
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
@@ -56,11 +59,11 @@ export const HeroSection = () => {
           </div>
         </motion.button>
       </a>
-      <div className="flex gap-4 items-center justify-center mt-4">
+      <div className="mt-4 flex items-center justify-center gap-4">
         <a
           href="https://github.com/Marcussyl"
           target="_blank"
-          className="flex justify-center items-center w-[40px] h-[40px] p-2 border-1 rounded-full border-main-purple"
+          className="border-main-purple flex h-[40px] w-[40px] items-center justify-center rounded-full border-1 p-2"
         >
           <img
             src="/software-engineer-portfolio/assets/social-media/github.png"
@@ -70,7 +73,7 @@ export const HeroSection = () => {
         <a
           href="https://www.linkedin.com/in/marcus-sze-3538ba229/"
           target="_blank"
-          className="flex justify-center items-center w-[40px] h-[40px] p-2 border-1 rounded-full border-main-purple"
+          className="border-main-purple flex h-[40px] w-[40px] items-center justify-center rounded-full border-1 p-2"
         >
           <img
             src="/software-engineer-portfolio/assets/social-media/linkedin.png"
@@ -90,4 +93,4 @@ export const HeroSection = () => {
       /> */}
     </div>
   );
-}
+};

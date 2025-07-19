@@ -1,5 +1,5 @@
 import { motion, useSpring, useTransform, useMotionValue } from "motion/react";
-import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
 import { useRef, useState, useReducer } from "react";
 
 export const Contacts = () => {
@@ -33,8 +33,16 @@ export const Contacts = () => {
   const mouseXSpring = useSpring(x);
   const mouseYSpring = useSpring(y);
 
-  const rotateX = useTransform(mouseYSpring, [-0.5, 0.5], ["7.5deg", "-7.5deg"]);
-  const rotateY = useTransform(mouseXSpring, [-0.5, 0.5], ["-7.5deg", "7.5deg"]);
+  const rotateX = useTransform(
+    mouseYSpring,
+    [-0.5, 0.5],
+    ["7.5deg", "-7.5deg"],
+  );
+  const rotateY = useTransform(
+    mouseXSpring,
+    [-0.5, 0.5],
+    ["-7.5deg", "7.5deg"],
+  );
 
   const handleMouseMove = (e) => {
     const rect = e.target.getBoundingClientRect();
@@ -50,12 +58,12 @@ export const Contacts = () => {
 
     x.set(xPct);
     y.set(yPct);
-  }
+  };
 
   const handleMouseLeave = () => {
     x.set(0);
     y.set(0);
-  }
+  };
 
   const form = useRef();
   const sendEmail = (e) => {
@@ -69,22 +77,22 @@ export const Contacts = () => {
     }
 
     emailjs
-    .sendForm('service_j34e6op', 'template_qdwmjme', form.current, {
-      publicKey: 'Ppd8kmEE1F2BBcDZv',
-    })
-    .then(
-      () => {
-        dispatch({type: "RESET"});
-        setEmailSendState("SUCCESS");
-        setTimeout(() => setEmailSendState(undefined), 5000);
-      },
-      (error) => {
-        console.log('FAILED...', error.text);
-        setEmailSendState("ERROR");
-        setTimeout(() => setEmailSendState(undefined), 5000);
-      },
-    );
-  }
+      .sendForm("service_j34e6op", "template_qdwmjme", form.current, {
+        publicKey: "Ppd8kmEE1F2BBcDZv",
+      })
+      .then(
+        () => {
+          dispatch({ type: "RESET" });
+          setEmailSendState("SUCCESS");
+          setTimeout(() => setEmailSendState(undefined), 5000);
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+          setEmailSendState("ERROR");
+          setTimeout(() => setEmailSendState(undefined), 5000);
+        },
+      );
+  };
 
   const handleFocus = () => {
     focusCount.current += 1;
@@ -104,7 +112,7 @@ export const Contacts = () => {
 
   return (
     <motion.div
-      className="flex flex-col items-center pt-10 relative"
+      className="relative flex flex-col items-center pt-10"
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.3 }}
@@ -115,7 +123,7 @@ export const Contacts = () => {
         onMouseLeave={handleMouseLeave}
         className={`${
           isAnyFocused ? "transform-none" : "transform-3d"
-        } flex flex-col items-center px-7 pt-5 pb-5 mx-auto rounded-lg border-2 border-dashed border-main-purple max-w-[500px]`}
+        } border-main-purple mx-auto flex max-w-[500px] flex-col items-center rounded-lg border-2 border-dashed px-7 pt-5 pb-5`}
         style={{
           rotateX: isAnyFocused ? 0 : rotateX,
           rotateY: isAnyFocused ? 0 : rotateY,
@@ -123,8 +131,8 @@ export const Contacts = () => {
             "linear-gradient(to bottom right, #261a42 0%, #1e0e3b 20%, #140534 50%, #1e0e3d 80%, #281c44 90%, #281c44 100%)",
         }}
       >
-        <div className="inner transform-3d translate-z-[75px]">
-          <h2 className="gradient-text font-bold text-2xl text-center">
+        <div className="inner translate-z-[75px] transform-3d">
+          <h2 className="gradient-text text-center text-2xl font-bold">
             Get in touch
           </h2>
           <br />
@@ -211,13 +219,13 @@ export const Contacts = () => {
             </div>
             <br />
             <motion.button
-              className="block mx-auto w-full"
+              className="mx-auto block w-full"
               type="submit"
               value={"Send"}
               whileTap={{ backgroundColor: "#5f3aa6" }}
               style={{ borderRadius: "10px" }}
             >
-              <div className="inner justify-center rounded-[10px] !cursor-pointer flex gap-2 items-center border-2 border-dashed border-main-purple p-2 text-grayish-white">
+              <div className="inner border-main-purple text-grayish-white flex !cursor-pointer items-center justify-center gap-2 rounded-[10px] border-2 border-dashed p-2">
                 {"Send Message"}
                 {/* <img
                   src="/software-engineer-portfolio/assets/send.svg"
@@ -227,17 +235,17 @@ export const Contacts = () => {
             </motion.button>
             {/* Show email send state message */}
             {emailSendState === "SUCCESS" && (
-              <div className="text-green-400 text-center mt-2 text-xs">
+              <div className="mt-2 text-center text-xs text-green-400">
                 Thanks for your message! I’ll respond to you soon.
               </div>
             )}
             {emailSendState === "ERROR" && (
-              <div className="text-red-400 text-center mt-2 text-xs">
+              <div className="mt-2 text-center text-xs text-red-400">
                 Failed to send message. Please try again later.
               </div>
             )}
             {emailSendState === "INCOMPLETE" && (
-              <div className="text-yellow-400 text-center mt-2 text-xs">
+              <div className="mt-2 text-center text-xs text-yellow-400">
                 Please fill in all fields before sending your message.
               </div>
             )}

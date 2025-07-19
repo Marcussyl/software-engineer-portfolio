@@ -3,55 +3,60 @@ import { HeaderContext } from "@/lib/HeaderContext.js";
 import { motion, AnimatePresence } from "motion/react";
 
 export const NavBar = () => {
-  const {handleHeaderLinkClick, activeHeaderLink, mobileNavOpen, setMobileNavOpen} = useContext(HeaderContext);
+  const {
+    handleHeaderLinkClick,
+    activeHeaderLink,
+    mobileNavOpen,
+    setMobileNavOpen,
+  } = useContext(HeaderContext);
   return (
     <div>
-      <nav className="fixed left-1/2 -translate-x-1/2 top-5 w-9/10 bg-[#160c2a]/70 backdrop-blur-sm border-[#2c1854] border-2 shadow-[0_0_10px_rgba(0,0,0,0.1)] z-50 px-7 rounded-full mx-auto max-w-[1300px]">
+      <nav className="fixed top-5 left-1/2 z-50 mx-auto w-9/10 max-w-[1300px] -translate-x-1/2 rounded-full border-2 border-[#2c1854] bg-[#160c2a]/70 px-7 shadow-[0_0_10px_rgba(0,0,0,0.1)] backdrop-blur-sm">
         <div className="flex items-center justify-between">
           {/* Left side - Logo */}
           <div
-            className="flex items-center gap-2 cursor-pointer"
+            className="flex cursor-pointer items-center gap-2"
             onClick={(e) => handleHeaderLinkClick(e, "#about")}
           >
             <img
               src="/software-engineer-portfolio/assets/globe.svg"
               alt="globe icon"
             />
-            <p className="font-black text-sharp-purple font-pacifico text-xl">
+            <p className="text-sharp-purple font-pacifico text-xl font-black">
               Mars
             </p>
           </div>
           {/* Right side - Navigation Links */}
-          <div className="hidden md:flex items-center gap-6">
+          <div className="hidden items-center gap-6 md:flex">
             <div
-              className={`text-grayish-white hover:text-light-purple transition-colors text-lg focus:outline-none py-4 font-medium cursor-pointer ${
+              className={`text-grayish-white hover:text-light-purple cursor-pointer py-4 text-lg font-medium transition-colors focus:outline-none ${
                 activeHeaderLink === "#about" ? "text-sharp-purple" : ""
               }`}
               onClick={(e) => handleHeaderLinkClick(e, "#about")}
             >
               About Me
             </div>
-            <div className="h-3 w-[1px] bg-grayish-white/50"></div>
+            <div className="bg-grayish-white/50 h-3 w-[1px]"></div>
             <div
-              className={`text-grayish-white hover:text-light-purple transition-colors text-lg focus:outline-none py-4 font-medium cursor-pointer ${
+              className={`text-grayish-white hover:text-light-purple cursor-pointer py-4 text-lg font-medium transition-colors focus:outline-none ${
                 activeHeaderLink === "#tech-stack" ? "text-sharp-purple" : ""
               }`}
               onClick={(e) => handleHeaderLinkClick(e, "#tech-stack")}
             >
               Technologies
             </div>
-            <div className="h-3 w-[1px] bg-grayish-white/50"></div>
+            <div className="bg-grayish-white/50 h-3 w-[1px]"></div>
             <div
-              className={`text-grayish-white hover:text-light-purple transition-colors text-lg focus:outline-none py-4 font-medium cursor-pointer ${
+              className={`text-grayish-white hover:text-light-purple cursor-pointer py-4 text-lg font-medium transition-colors focus:outline-none ${
                 activeHeaderLink === "#projects" ? "text-sharp-purple" : ""
               }`}
               onClick={(e) => handleHeaderLinkClick(e, "#projects")}
             >
               Projects
             </div>
-            <div className="h-3 w-[1px] bg-grayish-white/50"></div>
+            <div className="bg-grayish-white/50 h-3 w-[1px]"></div>
             <div
-              className={`text-grayish-white hover:text-light-purple transition-colors text-lg focus:outline-none py-4 font-medium cursor-pointer ${
+              className={`text-grayish-white hover:text-light-purple cursor-pointer py-4 text-lg font-medium transition-colors focus:outline-none ${
                 activeHeaderLink === "#contact" ? "text-sharp-purple" : ""
               }`}
               onClick={(e) => handleHeaderLinkClick(e, "#contact")}
@@ -60,10 +65,10 @@ export const NavBar = () => {
             </div>
           </div>
           <div
-            className="block md:hidden cursor-pointer"
+            className="block cursor-pointer md:hidden"
             onClick={() => setMobileNavOpen(true)}
           >
-            <div className="py-4 group">
+            <div className="group py-4">
               <img
                 src="/software-engineer-portfolio/assets/hamburger.svg"
                 alt="hamburger icon"
@@ -72,7 +77,7 @@ export const NavBar = () => {
               <img
                 src="/software-engineer-portfolio/assets/hamburger-purple.svg"
                 alt="hamburger icon"
-                className="w-[30px] object-contain hidden group-hover:block"
+                className="hidden w-[30px] object-contain group-hover:block"
               />
             </div>
           </div>
@@ -82,42 +87,42 @@ export const NavBar = () => {
       <AnimatePresence>
         {mobileNavOpen && (
           <motion.div
-            className="fixed right-0 h-screen w-full md:w-1/2 bg-dark-purple z-50 p-10"
+            className="bg-dark-purple fixed right-0 z-50 h-screen w-full p-10 md:w-1/2"
             initial={{ opacity: 0, x: 100 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: 100 }}
             transition={{ duration: 0.3 }}
           >
-            <div className="flex items-center justify-between gap-2 bg-[#160c2a]/70 border-[#2c1854] border-2 px-4 py-4 rounded-lg">
+            <div className="flex items-center justify-between gap-2 rounded-lg border-2 border-[#2c1854] bg-[#160c2a]/70 px-4 py-4">
               <div className="flex gap-2">
                 <img
                   src="/software-engineer-portfolio/assets/globe.svg"
                   alt=""
                 />
-                <p className="font-black text-sharp-purple font-pacifico text-xl">
+                <p className="text-sharp-purple font-pacifico text-xl font-black">
                   Mars
                 </p>
               </div>
               <div
-                className="cursor-pointer text-grayish-white hover:text-sharp-purple text-2xl z-20 group"
+                className="text-grayish-white hover:text-sharp-purple group z-20 cursor-pointer text-2xl"
                 onClick={() => setMobileNavOpen(false)}
               >
                 <img
                   src="/software-engineer-portfolio/assets/icon-close.svg"
                   alt="close icon"
-                  className="group-hover:hidden w-6 h-6"
+                  className="h-6 w-6 group-hover:hidden"
                 />
                 <img
                   src="/software-engineer-portfolio/assets/icon-close-purple.svg"
                   alt="close icon"
-                  className="hidden group-hover:block w-6 h-6"
+                  className="hidden h-6 w-6 group-hover:block"
                 />
               </div>
             </div>
-            <div className="flex flex-col items-start gap-2 mt-5 px-4 border-2 border-[#2c1854] border-dashed">
+            <div className="mt-5 flex flex-col items-start gap-2 border-2 border-dashed border-[#2c1854] px-4">
               <a
                 href="#about"
-                className={`text-grayish-white hover:text-light-purple transition-colors text-lg focus:outline-none py-4 font-medium cursor-pointer ${
+                className={`text-grayish-white hover:text-light-purple cursor-pointer py-4 text-lg font-medium transition-colors focus:outline-none ${
                   activeHeaderLink === "#about" ? "text-sharp-purple" : ""
                 }`}
                 onClick={(e) => handleHeaderLinkClick(e, "#about")}
@@ -126,7 +131,7 @@ export const NavBar = () => {
               </a>
               <a
                 href="#tech-stack"
-                className={`text-grayish-white hover:text-light-purple transition-colors text-lg focus:outline-none py-4 font-medium cursor-pointer ${
+                className={`text-grayish-white hover:text-light-purple cursor-pointer py-4 text-lg font-medium transition-colors focus:outline-none ${
                   activeHeaderLink === "#tech-stack" ? "text-sharp-purple" : ""
                 }`}
                 onClick={(e) => handleHeaderLinkClick(e, "#tech-stack")}
@@ -135,7 +140,7 @@ export const NavBar = () => {
               </a>
               <a
                 href="#projects"
-                className={`text-grayish-white hover:text-light-purple transition-colors text-lg focus:outline-none py-4 font-medium cursor-pointer ${
+                className={`text-grayish-white hover:text-light-purple cursor-pointer py-4 text-lg font-medium transition-colors focus:outline-none ${
                   activeHeaderLink === "#projects" ? "text-sharp-purple" : ""
                 }`}
                 onClick={(e) => handleHeaderLinkClick(e, "#projects")}
@@ -144,7 +149,7 @@ export const NavBar = () => {
               </a>
               <a
                 href="#contact"
-                className={`text-grayish-white hover:text-light-purple transition-colors text-lg focus:outline-none py-4 font-medium cursor-pointer ${
+                className={`text-grayish-white hover:text-light-purple cursor-pointer py-4 text-lg font-medium transition-colors focus:outline-none ${
                   activeHeaderLink === "#contact" ? "text-sharp-purple" : ""
                 }`}
                 onClick={(e) => handleHeaderLinkClick(e, "#contact")}
@@ -152,11 +157,11 @@ export const NavBar = () => {
                 Contact
               </a>
               <div className="h-[1px] w-full bg-[#2c1854]"></div>
-              <div className="flex gap-4 items-center justify-center py-4">
+              <div className="flex items-center justify-center gap-4 py-4">
                 <a
                   href="https://github.com/Marcussyl"
                   target="_blank"
-                  className="flex justify-center items-center w-[40px] h-[40px] p-2 border-1 rounded-full border-main-purple"
+                  className="border-main-purple flex h-[40px] w-[40px] items-center justify-center rounded-full border-1 p-2"
                 >
                   <img
                     src="/software-engineer-portfolio/assets/social-media/github.png"
@@ -166,7 +171,7 @@ export const NavBar = () => {
                 <a
                   href="https://www.linkedin.com/in/marcus-sze-3538ba229/"
                   target="_blank"
-                  className="flex justify-center items-center w-[40px] h-[40px] p-2 border-1 rounded-full border-main-purple"
+                  className="border-main-purple flex h-[40px] w-[40px] items-center justify-center rounded-full border-1 p-2"
                 >
                   <img
                     src="/software-engineer-portfolio/assets/social-media/linkedin.png"

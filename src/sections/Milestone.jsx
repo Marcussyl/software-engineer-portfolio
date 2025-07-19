@@ -16,7 +16,7 @@ export const Milestone = () => {
 
   return (
     <motion.div
-      className="flex flex-col justify-center items-center gap-5"
+      className="flex flex-col items-center justify-center gap-5"
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.3 }}
@@ -53,11 +53,11 @@ export const Milestone = () => {
               modules={[Navigation, Pagination, Mousewheel, Keyboard]}
               className="mySwiper w-full rounded-lg"
             >
-              <SwiperSlide className="!w-full flex justify-center">
+              <SwiperSlide className="flex !w-full justify-center">
                 <img
                   src="/software-engineer-portfolio/assets/milestone-thumbs/aws-practitioner/aws-practitioner.png"
                   alt="aws practitioner"
-                  className="mx-auto pb-8 object-contain"
+                  className="mx-auto object-contain pb-8"
                   data-achievement="aws-practitioner"
                 />
               </SwiperSlide>
@@ -82,11 +82,11 @@ export const Milestone = () => {
               modules={[Navigation, Pagination, Mousewheel, Keyboard]}
               className="mySwiper w-full rounded-lg"
             >
-              <SwiperSlide className="!w-full flex justify-center">
+              <SwiperSlide className="flex !w-full justify-center">
                 <img
                   src="/software-engineer-portfolio/assets/milestone-thumbs/hackathon/hackathon.png"
                   alt="aws practitioner"
-                  className="mx-auto pb-8 object-contain"
+                  className="mx-auto object-contain pb-8"
                   data-achievement="aws-practitioner"
                 />
               </SwiperSlide>
@@ -112,11 +112,11 @@ export const Milestone = () => {
               modules={[Navigation, Pagination, Mousewheel, Keyboard]}
               className="mySwiper w-full rounded-lg"
             >
-              <SwiperSlide className="!w-full flex justify-center">
+              <SwiperSlide className="flex !w-full justify-center">
                 <img
                   src="/software-engineer-portfolio/assets/milestone-thumbs/mastercode/mastercode.png"
                   alt="aws practitioner"
-                  className="mx-auto pb-8 object-contain"
+                  className="mx-auto object-contain pb-8"
                   data-achievement="aws-practitioner"
                 />
               </SwiperSlide>
