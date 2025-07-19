@@ -186,26 +186,17 @@ export const Projects = () => {
       {projects.map((project, idx) => (
         <AnimatePresence key={idx}>
           {openProjectId === project.projectId && (
-            <motion.div
-              initial={{ opacity: 0, y: 100 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -100 }}
-              transition={{ duration: 0.3 }}
-              className="fixed top-1/2 left-1/2 z-100 max-h-[80dvh] w-full max-w-[1080px] -translate-x-1/2 -translate-y-1/2 px-7"
-              style={{ overflowY: "auto", WebkitOverflowScrolling: "touch" }}
-            >
-              <ProjectDetailCard
-                setOpenProjectId={setOpenProjectId}
-                title={project.title}
-                desc={project.overview}
-                features={project.features}
-                challenges={project.challenges}
-                githubLink={project.githubLink}
-                liveLink={project.liveSiteLink}
-                tags={project.tags}
-                thumbImgs={project.thumbImgs}
-              />
-            </motion.div>
+            <ProjectDetailCard
+              setOpenProjectId={setOpenProjectId}
+              title={project.title}
+              desc={project.overview}
+              features={project.features}
+              challenges={project.challenges}
+              githubLink={project.githubLink}
+              liveLink={project.liveSiteLink}
+              tags={project.tags}
+              thumbImgs={project.thumbImgs}
+            />
           )}
         </AnimatePresence>
       ))}
