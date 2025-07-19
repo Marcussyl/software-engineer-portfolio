@@ -1,6 +1,4 @@
 import { motion } from "motion/react";
-import { useEffect } from "react";
-import { useRef, useState } from "react";
 
 const ProjectDetailCard = ({
   setOpenProjectId,
@@ -14,19 +12,6 @@ const ProjectDetailCard = ({
   thumbImgs,
   modalRef
 }) => {
-  const ref = useRef();
-  const [scrollable, setScrollable] = useState();
-
-  useEffect(() => {
-    if (ref.current) {
-      const isScrollable =
-        ref.current.scrollHeight > ref.current.clientHeight ||
-        ref.current.scrollWidth > ref.current.clientWidth;
-      console.log("Is scrollable:", isScrollable);
-      setScrollable(isScrollable);
-    }
-  }, []);
-
   return (
     <motion.div
       initial={{ opacity: 0, y: 100 }}
@@ -34,7 +19,6 @@ const ProjectDetailCard = ({
       exit={{ opacity: 0, y: -100 }}
       transition={{ duration: 0.3 }}
       className="fixed top-1/2 left-1/2 z-100 w-full max-w-[1080px] -translate-x-1/2 -translate-y-1/2 px-7"
-      ref={modalRef}
     >
       <div className="text-grayish-white border-main-purple bg-dark-purple relative w-full rounded-xl border-2 border-dashed p-5 pt-12 md:h-auto md:p-8 md:pt-8">
         <button
@@ -53,11 +37,10 @@ const ProjectDetailCard = ({
           />
         </button>
         <div
-          ref={ref}
           className="flex h-full max-h-[500px] flex-col gap-3 md:flex-row md:gap-7"
           style={{ overflowY: "auto", WebkitOverflowScrolling: "touch" }}
+          ref={modalRef}
         >
-          <h2 className="text-white">{`scrollable: ${scrollable}`}</h2>
           <div className="basic-info flex flex-1 flex-col gap-3 md:gap-5">
             <img src={thumbImgs[0]} alt="swiper img" className="proj-thumb" />
             <div className="tags flex flex-wrap gap-2">
