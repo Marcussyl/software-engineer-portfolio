@@ -48,7 +48,7 @@ const ProjectDetailCard = ({
       </button>
       <div
         ref={ref}
-        className="flex max-h-[500px] flex-col gap-3 md:flex-row md:gap-7 overflow-y-auto"
+        className="flex max-h-[cacl(80dvh+1px)] flex-col gap-3 md:flex-row md:gap-7 overflow-y-auto"
       >
         <h2 className="text-white">{`scrollable: ${scrollable}`}</h2>
         <div className="basic-info flex flex-1 flex-col gap-3 md:gap-5">
