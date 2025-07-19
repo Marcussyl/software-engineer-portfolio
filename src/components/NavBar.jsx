@@ -78,6 +78,7 @@ export const NavBar = () => {
           </div>
         </div>
       </nav>
+      {/* Mobile Nav */}
       <AnimatePresence>
         {mobileNavOpen && (
           <motion.div
@@ -97,17 +98,26 @@ export const NavBar = () => {
                   Mars
                 </p>
               </div>
-              <button
-                className="close-btn cursor-pointer text-grayish-white hover:text-sharp-purple text-2xl z-20"
+              <div
+                className="cursor-pointer text-grayish-white hover:text-sharp-purple text-2xl z-20 group"
                 onClick={() => setMobileNavOpen(false)}
               >
-                x
-              </button>
+                <img
+                  src="/software-engineer-portfolio/assets/icon-close.svg"
+                  alt="close icon"
+                  className="group-hover:hidden w-6 h-6"
+                />
+                <img
+                  src="/software-engineer-portfolio/assets/icon-close-purple.svg"
+                  alt="close icon"
+                  className="hidden group-hover:block w-6 h-6"
+                />
+              </div>
             </div>
             <div className="flex flex-col items-start gap-2 mt-5 px-4 border-2 border-[#2c1854] border-dashed">
               <a
                 href="#about"
-                className={`section-linker w-full ${
+                className={`text-grayish-white hover:text-light-purple transition-colors text-lg focus:outline-none py-4 font-medium cursor-pointer ${
                   activeHeaderLink === "#about" ? "text-sharp-purple" : ""
                 }`}
                 onClick={(e) => handleHeaderLinkClick(e, "#about")}
@@ -116,7 +126,7 @@ export const NavBar = () => {
               </a>
               <a
                 href="#tech-stack"
-                className={`section-linker w-full ${
+                className={`text-grayish-white hover:text-light-purple transition-colors text-lg focus:outline-none py-4 font-medium cursor-pointer ${
                   activeHeaderLink === "#tech-stack" ? "text-sharp-purple" : ""
                 }`}
                 onClick={(e) => handleHeaderLinkClick(e, "#tech-stack")}
@@ -125,7 +135,7 @@ export const NavBar = () => {
               </a>
               <a
                 href="#projects"
-                className={`section-linker w-full ${
+                className={`text-grayish-white hover:text-light-purple transition-colors text-lg focus:outline-none py-4 font-medium cursor-pointer ${
                   activeHeaderLink === "#projects" ? "text-sharp-purple" : ""
                 }`}
                 onClick={(e) => handleHeaderLinkClick(e, "#projects")}
@@ -134,7 +144,7 @@ export const NavBar = () => {
               </a>
               <a
                 href="#contact"
-                className={`section-linker w-full ${
+                className={`text-grayish-white hover:text-light-purple transition-colors text-lg focus:outline-none py-4 font-medium cursor-pointer ${
                   activeHeaderLink === "#contact" ? "text-sharp-purple" : ""
                 }`}
                 onClick={(e) => handleHeaderLinkClick(e, "#contact")}
