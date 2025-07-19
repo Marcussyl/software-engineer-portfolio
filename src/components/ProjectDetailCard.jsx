@@ -28,8 +28,7 @@ const ProjectDetailCard = ({
 
   return (
     <div
-      className="max-h-[80dvh] text-grayish-white relative border-main-purple bg-dark-purple w-full rounded-xl border-2 border-dashed p-5 pt-12 md:h-auto md:p-8 md:pt-8"
-      style={{ overflowY: "auto", WebkitOverflowScrolling: "touch" }}
+      className="text-grayish-white relative border-main-purple bg-dark-purple w-full rounded-xl border-2 border-dashed p-5 pt-12 md:h-auto md:p-8 md:pt-8"
     >
       <button
         className="group absolute top-4 right-4 z-20 cursor-pointer"
