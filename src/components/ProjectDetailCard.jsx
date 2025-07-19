@@ -12,6 +12,7 @@ const ProjectDetailCard = ({
   liveLink,
   tags,
   thumbImgs,
+  modalRef
 }) => {
   const ref = useRef();
   const [scrollable, setScrollable] = useState();
@@ -33,6 +34,7 @@ const ProjectDetailCard = ({
       exit={{ opacity: 0, y: -100 }}
       transition={{ duration: 0.3 }}
       className="fixed top-1/2 left-1/2 z-100 w-full max-w-[1080px] -translate-x-1/2 -translate-y-1/2 px-7"
+      ref={modalRef}
     >
       <div className="text-grayish-white border-main-purple bg-dark-purple relative w-full rounded-xl border-2 border-dashed p-5 pt-12 md:h-auto md:p-8 md:pt-8">
         <button

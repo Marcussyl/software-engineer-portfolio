@@ -196,6 +196,7 @@ export const Projects = () => {
               liveLink={project.liveSiteLink}
               tags={project.tags}
               thumbImgs={project.thumbImgs}
+              modalRef={modalRef}
             />
           )}
         </AnimatePresence>
