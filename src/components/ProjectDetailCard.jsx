@@ -27,7 +27,10 @@ const ProjectDetailCard = ({
   }, [])
 
   return (
-    <div className="relative text-grayish-white p-5 md:p-8 pt-12 md:pt-8 border-2 border-dashed border-main-purple rounded-xl w-full bg-dark-purple">
+    <div
+      className="max-h-[500px] md:h-auto relative text-grayish-white p-5 md:p-8 pt-12 md:pt-8 border-2 border-dashed border-main-purple rounded-xl w-full bg-dark-purple"
+      style={{ overflowY: "auto", WebkitOverflowScrolling: "touch" }}
+    >
       <button
         className="absolute top-4 right-4 cursor-pointer z-20 group"
         onClick={() => setOpenProjectId(null)}
@@ -43,9 +46,9 @@ const ProjectDetailCard = ({
           className="hidden group-hover:block w-6 h-6"
         />
       </button>
-      <div ref={ref} className="flex flex-col md:flex-row gap-2 md:gap-7 max-h-[500px] md:h-auto" style={{overflowY: "auto", WebkitOverflowScrolling: "touch"}}>
+      <div ref={ref} className="flex flex-col md:flex-row gap-3 md:gap-7">
         <h2 className="text-white">{`scrollable: ${scrollable}`}</h2>
-        <div className="basic-info flex-1 flex flex-col gap-5">
+        <div className="basic-info flex-1 flex flex-col gap-3 md:gap-5">
           <img src={thumbImgs[0]} alt="swiper img" className="proj-thumb" />
           <div className="tags flex gap-2 flex-wrap">
             {tags.map((tag, index) => (
