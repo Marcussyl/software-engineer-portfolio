@@ -28,7 +28,7 @@ const ProjectDetailCard = ({
 
   return (
     <div
-      className="text-grayish-white relative border-main-purple bg-dark-purple w-full rounded-xl border-2 border-dashed p-5 pt-12 md:h-auto md:p-8 md:pt-8"
+      className="max-h-[80dvh] text-grayish-white relative border-main-purple bg-dark-purple w-full rounded-xl border-2 border-dashed p-5 pt-12 md:h-auto md:p-8 md:pt-8"
       style={{ overflowY: "auto", WebkitOverflowScrolling: "touch" }}
     >
       <button
@@ -48,7 +48,7 @@ const ProjectDetailCard = ({
       </button>
       <div
         ref={ref}
-        className="flex max-h-[cacl(80dvh+1px)] flex-col gap-3 md:flex-row md:gap-7 overflow-y-auto"
+        className="flex h-[cacl(100%+1px)] flex-col gap-3 md:flex-row md:gap-7 overflow-y-auto"
       >
         <h2 className="text-white">{`scrollable: ${scrollable}`}</h2>
         <div className="basic-info flex flex-1 flex-col gap-3 md:gap-5">
