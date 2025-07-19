@@ -28,7 +28,7 @@ const ProjectDetailCard = ({
 
   return (
     <div
-      className="text-grayish-white border-main-purple bg-dark-purple relative max-h-[500px] w-full rounded-xl border-2 border-dashed p-5 pt-12 md:h-auto md:p-8 md:pt-8"
+      className="text-grayish-white relative border-main-purple bg-dark-purple w-full rounded-xl border-2 border-dashed p-5 pt-12 md:h-auto md:p-8 md:pt-8"
       style={{ overflowY: "auto", WebkitOverflowScrolling: "touch" }}
     >
       <button
@@ -46,7 +46,10 @@ const ProjectDetailCard = ({
           className="hidden h-6 w-6 group-hover:block"
         />
       </button>
-      <div ref={ref} className="flex flex-col gap-3 md:flex-row md:gap-7">
+      <div
+        ref={ref}
+        className="flex max-h-[500px] flex-col gap-3 md:flex-row md:gap-7 overflow-y-auto"
+      >
         <h2 className="text-white">{`scrollable: ${scrollable}`}</h2>
         <div className="basic-info flex flex-1 flex-col gap-3 md:gap-5">
           <img src={thumbImgs[0]} alt="swiper img" className="proj-thumb" />
