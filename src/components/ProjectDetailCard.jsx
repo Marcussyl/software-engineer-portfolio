@@ -38,9 +38,10 @@ const ProjectDetailCard = ({
         </button>
         <div
           className="flex h-full max-h-[500px] flex-col gap-3 md:flex-row md:gap-7"
-          style={{ overflowY: "auto", WebkitOverflowScrolling: "touch" }}
+          style={{ overflowY: "auto" }}
           ref={modalRef}
         >
+          {/* WebkitOverflowScrolling: "touch" */}
           <div className="basic-info flex flex-1 flex-col gap-3 md:gap-5">
             <img src={thumbImgs[0]} alt="swiper img" className="proj-thumb" />
             <div className="tags flex flex-wrap gap-2">
