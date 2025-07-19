@@ -5,7 +5,7 @@ import TextRotate from "../components/TextRotate";
 
 export const HeroSection = () => {
   const displayText = useTypewriter(
-    "I'm a full-stack software engineer passionate about creating responsive, user-friendly web experiences with 2 years of experience in modern technologies.",
+    "I'm a web developer passionate about creating responsive, user-friendly web experiences with solid fundation in modern technologies✨",
     70,
   );
 
@@ -22,7 +22,7 @@ export const HeroSection = () => {
           Web Developer
         </h1>
       </div>
-      <p className="section-desc typewriter-effect inline-block">
+      <p className="section-desc typewriter-effect inline-block max-w-[900px]">
         {displayText}
         <span className="animate-blinking-caret inline-block h-3 w-3 border-b-2"></span>
       </p>

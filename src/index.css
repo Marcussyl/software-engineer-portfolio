@@ -20,7 +20,7 @@
 
     --animate-blinking-caret: blinking-caret .5s infinite;
 
-    --breakpoint-project-card-desktop: "1450px";
+    --breakpoint-navbar: 1165px;
 
     @keyframes blinking-caret {
       from, to { border-color: transparent }

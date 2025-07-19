@@ -27,7 +27,7 @@ export const NavBar = () => {
             </p>
           </div>
           {/* Right side - Navigation Links */}
-          <div className="hidden items-center gap-6 md:flex">
+          <div className="hidden items-center gap-6 navbar:flex">
             <div
               className={`text-grayish-white hover:text-light-purple cursor-pointer py-4 text-lg font-medium transition-colors focus:outline-none ${
                 activeHeaderLink === "#about" ? "text-sharp-purple" : ""
@@ -74,7 +74,7 @@ export const NavBar = () => {
             </div>
           </div>
           <div
-            className="block cursor-pointer md:hidden"
+            className="block cursor-pointer navbar:hidden"
             onClick={() => setMobileNavOpen(true)}
           >
             <div className="group py-4">
