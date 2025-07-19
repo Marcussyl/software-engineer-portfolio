@@ -17,7 +17,7 @@ const projects = [
     title: "Towngas Lifestyle",
     tags: ["Astro", "SSG", "SSR", "React", "Multi-language"],
     overview:
-      "Towngas Lifestyle Revamp is a redesigned landing page project aimed at refreshing the digital identity of Towngas Lifestyle. This clean, responsive interface highlights the brand’s expanded offerings—from smart kitchens and home services to premium retail experiences.",
+      "A redesigned landing page project aimed at refreshing the digital identity of Towngas Lifestyle. This clean, responsive interface highlights the brand’s expanded offerings—from smart kitchens and home services to premium retail experiences.",
     features: null,
     challenges: null,
     githubLink: "https://github.com/Marcussyl/banking",
@@ -39,7 +39,7 @@ const projects = [
       "Restful API Integration",
     ],
     overview:
-      "Horizon is a full-stack financial platform that empowers users to connect their bank accounts, monitor transactions, transfer money between platform users, and generate insightful financial reports.",
+      "A full-stack financial platform that empowers users to connect their bank accounts, monitor transactions, transfer money between platform users, and generate insightful financial reports.",
     features: null,
     challenges: null,
     githubLink: "https://github.com/Marcussyl/banking",
@@ -67,7 +67,7 @@ const projects = [
     title: "Jammming",
     tags: ["React", "OAuth2", "Spotify API"],
     overview:
-      "Jammming is a sleek, user-friendly web app built with React that empowers users to search for tracks, artists, and albums through the Spotify API. Once users find their favorite songs, they can effortlessly assemble a custom playlist and save it directly to their Spotify account.",
+      "A sleek, user-friendly web app built with React that empowers users to search for tracks, artists, and albums through the Spotify API. Once users find their favorite songs, they can effortlessly assemble a custom playlist and save it directly to their Spotify account.",
     features: null,
     challenges: null,
     githubLink: "https://github.com/Marcussyl/jamming",
@@ -80,7 +80,7 @@ const projects = [
     title: "AI Racer",
     tags: ["MkDocs", "SSG", "Light/Dark Mode Support"],
     overview:
-      "AI Racer is a beautifully structured landing page crafted to showcase and document participation in the AWS DeepRacer competition. Powered by MkDocs and styled with MkDocs Material, the page delivers clean, fast-loading documentation that’s as sleek as the autonomous vehicles it represents.",
+      "A beautifully structured landing page crafted to showcase and document participation in the AWS DeepRacer competition. Powered by MkDocs and styled with MkDocs Material, the page delivers clean, fast-loading documentation that’s as sleek as the autonomous vehicles it represents.",
     features: null,
     challenges: null,
     githubLink: null,
@@ -93,7 +93,7 @@ const projects = [
     title: "Big Two",
     tags: ["Java", "Java Swing", "OOP", "Real-time Game Validation"],
     overview:
-      "Big Two is a Java-based desktop application that simulates the popular East Asian card game in an intuitive, interactive format. Built with Java Swing, the project delivers a familiar gaming experience through a custom graphical user interface, complete with card visuals, player turns, and game logic.",
+      "A Java-based desktop application that simulates the popular East Asian card game in an intuitive, interactive format. Built with Java Swing, the project delivers a familiar gaming experience through a custom graphical user interface, complete with card visuals, player turns, and game logic.",
     features: null,
     challenges: null,
     githubLink: "https://github.com/Marcussyl/banking",
